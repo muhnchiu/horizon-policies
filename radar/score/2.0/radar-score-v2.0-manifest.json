@@ -1,0 +1,20 @@
+{
+  "scoreVersion": "2.0",
+  "status": "frozen",
+  "baselineSource": "phase-4.2.1-deterministic",
+  "supersedes": "phase-4.1-manual-replay",
+  "policyJsonSha256": "52f32078c63b07ddeb7f3b0d76c9e2a1e1cab6e5cfc67b08133f11153a7ad0e5",
+  "replayJsonSha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+  "policyMarkdownSha256": "f5ac707d5f8cebb513bcd80f712e53391519f558a68fa3b0a2b5f59ed86ee6b6",
+  "replaySummary": {
+    "total": 50,
+    "high": 8,
+    "medium": 8,
+    "low": 13,
+    "filtered": 21,
+    "net": 16
+  },
+  "fixtureCount": 50,
+  "createdFrom": "phase-4.2.2-reconciliation",
+  "documentationRevision": "phase-4.3-integrity-fix"
+}

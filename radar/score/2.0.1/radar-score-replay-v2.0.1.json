@@ -1,0 +1,2135 @@
+{
+  "scoreVersion": "2.0.1",
+  "policyVersion": "2.0.1",
+  "status": "FROZEN",
+  "sourceReplaySha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+  "sourceCandidateSha256": "1bcf54444e0d0590fa489a3b85be05006333c3b0afb8c3abf31c7dd8855be344",
+  "generation": "Deterministic resolver + frozen Score Policy scoring engine; no row-specific overrides.",
+  "summary": {
+    "total": 50,
+    "high": 8,
+    "medium": 8,
+    "low": 13,
+    "filtered": 21,
+    "net": 16
+  },
+  "deltaAudit": {
+    "comparedFixtures": 50,
+    "changed": [
+      {
+        "fixtureId": 34,
+        "fields": [
+          "radarModifier",
+          "finalScore"
+        ],
+        "before": {
+          "radarModifier": 1,
+          "finalScore": 18
+        },
+        "after": {
+          "radarModifier": -2,
+          "finalScore": 15
+        },
+        "signalActionFilterUnchanged": true
+      }
+    ]
+  },
+  "regressionAudit": {
+    "highFixtureIds": [
+      1,
+      2,
+      10,
+      11,
+      21,
+      22,
+      24,
+      25
+    ],
+    "boundaryCrossings": [],
+    "adoptCount": 0,
+    "entityOverrideCount": 0,
+    "duplicateHardFilterFixtures": [
+      7,
+      9,
+      19,
+      23,
+      26,
+      28,
+      40,
+      47,
+      48,
+      50
+    ],
+    "directBonusFixtures": [
+      1,
+      2,
+      10,
+      11,
+      19,
+      21,
+      22,
+      24,
+      25,
+      28
+    ],
+    "securityGateFilteredFixtures": [
+      31,
+      33,
+      34,
+      37,
+      38,
+      39
+    ]
+  },
+  "fixtures": [
+    {
+      "id": 1,
+      "date": "2026-09-23",
+      "radar": "ai",
+      "title": "OpenAI 发布 GPT-6 Sol 和 Luna",
+      "entity": "openai-gpt6",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 7,
+        "novelty": 6,
+        "confidence": 8,
+        "momentum": 7,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "model-release"
+      },
+      "baseScore": 76,
+      "directBonus": 5,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 81,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 2,
+      "date": "2026-09-23",
+      "radar": "ai",
+      "title": "Anthropic 发布 Opus 5.5",
+      "entity": "anthropic-opus",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 7,
+        "novelty": 6,
+        "confidence": 8,
+        "momentum": 7,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "model-release"
+      },
+      "baseScore": 76,
+      "directBonus": 5,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 81,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 3,
+      "date": "2026-09-23",
+      "radar": "ai",
+      "title": "DeepSeek-V4.1-Flash 开放权重模型",
+      "entity": "deepseek-v4.1",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 4,
+        "confidence": 6,
+        "momentum": 5,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "model-release"
+      },
+      "baseScore": 45,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 45,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 4,
+      "date": "2026-09-23",
+      "radar": "ai",
+      "title": "ZCode 编码代理框架",
+      "entity": "zcode",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 5,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 37,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 37,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 5,
+      "date": "2026-09-23",
+      "radar": "ai",
+      "title": "Snorkel AI 估值翻三倍至 35 亿美元",
+      "entity": "snorkel",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 1,
+        "actionability": 0,
+        "novelty": 3,
+        "confidence": 5,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "funding"
+      },
+      "baseScore": 18,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 18,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "funding news"
+    },
+    {
+      "id": 6,
+      "date": "2026-09-24",
+      "radar": "ai",
+      "title": "XiaomiMiMo V2.6 RL 系列模型",
+      "entity": "xiaomi-mimo",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 1,
+        "actionability": 1,
+        "novelty": 3,
+        "confidence": 5,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "model-release"
+      },
+      "baseScore": 19,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 19,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "UNRELATED + low impact"
+    },
+    {
+      "id": 7,
+      "date": "2026-09-24",
+      "radar": "ai",
+      "title": "DeepSeek-V4.1-Flash 图文模型获得高下载量",
+      "entity": "deepseek-v4.1",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 4,
+        "confidence": 6,
+        "momentum": 5,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "model-release"
+      },
+      "baseScore": 45,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 45,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 8,
+      "date": "2026-09-24",
+      "radar": "ai",
+      "title": "ChatGPT 移动端获得语音智能体功能",
+      "entity": "chatgpt-voice-agent",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 5,
+        "novelty": 6,
+        "confidence": 7,
+        "momentum": 6,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "capability-change"
+      },
+      "baseScore": 69,
+      "directBonus": 0,
+      "radarModifier": 3,
+      "matchedRules": [
+        "AI_CAPABILITY"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "AI_CAPABILITY",
+          "term": "agent",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched AI_CAPABILITY; raw=3; clamped=3.",
+      "finalScore": 72,
+      "signal": "medium",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 9,
+      "date": "2026-09-24",
+      "radar": "ai",
+      "title": "ZCode 编码智能体框架在 GitHub 获得高关注",
+      "entity": "zcode",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 5,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 37,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 37,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 10,
+      "date": "2026-09-24",
+      "radar": "ai",
+      "title": "GLM-5.2 在 OpenRouter 提供免费调用",
+      "entity": "glm-5.2-openrouter",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 8,
+        "novelty": 5,
+        "confidence": 5,
+        "momentum": 5,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "price-change"
+      },
+      "baseScore": 71,
+      "directBonus": 5,
+      "radarModifier": 5,
+      "matchedRules": [
+        "AI_PRICE_OR_COST"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "AI_PRICE_OR_COST",
+          "term": "免费",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched AI_PRICE_OR_COST; raw=5; clamped=5.",
+      "finalScore": 81,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 11,
+      "date": "2026-09-23",
+      "radar": "app",
+      "title": "Atuin Desktop Shell 历史同步与 Runbook 编辑器",
+      "entity": "atuin",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 7,
+        "novelty": 5,
+        "confidence": 5,
+        "momentum": 5,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "release"
+      },
+      "baseScore": 67,
+      "directBonus": 5,
+      "radarModifier": 3,
+      "matchedRules": [
+        "APP_STACK_MATCH"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "APP_STACK_MATCH",
+          "term": "atuin",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched APP_STACK_MATCH; raw=3; clamped=3.",
+      "finalScore": 75,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 12,
+      "date": "2026-09-23",
+      "radar": "app",
+      "title": "HTTPS Capture 全平台抓包工具限免",
+      "entity": "https-capture",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 3,
+        "actionability": 5,
+        "novelty": 4,
+        "confidence": 4,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "price-change"
+      },
+      "baseScore": 41,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 41,
+      "signal": "low",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 13,
+      "date": "2026-09-23",
+      "radar": "app",
+      "title": "Obscura VPN 零日志隐私 VPN",
+      "entity": "obscura-vpn",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 1,
+        "actionability": 1,
+        "novelty": 2,
+        "confidence": 4,
+        "momentum": 2,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "product-discovery"
+      },
+      "baseScore": 16,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [
+        "APP_NEGATIVE_SUPPRESSED_UNRELATED"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "APP_NEGATIVE_SUPPRESSED_UNRELATED",
+          "term": "vpn",
+          "value": 0
+        }
+      ],
+      "modifierReason": "Matched APP_NEGATIVE_SUPPRESSED_UNRELATED; raw=0; clamped=0.",
+      "finalScore": 16,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "UNRELATED + low impact"
+    },
+    {
+      "id": 14,
+      "date": "2026-09-23",
+      "radar": "app",
+      "title": "Morloc 类型化多语言 CLI/API/MCP 生成器",
+      "entity": "morloc",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 2,
+        "actionability": 2,
+        "novelty": 4,
+        "confidence": 3,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "product-discovery"
+      },
+      "baseScore": 26,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 26,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 15,
+      "date": "2026-09-23",
+      "radar": "app",
+      "title": "PGSTY Silo MinIO 无缝替代品",
+      "entity": "pgsty-silo",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 1,
+        "actionability": 1,
+        "novelty": 3,
+        "confidence": 3,
+        "momentum": 2,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "product-discovery"
+      },
+      "baseScore": 15,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [
+        "APP_NEGATIVE_SUPPRESSED_UNRELATED"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "APP_NEGATIVE_SUPPRESSED_UNRELATED",
+          "term": "minio",
+          "value": 0
+        }
+      ],
+      "modifierReason": "Matched APP_NEGATIVE_SUPPRESSED_UNRELATED; raw=0; clamped=0.",
+      "finalScore": 15,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "UNRELATED + low impact"
+    },
+    {
+      "id": 16,
+      "date": "2026-09-24",
+      "radar": "app",
+      "title": "HTTPS Capture 终身限免",
+      "entity": "https-capture",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 3,
+        "actionability": 5,
+        "novelty": 4,
+        "confidence": 4,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "price-change"
+      },
+      "baseScore": 41,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 41,
+      "signal": "low",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 17,
+      "date": "2026-09-24",
+      "radar": "app",
+      "title": "Radicle 网络协议漏洞披露",
+      "entity": "radicle",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 1,
+        "actionability": 0,
+        "novelty": 3,
+        "confidence": 5,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "vulnerability"
+      },
+      "baseScore": 17,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [
+        "APP_NEGATIVE_SUPPRESSED_UNRELATED"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "APP_NEGATIVE_SUPPRESSED_UNRELATED",
+          "term": "radicle",
+          "value": 0
+        }
+      ],
+      "modifierReason": "Matched APP_NEGATIVE_SUPPRESSED_UNRELATED; raw=0; clamped=0.",
+      "finalScore": 17,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "UNRELATED + low impact"
+    },
+    {
+      "id": 18,
+      "date": "2026-09-24",
+      "radar": "app",
+      "title": "AI 编程助手遥测读取 AGENTS.md 争议已修复",
+      "entity": "agents-md-telemetry",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 5,
+        "actionability": 4,
+        "novelty": 5,
+        "confidence": 6,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "incident"
+      },
+      "baseScore": 49,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 49,
+      "signal": "low",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 19,
+      "date": "2026-09-24",
+      "radar": "app",
+      "title": "Atuin - Shell 命令历史搜索与同步",
+      "entity": "atuin",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 7,
+        "novelty": 5,
+        "confidence": 5,
+        "momentum": 5,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "release"
+      },
+      "baseScore": 67,
+      "directBonus": 5,
+      "radarModifier": 3,
+      "matchedRules": [
+        "APP_STACK_MATCH"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "APP_STACK_MATCH",
+          "term": "atuin",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched APP_STACK_MATCH; raw=3; clamped=3.",
+      "finalScore": 75,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 20,
+      "date": "2026-09-24",
+      "radar": "app",
+      "title": "Tailscale 性能优化官方说明",
+      "entity": "tailscale",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 3,
+        "confidence": 8,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "documentation"
+      },
+      "baseScore": 58,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 58,
+      "signal": "medium",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 21,
+      "date": "2026-09-23",
+      "radar": "dev",
+      "title": "fast-jev-compaction Claude Code 上下文压缩插件",
+      "entity": "fast-jev-compaction",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 8,
+        "actionability": 9,
+        "novelty": 7,
+        "confidence": 6,
+        "momentum": 8,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 80,
+      "directBonus": 5,
+      "radarModifier": 5,
+      "matchedRules": [
+        "DEV_CONTEXT_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_CONTEXT_TOOL",
+          "term": "claude code",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched DEV_CONTEXT_TOOL; raw=5; clamped=5.",
+      "finalScore": 90,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 22,
+      "date": "2026-09-23",
+      "radar": "dev",
+      "title": "abide 编码代理项目规则遵从工具",
+      "entity": "abide",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 7,
+        "novelty": 6,
+        "confidence": 5,
+        "momentum": 5,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 71,
+      "directBonus": 5,
+      "radarModifier": 3,
+      "matchedRules": [
+        "DEV_WORKFLOW_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_WORKFLOW_TOOL",
+          "term": "abide",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched DEV_WORKFLOW_TOOL; raw=3; clamped=3.",
+      "finalScore": 79,
+      "signal": "high",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 23,
+      "date": "2026-09-23",
+      "radar": "dev",
+      "title": "ZCode Z.ai 编码代理框架",
+      "entity": "zcode",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 5,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 37,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 37,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 24,
+      "date": "2026-09-23",
+      "radar": "dev",
+      "title": "CometixCode Rust 重写 Claude Code 客户端",
+      "entity": "cometixcode",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 5,
+        "novelty": 7,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 67,
+      "directBonus": 5,
+      "radarModifier": 5,
+      "matchedRules": [
+        "DEV_CONTEXT_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_CONTEXT_TOOL",
+          "term": "claude code",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched DEV_CONTEXT_TOOL; raw=5; clamped=5.",
+      "finalScore": 77,
+      "signal": "high",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 25,
+      "date": "2026-09-23",
+      "radar": "dev",
+      "title": "jev-review MCP 持续代码审查插件",
+      "entity": "jev-review-mcp",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 6,
+        "novelty": 7,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 69,
+      "directBonus": 5,
+      "radarModifier": 5,
+      "matchedRules": [
+        "DEV_CONTEXT_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_CONTEXT_TOOL",
+          "term": "jev",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched DEV_CONTEXT_TOOL; raw=5; clamped=5.",
+      "finalScore": 79,
+      "signal": "high",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 26,
+      "date": "2026-09-24",
+      "radar": "dev",
+      "title": "ZCode - Z.ai 编码代理框架",
+      "entity": "zcode",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 5,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 37,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 37,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 27,
+      "date": "2026-09-24",
+      "radar": "dev",
+      "title": "Claude Code v2.1.281 发布",
+      "entity": "claude-code",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 5,
+        "novelty": 3,
+        "confidence": 8,
+        "momentum": 7,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "version-release"
+      },
+      "baseScore": 67,
+      "directBonus": 0,
+      "radarModifier": 5,
+      "matchedRules": [
+        "DEV_CONTEXT_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_CONTEXT_TOOL",
+          "term": "claude code",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched DEV_CONTEXT_TOOL; raw=5; clamped=5.",
+      "finalScore": 72,
+      "signal": "medium",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 28,
+      "date": "2026-09-24",
+      "radar": "dev",
+      "title": "CometixCode - Claude Code 终端的 Rust 重实现",
+      "entity": "cometixcode",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 7,
+        "actionability": 5,
+        "novelty": 7,
+        "confidence": 4,
+        "momentum": 6,
+        "radarModifier": 5,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 67,
+      "directBonus": 5,
+      "radarModifier": 5,
+      "matchedRules": [
+        "DEV_CONTEXT_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_CONTEXT_TOOL",
+          "term": "claude code",
+          "value": 5
+        }
+      ],
+      "modifierReason": "Matched DEV_CONTEXT_TOOL; raw=5; clamped=5.",
+      "finalScore": 77,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 29,
+      "date": "2026-09-24",
+      "radar": "dev",
+      "title": "Cordium - 自托管沙箱平台",
+      "entity": "cordium",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 3,
+        "actionability": 2,
+        "novelty": 6,
+        "confidence": 3,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 31,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 31,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 30,
+      "date": "2026-09-24",
+      "radar": "dev",
+      "title": "AgentRun - 将代理转化为工作流的 DSL",
+      "entity": "agentrun",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 4,
+        "actionability": 2,
+        "novelty": 6,
+        "confidence": 3,
+        "momentum": 3,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "project-discovery"
+      },
+      "baseScore": 40,
+      "directBonus": 0,
+      "radarModifier": 3,
+      "matchedRules": [
+        "DEV_WORKFLOW_TOOL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "DEV_WORKFLOW_TOOL",
+          "term": "agent",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched DEV_WORKFLOW_TOOL; raw=3; clamped=3.",
+      "finalScore": 43,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 31,
+      "date": "2026-09-23",
+      "radar": "sec",
+      "title": "CVE-2026-94493 Gigatech PDV5701 RCE (CVSS 10.0)",
+      "entity": "gigatech-pdv5701",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 0,
+        "actionability": 0,
+        "novelty": 2,
+        "confidence": 9,
+        "momentum": 1,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 19,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 17,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 32,
+      "date": "2026-09-23",
+      "radar": "sec",
+      "title": "CISA KEV 新增 Linux Kernel 漏洞组",
+      "entity": "linux-kernel-cisa",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 3,
+        "confidence": 9,
+        "momentum": 3,
+        "radarModifier": -2,
+        "securityGate": "DIRECTLY_EXPOSED",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cisa-kev"
+      },
+      "baseScore": 59,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 57,
+      "signal": "medium",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 33,
+      "date": "2026-09-23",
+      "radar": "sec",
+      "title": "F5 BIG-IP APM 堆缓冲区溢出",
+      "entity": "f5-bigip",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 2,
+        "actionability": 1,
+        "novelty": 2,
+        "confidence": 8,
+        "momentum": 2,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 24,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 22,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 34,
+      "date": "2026-09-23",
+      "radar": "sec",
+      "title": "Meta Box AIO WordPress 插件权限提升",
+      "entity": "wordpress-metabox",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 0,
+        "actionability": 0,
+        "novelty": 2,
+        "confidence": 8,
+        "momentum": 1,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 17,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 15,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 35,
+      "date": "2026-09-23",
+      "radar": "sec",
+      "title": "Gecko Security AI 自动漏洞挖掘获关注",
+      "entity": "gecko-security",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 5,
+        "actionability": 4,
+        "novelty": 6,
+        "confidence": 4,
+        "momentum": 5,
+        "radarModifier": 1,
+        "securityGate": "DIRECTLY_EXPOSED",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "product-discovery"
+      },
+      "baseScore": 48,
+      "directBonus": 0,
+      "radarModifier": 1,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS",
+        "SECURITY_TOPICAL"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        },
+        {
+          "rule": "SECURITY_TOPICAL",
+          "term": "ai",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS + SECURITY_TOPICAL; raw=1; clamped=1.",
+      "finalScore": 49,
+      "signal": "low",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 36,
+      "date": "2026-09-24",
+      "radar": "sec",
+      "title": "FasterXML jackson-databind/core CVE",
+      "entity": "jackson-databind",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 6,
+        "novelty": 3,
+        "confidence": 8,
+        "momentum": 3,
+        "radarModifier": -2,
+        "securityGate": "DIRECTLY_EXPOSED",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 67,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 65,
+      "signal": "medium",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 37,
+      "date": "2026-09-24",
+      "radar": "sec",
+      "title": "Fast FAC1203R 命令注入 (CVSS 10.0)",
+      "entity": "fast-fac1203r",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 0,
+        "actionability": 0,
+        "novelty": 2,
+        "confidence": 6,
+        "momentum": 1,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 14,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 12,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 38,
+      "date": "2026-09-24",
+      "radar": "sec",
+      "title": "F5 BIG-IP APM (CISA KEV)",
+      "entity": "f5-bigip",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 2,
+        "actionability": 1,
+        "novelty": 2,
+        "confidence": 8,
+        "momentum": 2,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cve"
+      },
+      "baseScore": 24,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 22,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 39,
+      "date": "2026-09-24",
+      "radar": "sec",
+      "title": "Check Point 多产品路径遍历 (CISA KEV)",
+      "entity": "checkpoint",
+      "input": {
+        "relevanceLevel": "UNRELATED",
+        "relevanceScore": 1,
+        "impact": 0,
+        "actionability": 0,
+        "novelty": 2,
+        "confidence": 8,
+        "momentum": 1,
+        "radarModifier": -2,
+        "securityGate": "UNRELATED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "cisa-kev"
+      },
+      "baseScore": 17,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 15,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    {
+      "id": 40,
+      "date": "2026-09-24",
+      "radar": "sec",
+      "title": "Linux Kernel 竞态条件 (CISA KEV)",
+      "entity": "linux-kernel-cisa",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 4,
+        "actionability": 3,
+        "novelty": 3,
+        "confidence": 9,
+        "momentum": 3,
+        "radarModifier": -2,
+        "securityGate": "DIRECTLY_EXPOSED",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "cisa-kev"
+      },
+      "baseScore": 59,
+      "directBonus": 0,
+      "radarModifier": -2,
+      "matchedRules": [
+        "SECURITY_DEFAULT_BIAS"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SECURITY_DEFAULT_BIAS",
+          "value": -2
+        }
+      ],
+      "modifierReason": "Matched SECURITY_DEFAULT_BIAS; raw=-2; clamped=-2.",
+      "finalScore": 57,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 41,
+      "date": "2026-09-23",
+      "radar": "skill",
+      "title": "microsoft/azure-skills",
+      "entity": "azure-skills",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 4,
+        "actionability": 5,
+        "novelty": 3,
+        "confidence": 7,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 47,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 47,
+      "signal": "low",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 42,
+      "date": "2026-09-23",
+      "radar": "skill",
+      "title": "obra/superpowers (code review)",
+      "entity": "obra-superpowers",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 6,
+        "novelty": 5,
+        "confidence": 5,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 65,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 65,
+      "signal": "medium",
+      "action": "test",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 43,
+      "date": "2026-09-23",
+      "radar": "skill",
+      "title": "cicd-pipeline (ClawHub)",
+      "entity": "cicd-pipeline-skill",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 3,
+        "actionability": 3,
+        "novelty": 3,
+        "confidence": 4,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 37,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 37,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 44,
+      "date": "2026-09-23",
+      "radar": "skill",
+      "title": "microsoft/SkillOpt",
+      "entity": "skillopt",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 5,
+        "actionability": 3,
+        "novelty": 8,
+        "confidence": 5,
+        "momentum": 4,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "research-release"
+      },
+      "baseScore": 49,
+      "directBonus": 0,
+      "radarModifier": 3,
+      "matchedRules": [
+        "SKILL_TRAINING_RESEARCH"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SKILL_TRAINING_RESEARCH",
+          "term": "skillopt",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched SKILL_TRAINING_RESEARCH; raw=3; clamped=3.",
+      "finalScore": 52,
+      "signal": "medium",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 45,
+      "date": "2026-09-23",
+      "radar": "skill",
+      "title": "self-improving-agent (ClawHub)",
+      "entity": "self-improving-agent",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 2,
+        "actionability": 1,
+        "novelty": 5,
+        "confidence": 3,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 26,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 26,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 46,
+      "date": "2026-09-24",
+      "radar": "skill",
+      "title": "larksuite/cli lark-* suite",
+      "entity": "lark-cli-skills",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 5,
+        "actionability": 6,
+        "novelty": 4,
+        "confidence": 7,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 53,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 53,
+      "signal": "medium",
+      "action": "read",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 47,
+      "date": "2026-09-24",
+      "radar": "skill",
+      "title": "obra/superpowers requesting-code-review",
+      "entity": "obra-superpowers",
+      "input": {
+        "relevanceLevel": "DIRECT",
+        "relevanceScore": 9,
+        "impact": 6,
+        "actionability": 6,
+        "novelty": 5,
+        "confidence": 5,
+        "momentum": 4,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "skill-release"
+      },
+      "baseScore": 65,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 65,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 48,
+      "date": "2026-09-24",
+      "radar": "skill",
+      "title": "microsoft/azure-skills suite",
+      "entity": "azure-skills",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 4,
+        "actionability": 5,
+        "novelty": 3,
+        "confidence": 7,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "skill-release"
+      },
+      "baseScore": 47,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 47,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    },
+    {
+      "id": 49,
+      "date": "2026-09-24",
+      "radar": "skill",
+      "title": "ClawHub architecture-diagram variants",
+      "entity": "diagram-skill",
+      "input": {
+        "relevanceLevel": "EXPLORATORY",
+        "relevanceScore": 3,
+        "impact": 2,
+        "actionability": 3,
+        "novelty": 3,
+        "confidence": 5,
+        "momentum": 3,
+        "radarModifier": 0,
+        "securityGate": "N/A",
+        "securityEscalation": {
+          "activeExploitation": false,
+          "supplyChainImpact": false,
+          "reachableDependency": false,
+          "officialEmergencyAdvisory": false
+        },
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": false,
+        "eventType": "skill-release"
+      },
+      "baseScore": 30,
+      "directBonus": 0,
+      "radarModifier": 0,
+      "matchedRules": [],
+      "modifierComponents": [],
+      "modifierReason": "No modifier trigger matched; raw=0; clamped=0.",
+      "finalScore": 30,
+      "signal": "low",
+      "action": "watch",
+      "filtered": false,
+      "filterReason": null
+    },
+    {
+      "id": 50,
+      "date": "2026-09-24",
+      "radar": "skill",
+      "title": "microsoft/SkillOpt",
+      "entity": "skillopt",
+      "input": {
+        "relevanceLevel": "ADJACENT",
+        "relevanceScore": 5,
+        "impact": 5,
+        "actionability": 3,
+        "novelty": 8,
+        "confidence": 5,
+        "momentum": 4,
+        "radarModifier": 3,
+        "securityGate": "N/A",
+        "securityEscalation": {},
+        "priorValidation": false,
+        "risk": "normal",
+        "duplicate": true,
+        "eventType": "research-release"
+      },
+      "baseScore": 49,
+      "directBonus": 0,
+      "radarModifier": 3,
+      "matchedRules": [
+        "SKILL_TRAINING_RESEARCH"
+      ],
+      "modifierComponents": [
+        {
+          "rule": "SKILL_TRAINING_RESEARCH",
+          "term": "skillopt",
+          "value": 3
+        }
+      ],
+      "modifierReason": "Matched SKILL_TRAINING_RESEARCH; raw=3; clamped=3.",
+      "finalScore": 52,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "DUPLICATE_UPDATE"
+    }
+  ]
+}

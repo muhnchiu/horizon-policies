@@ -1,0 +1,24 @@
+{
+  "policyVersion": "1.0",
+  "status": "frozen",
+  "designPhase": "5A.1",
+  "baselineSource": "phase-4.2.1-deterministic-fixtures",
+  "policyJsonSha256": "8585485099430d13652b2ba8560dc0ea00ce3cd26b8c28e21f3d13e188221a31",
+  "replayJsonSha256": "f172f4b9bb26335633ce4c018420ff41ee748df53161c1ea83f19bd182d76dd9",
+  "policyMarkdownSha256": "a8ae49b46dcad785ea006e03788a9d6ee4244d3d4a18bb97b8bc7eeb663cbfd6",
+  "replaySummary": {
+    "candidates": 50,
+    "uniqueEvents": 39,
+    "NEW": 39,
+    "DUPLICATE": 11,
+    "UPDATE": 0
+  },
+  "collisionAudit": {
+    "falseMerge": 0,
+    "falseSplit": 0,
+    "ambiguous": 2
+  },
+  "fixtureCount": 50,
+  "createdFrom": "phase-5A.1-identity-freeze",
+  "phase4Unchanged": true
+}

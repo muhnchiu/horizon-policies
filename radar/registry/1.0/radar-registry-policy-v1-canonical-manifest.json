@@ -1,0 +1,119 @@
+{
+  "policyVersion": "1.0",
+  "canonicalizationVersion": "1.0",
+  "status": "FROZEN",
+  "gate": "PASS",
+  "distributionReady": true,
+  "canonicalizationSource": {
+    "primary": "Frozen Registry Design → Frozen Registry Schema",
+    "implementationEvidenceRole": "conformance verification only",
+    "method": "deterministic normative-rule projection with ruleId/sourceSection/canonicalValue"
+  },
+  "canonicalizationTimestamp": "2026-09-30T12:10:39Z",
+  "sourceArtifacts": {
+    "radar-registry-design-v1.md": {
+      "sha256": "f054be5caf1bd79c432e8ef0b4444ccc3e62cbf18f10671907e9e0143366acf5",
+      "immutable": true
+    },
+    "radar-registry-schema-v1.json": {
+      "sha256": "828b3a378c1f9801cfd3837a5d8a3bbd399df5ce6772949d2d7cb157f5dc091a",
+      "immutable": true
+    },
+    "radar-registry-policy-v1-manifest.json": {
+      "sha256": "54ab0cde71865005e6f60c0d1204a1f5d68be47f9b3fa5785236bd3f3f5b2250",
+      "immutable": true
+    },
+    "radar-registry-design-implementation-conformance-v1.json": {
+      "sha256": "46fb3c2cd20a7b5603960cbfc26997b77e239afbb9252f54f4d2c72fcf262d67",
+      "summary": {
+        "total": 36,
+        "conformant": 36,
+        "nonConformant": 0,
+        "notImplemented": 0,
+        "notApplicable": 0
+      }
+    },
+    "radar-registry-lock-conformance-v1-report.md": {
+      "sha256": "d4b659e01341fb1e2ea4ac70f27d18476c39feccdef4b51622b216ae33a20677",
+      "result": "PASS"
+    },
+    "radar-registry-lock-conformance-v1-test.json": {
+      "sha256": "b40d4689b9e2341d8158d34143b218e5fb25adc02a21adf13b5719bbf0db2e3b",
+      "result": "PASS"
+    },
+    "radar-registry-corruption-conformance-v1-report.md": {
+      "sha256": "192204e8e4a894c11c55818ee7a1d026df68e9d1bdb2df03e7260b7c55016192",
+      "result": "PASS"
+    },
+    "radar-registry-corruption-conformance-v1-test.json": {
+      "sha256": "00764fed7d922c4c613622e93c52d4decce1b63764d63b5d0d5d0f2e06e2e9df",
+      "result": "PASS"
+    },
+    "radar-registry-row-shape-conformance-v1-report.md": {
+      "sha256": "4423fc80b2720a1acc42af22a0d9085ea584a25f2bb4977acd6f5a026c439b7f",
+      "result": "PASS"
+    },
+    "radar-registry-row-shape-conformance-v1-test.json": {
+      "sha256": "a9e17ab3c24990b17e61ba0c74a769f6207443963cd45986f89a25b3d99a5738",
+      "result": "PASS"
+    },
+    "radar-event-policy-v1.json": {
+      "sha256": "8585485099430d13652b2ba8560dc0ea00ce3cd26b8c28e21f3d13e188221a31",
+      "frozen": true
+    },
+    "radar-event-replay-v1.json": {
+      "sha256": "f172f4b9bb26335633ce4c018420ff41ee748df53161c1ea83f19bd182d76dd9",
+      "frozen": true
+    },
+    "radar-observation-policy-v1.json": {
+      "sha256": "c7761cdeae712deb6096fce67b1324f5d1acac55ed3b0df6e91a1a49a8c9de51",
+      "frozen": true
+    },
+    "radar-observation-fixtures-v1.json": {
+      "sha256": "b01e8f0c4e9c350df4cfce4b55a4f210c7447692caf6e6530cbd611c8b1e7cdc",
+      "frozen": true
+    },
+    "radar-score-policy-v2.0.json": {
+      "sha256": "52f32078c63b07ddeb7f3b0d76c9e2a1e1cab6e5cfc67b08133f11153a7ad0e5",
+      "frozen": true
+    },
+    "radar-score-replay-v2.0.json": {
+      "sha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+      "frozen": true
+    },
+    "radar-score-policy-v2.0.1.json": {
+      "sha256": "6ee674ab532d57ad9b49df815e61c453255c1a866e1a8a2ddca7bf86a763549f",
+      "frozen": true
+    },
+    "radar-score-replay-v2.0.1.json": {
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "frozen": true
+    }
+  },
+  "canonicalArtifacts": {
+    "radar-registry-policy-v1.json": {
+      "sha256": "cf052c2d75de5f4ba74cece3ae91a21994de535e8cd8852ac3a182f098028362",
+      "status": "FROZEN"
+    },
+    "radar-registry-policy-canonicalization-v1.md": {
+      "sha256": "8bd935161464b8c3585837278c87ce66bfd176e9fd56a8958540ef841d031ad3",
+      "result": "PASS"
+    },
+    "radar-registry-score-compatibility-v1.json": {
+      "sha256": "f5ba74124916bf4b63f8af28701cf7c3018283a680c8860276e7e86839226fcc",
+      "result": "PASS",
+      "declarations": [
+        "COMPATIBLE_WITH_SCORE_POLICY_2.0",
+        "COMPATIBLE_WITH_SCORE_POLICY_2.0.1"
+      ]
+    }
+  },
+  "compatibilityDeclarations": [
+    "Registry Policy 1.0 COMPATIBLE_WITH Score Policy 2.0",
+    "Registry Policy 1.0 COMPATIBLE_WITH Score Policy 2.0.1"
+  ],
+  "policyDrift": "NONE",
+  "ambiguity": "NONE",
+  "crossArtifactConsistency": "PASS",
+  "consumerUseAllowed": true
+}

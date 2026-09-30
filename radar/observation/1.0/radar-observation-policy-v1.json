@@ -1,0 +1,135 @@
+{
+  "policyVersion": "1.0",
+  "status": "FROZEN",
+  "title": "Horizon Radar V2 Observation Identity Policy 1.0",
+  "authority": "Authoritative for Observation identity, source URL canonicalization, Observation deduplication, and Observation time semantics.",
+  "observationSemantics": "An Observation is a Radar evidence relationship between one Event and one canonical Source. It is not a fetch execution, crawler run, or daily report occurrence.",
+  "identity": {
+    "fields": [
+      "eventKey",
+      "canonicalSourceUrl",
+      "radar"
+    ],
+    "inputEncoding": "UTF-8",
+    "identityInput": "eventKey + \"\\n\" + canonicalSourceUrl + \"\\n\" + radar",
+    "digest": "SHA-256",
+    "observationId": "first 16 lowercase hexadecimal characters of digest",
+    "excludedFields": [
+      "entity",
+      "date",
+      "observedAt",
+      "retrievedAt",
+      "sourcePublishedAt",
+      "sourceName",
+      "sourceLevel",
+      "sourceAuthority",
+      "eventOccurredAt"
+    ]
+  },
+  "metadataFields": [
+    "sourceName",
+    "sourceLevel",
+    "sourceAuthority",
+    "observedAt",
+    "sourcePublishedAt",
+    "retrievedAt"
+  ],
+  "urlCanonicalization": {
+    "version": "1.0",
+    "scheme": "lowercase; http and https supported",
+    "hostname": "lowercase",
+    "defaultPort": {
+      "http": 80,
+      "https": 443,
+      "rule": "remove scheme default port"
+    },
+    "fragment": "remove",
+    "trailingSlash": "remove trailing slash from non-root path; root path remains /",
+    "path": "preserve",
+    "query": "preserve without sorting or filtering",
+    "prohibited": [
+      "network redirect resolution",
+      "tracking parameter removal",
+      "unknown query sorting",
+      "semantic URL rewriting",
+      "fuzzy matching"
+    ]
+  },
+  "timeSemantics": {
+    "observedAt": "Required; time Radar first records an Observation or timestamp on the current Observation record. Explicit ISO 8601 date-time.",
+    "sourcePublishedAt": "Optional; original publication time from Source.",
+    "retrievedAt": "Local state only; fetch/read execution time.",
+    "eventOccurredAt": "Event field, not part of Observation identity.",
+    "identityRule": "No time field enters observationId.",
+    "refetch": "Same eventKey, canonicalSourceUrl, and radar with changed observedAt/retrievedAt retains observationId. Registry may update lastObservedAt, retrievedAt, and metadata without adding an identity."
+  },
+  "deduplicationRules": [
+    "Same Event + same canonical source URL + same Radar = same Observation identity.",
+    "Different canonical source URL for same Event = different Observation.",
+    "Same Event and source URL under different Radars = two Observations; Event remains the same.",
+    "Metadata changes do not change observationId."
+  ],
+  "supersession": {
+    "supersedes": "Event Policy 1.0 observationId definition only: radar:entity:eventKey:source:date",
+    "scope": "Observation identity only",
+    "eventPolicy": "Event Policy 1.0 remains authoritative for Event semantics: eventKey, canonicalEventType, fingerprint, NEW, DUPLICATE, UPDATE, and materialChange.",
+    "unchanged": [
+      "Event Identity",
+      "Event State",
+      "Event Fingerprint",
+      "Material Change",
+      "Event Replay"
+    ]
+  },
+  "contractCompatibility": {
+    "contract": "Radar Contract 2.1.1",
+    "status": "UNCHANGED",
+    "supports": [
+      "eventKey",
+      "radar",
+      "source URL (sources[].url)",
+      "observedAt",
+      "source metadata (source level/name/sourcePublishedAt/sourceAuthority)"
+    ],
+    "internalOnly": [
+      "observationId",
+      "canonicalSourceUrl",
+      "retrievedAt"
+    ],
+    "contractGap": false
+  },
+  "sourceLevel": {
+    "status": "DEFINED_BY_CONTRACT_2_1_1",
+    "allowed": [
+      "official",
+      "research",
+      "ecosystem",
+      "media",
+      "community"
+    ],
+    "noRedesign": true
+  },
+  "sourceAuthority": {
+    "status": "OPTIONAL",
+    "allowed": [
+      "official",
+      "primary",
+      "secondary",
+      "community"
+    ]
+  },
+  "fixtureBaseline": {
+    "file": "radar-observation-fixtures-v1.json",
+    "version": "1.0",
+    "counts": {
+      "total": 29,
+      "valid": 19,
+      "invalid": 10
+    }
+  },
+  "implementationBoundary": {
+    "engineImplemented": false,
+    "registryImplemented": false,
+    "productionRadarConnected": false
+  }
+}

@@ -1,0 +1,561 @@
+{
+  "fixtureVersion": "1.0",
+  "title": "Horizon Radar V2 Observation Fixture 1.0",
+  "status": "FROZEN",
+  "synthetic": true,
+  "purpose": "Independent deterministic Observation identity and input-validation fixture; not a real-world Radar replay.",
+  "architecture": {
+    "eventReplay": "SEPARATE",
+    "observationReplay": "SEPARATE"
+  },
+  "requiredFields": [
+    "eventKey",
+    "radar",
+    "sourceName",
+    "sourceUrl",
+    "sourceLevel",
+    "observedAt"
+  ],
+  "allowedValues": {
+    "radar": [
+      "ai",
+      "dev",
+      "app",
+      "security",
+      "skill"
+    ],
+    "sourceLevel": [
+      "official",
+      "research",
+      "ecosystem",
+      "media",
+      "community"
+    ],
+    "sourceAuthority": [
+      "official",
+      "primary",
+      "secondary",
+      "community"
+    ]
+  },
+  "identityAlgorithm": {
+    "status": "FROZEN",
+    "inputs": [
+      "eventKey",
+      "canonicalSourceUrl",
+      "radar"
+    ],
+    "encoding": "UTF-8(eventKey + \"\\n\" + canonicalSourceUrl + \"\\n\" + radar)",
+    "digest": "SHA-256",
+    "observationId": "first 16 lowercase hexadecimal characters",
+    "excludes": [
+      "entity",
+      "date",
+      "observedAt",
+      "retrievedAt",
+      "sourcePublishedAt",
+      "sourceName",
+      "sourceLevel",
+      "sourceAuthority",
+      "eventOccurredAt"
+    ]
+  },
+  "urlCanonicalization": {
+    "version": "candidate-1.0",
+    "scheme": "lowercase; http/https only",
+    "hostname": "lowercase",
+    "fragment": "remove",
+    "defaultPort": "remove (http:80, https:443)",
+    "trailingSlash": "remove trailing slash(es) from non-root path; root remains /",
+    "path": "preserve",
+    "query": "preserve byte/order; do not strip tracking parameters, sort unknown parameters, decode semantic URLs, follow redirects, or use network/fuzzy matching"
+  },
+  "timeSemantics": {
+    "observedAt": "required explicit ISO 8601 date-time; time Radar observed source",
+    "firstSeen": "minimum observedAt among observations for same eventKey",
+    "lastSeen": "maximum observedAt among observations for same eventKey",
+    "forbiddenInference": [
+      "report date",
+      "sourcePublishedAt",
+      "retrievedAt"
+    ],
+    "retrievedAt": "Local state only; fetch/read time and excluded from identity."
+  },
+  "cases": {
+    "valid": [
+      {
+        "case": "A1_same_tuple_first_observation",
+        "eventKey": "fixture-tool:release:initial",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/1",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T09:00:00Z",
+        "sourcePublishedAt": "2026-07-31T08:00:00Z",
+        "sourceAuthority": "official",
+        "retrievedAt": "2026-08-01T09:00:05Z",
+        "canonicalSourceUrl": "https://example.com/release/1",
+        "expectedObservationId": "7ddf3879990de725"
+      },
+      {
+        "case": "A2_same_tuple_refetch_later",
+        "eventKey": "fixture-tool:release:initial",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/1",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-03T10:00:00Z",
+        "sourcePublishedAt": "2026-07-31T08:00:00Z",
+        "sourceAuthority": "official",
+        "retrievedAt": "2026-08-03T10:00:05Z",
+        "canonicalSourceUrl": "https://example.com/release/1",
+        "expectedObservationId": "7ddf3879990de725"
+      },
+      {
+        "case": "B1_fragment_overview",
+        "eventKey": "fixture-tool:release:fragment-case",
+        "radar": "dev",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/2#overview",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T10:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/2",
+        "expectedObservationId": "2dd5fb8cdb9b1b37"
+      },
+      {
+        "case": "B2_fragment_details",
+        "eventKey": "fixture-tool:release:fragment-case",
+        "radar": "dev",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/2#details",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-02T10:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/2",
+        "expectedObservationId": "2dd5fb8cdb9b1b37"
+      },
+      {
+        "case": "C1_hostname_uppercase",
+        "eventKey": "fixture-tool:release:host-case",
+        "radar": "app",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://EXAMPLE.com/release/3",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T11:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/3",
+        "expectedObservationId": "c34e5b60f0ea1908"
+      },
+      {
+        "case": "C2_hostname_lowercase",
+        "eventKey": "fixture-tool:release:host-case",
+        "radar": "app",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/3",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-02T11:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/3",
+        "expectedObservationId": "c34e5b60f0ea1908"
+      },
+      {
+        "case": "D1_explicit_default_port",
+        "eventKey": "fixture-tool:release:port-case",
+        "radar": "security",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com:443/release/4",
+        "sourceLevel": "research",
+        "observedAt": "2026-08-01T12:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/4",
+        "expectedObservationId": "e244d67ae3b19faf"
+      },
+      {
+        "case": "D2_implicit_default_port",
+        "eventKey": "fixture-tool:release:port-case",
+        "radar": "security",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/4",
+        "sourceLevel": "research",
+        "observedAt": "2026-08-02T12:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/4",
+        "expectedObservationId": "e244d67ae3b19faf"
+      },
+      {
+        "case": "E1_trailing_slash",
+        "eventKey": "fixture-tool:release:slash-case",
+        "radar": "skill",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/5/",
+        "sourceLevel": "ecosystem",
+        "observedAt": "2026-08-01T13:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/5",
+        "expectedObservationId": "7fd6f078a99a9851"
+      },
+      {
+        "case": "E2_no_trailing_slash",
+        "eventKey": "fixture-tool:release:slash-case",
+        "radar": "skill",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/5",
+        "sourceLevel": "ecosystem",
+        "observedAt": "2026-08-02T13:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/5",
+        "expectedObservationId": "7fd6f078a99a9851"
+      },
+      {
+        "case": "F1_query_stable",
+        "eventKey": "fixture-tool:release:query-case",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/6?channel=stable",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T14:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/6?channel=stable",
+        "expectedObservationId": "9cb5c10f8d764f4c"
+      },
+      {
+        "case": "F2_query_beta",
+        "eventKey": "fixture-tool:release:query-case",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/6?channel=beta",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T14:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/6?channel=beta",
+        "expectedObservationId": "f7f44e79a2a2a97f"
+      },
+      {
+        "case": "F3_unknown_query_preserved",
+        "eventKey": "fixture-tool:release:query-case",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/6?z=2&a=1",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T14:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/6?z=2&a=1",
+        "expectedObservationId": "519e777574ca7882"
+      },
+      {
+        "case": "G_different_source_host",
+        "eventKey": "fixture-tool:release:source-case",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.org/release/7",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T15:00:00Z",
+        "canonicalSourceUrl": "https://example.org/release/7",
+        "expectedObservationId": "7231a632acfa25b4"
+      },
+      {
+        "case": "H1_same_event_ai_radar",
+        "eventKey": "fixture-tool:release:cross-radar",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.net/release/8",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T16:00:00Z",
+        "canonicalSourceUrl": "https://example.net/release/8",
+        "expectedObservationId": "15151e748e3f93ec"
+      },
+      {
+        "case": "H2_same_event_dev_radar",
+        "eventKey": "fixture-tool:release:cross-radar",
+        "radar": "dev",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.net/release/8",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T16:00:00Z",
+        "canonicalSourceUrl": "https://example.net/release/8",
+        "expectedObservationId": "be368a816221da13"
+      },
+      {
+        "case": "J1_publication_time_old",
+        "eventKey": "fixture-tool:release:published-time",
+        "radar": "app",
+        "sourceName": "Synthetic Fixture Source A",
+        "sourceUrl": "https://example.com/release/9",
+        "sourceLevel": "official",
+        "observedAt": "2026-08-01T17:00:00Z",
+        "sourcePublishedAt": "2026-07-30T10:00:00Z",
+        "sourceAuthority": "official",
+        "canonicalSourceUrl": "https://example.com/release/9",
+        "expectedObservationId": "22962e2dd0f64a9c"
+      },
+      {
+        "case": "J2_publication_time_corrected",
+        "eventKey": "fixture-tool:release:published-time",
+        "radar": "app",
+        "sourceName": "Synthetic Fixture Source B",
+        "sourceUrl": "https://example.com/release/9",
+        "sourceLevel": "media",
+        "observedAt": "2026-08-01T17:00:00Z",
+        "sourcePublishedAt": "2026-07-31T10:00:00Z",
+        "sourceAuthority": "secondary",
+        "canonicalSourceUrl": "https://example.com/release/9",
+        "expectedObservationId": "22962e2dd0f64a9c"
+      },
+      {
+        "case": "G2_different_source_host_pair",
+        "eventKey": "fixture-tool:release:source-case",
+        "radar": "ai",
+        "sourceName": "Synthetic Fixture Source",
+        "sourceUrl": "https://example.com/release/7",
+        "sourceLevel": "community",
+        "observedAt": "2026-08-01T15:00:00Z",
+        "canonicalSourceUrl": "https://example.com/release/7",
+        "expectedObservationId": "1ca067aa3718997c"
+      }
+    ],
+    "invalid": [
+      {
+        "case": "missing_eventKey",
+        "observation": {
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:eventKey"
+      },
+      {
+        "case": "missing_radar",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:radar"
+      },
+      {
+        "case": "missing_sourceName",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:sourceName"
+      },
+      {
+        "case": "missing_sourceUrl",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:sourceUrl"
+      },
+      {
+        "case": "missing_sourceLevel",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:sourceLevel"
+      },
+      {
+        "case": "missing_observedAt",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official"
+        },
+        "expected": "FAIL",
+        "error": "MISSING_REQUIRED_FIELD:observedAt"
+      },
+      {
+        "case": "invalid_observedAt",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official",
+          "observedAt": "not-a-timestamp"
+        },
+        "expected": "FAIL",
+        "error": "INVALID_ISO_DATE_TIME:observedAt"
+      },
+      {
+        "case": "invalid_url",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "not a url",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "INVALID_URL:sourceUrl"
+      },
+      {
+        "case": "unsupported_scheme",
+        "observation": {
+          "eventKey": "fixture-tool:release:invalid-case",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "ftp://example.com/file",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "UNSUPPORTED_URL_SCHEME:sourceUrl (https/http required)"
+      },
+      {
+        "case": "malformed_eventKey",
+        "observation": {
+          "eventKey": "Fixture Tool release",
+          "radar": "ai",
+          "sourceName": "Synthetic Fixture Source",
+          "sourceUrl": "https://example.com/invalid",
+          "sourceLevel": "official",
+          "observedAt": "2026-08-01T00:00:00Z"
+        },
+        "expected": "FAIL",
+        "error": "INVALID_EVENT_KEY:must match Contract 2.1.1 eventKey grammar"
+      }
+    ]
+  },
+  "identityExpectations": [
+    {
+      "case": "A_same_event_url_radar_refetch",
+      "members": [
+        "A1_same_tuple_first_observation",
+        "A2_same_tuple_refetch_later"
+      ],
+      "expected": "same observationId; observedAt and retrievedAt excluded",
+      "expectedIds": [
+        "7ddf3879990de725",
+        "7ddf3879990de725"
+      ]
+    },
+    {
+      "case": "B_fragment_removed",
+      "members": [
+        "B1_fragment_overview",
+        "B2_fragment_details"
+      ],
+      "expected": "same canonicalSourceUrl and observationId",
+      "expectedIds": [
+        "2dd5fb8cdb9b1b37",
+        "2dd5fb8cdb9b1b37"
+      ]
+    },
+    {
+      "case": "C_hostname_case_folded",
+      "members": [
+        "C1_hostname_uppercase",
+        "C2_hostname_lowercase"
+      ],
+      "expected": "same canonicalSourceUrl and observationId",
+      "expectedIds": [
+        "c34e5b60f0ea1908",
+        "c34e5b60f0ea1908"
+      ]
+    },
+    {
+      "case": "D_default_port_removed",
+      "members": [
+        "D1_explicit_default_port",
+        "D2_implicit_default_port"
+      ],
+      "expected": "same canonicalSourceUrl and observationId",
+      "expectedIds": [
+        "e244d67ae3b19faf",
+        "e244d67ae3b19faf"
+      ]
+    },
+    {
+      "case": "E_trailing_slash_removed",
+      "members": [
+        "E1_trailing_slash",
+        "E2_no_trailing_slash"
+      ],
+      "expected": "same canonicalSourceUrl and observationId",
+      "expectedIds": [
+        "7fd6f078a99a9851",
+        "7fd6f078a99a9851"
+      ]
+    },
+    {
+      "case": "F_query_preserved",
+      "members": [
+        "F1_query_stable",
+        "F2_query_beta",
+        "F3_unknown_query_preserved"
+      ],
+      "expected": "query preserved exactly; different queries produce different observationIds",
+      "expectedIds": [
+        "9cb5c10f8d764f4c",
+        "f7f44e79a2a2a97f",
+        "519e777574ca7882"
+      ]
+    },
+    {
+      "case": "G_different_source_url",
+      "members": [
+        "G_different_source_host",
+        "G2_different_source_host_pair"
+      ],
+      "expected": "different canonicalSourceUrl and observationId",
+      "expectedIds": [
+        "7231a632acfa25b4",
+        "1ca067aa3718997c"
+      ]
+    },
+    {
+      "case": "H_cross_radar",
+      "members": [
+        "H1_same_event_ai_radar",
+        "H2_same_event_dev_radar"
+      ],
+      "expected": "different observationId; same Event",
+      "expectedIds": [
+        "15151e748e3f93ec",
+        "be368a816221da13"
+      ]
+    },
+    {
+      "case": "J_metadata_only_changes",
+      "members": [
+        "J1_publication_time_old",
+        "J2_publication_time_corrected"
+      ],
+      "expected": "same observationId despite changed sourcePublishedAt, sourceName, sourceLevel, sourceAuthority",
+      "expectedIds": [
+        "22962e2dd0f64a9c",
+        "22962e2dd0f64a9c"
+      ]
+    }
+  ],
+  "timeOrderingFixture": {
+    "eventKey": "fixture-tool:release:initial",
+    "members": [
+      "A1_same_tuple_first_observation",
+      "A2_same_tuple_refetch_later"
+    ],
+    "expectedFirstSeen": "2026-08-01T09:00:00Z",
+    "expectedLastSeen": "2026-08-03T10:00:00Z",
+    "expectedObservationId": "7ddf3879990de725"
+  },
+  "policyVersion": "1.0",
+  "policyReference": {
+    "version": "1.0",
+    "jsonSha256": "c7761cdeae712deb6096fce67b1324f5d1acac55ed3b0df6e91a1a49a8c9de51",
+    "markdownSha256": "a9664ead4ef3288884b5b657851cd7868b5a37b70ccb4f89e0cac760a574fa3e"
+  }
+}

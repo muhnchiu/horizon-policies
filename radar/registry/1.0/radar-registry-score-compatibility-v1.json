@@ -1,0 +1,1585 @@
+{
+  "artifact": "radar-registry-score-compatibility-v1",
+  "policyVersion": "1.0",
+  "status": "VERIFIED",
+  "compatibility": [
+    {
+      "registryPolicy": "1.0",
+      "scorePolicy": "2.0",
+      "result": "COMPATIBLE",
+      "declarationIssued": true,
+      "consumed": [
+        "identity",
+        "evidence",
+        "event state",
+        "material fingerprint",
+        "observation facts"
+      ],
+      "notConsumed": [
+        "score",
+        "signal",
+        "action",
+        "modifier"
+      ]
+    },
+    {
+      "registryPolicy": "1.0",
+      "scorePolicy": "2.0.1",
+      "result": "COMPATIBLE",
+      "declarationIssued": true,
+      "consumed": [
+        "identity",
+        "evidence",
+        "event state",
+        "material fingerprint",
+        "observation facts"
+      ],
+      "notConsumed": [
+        "score",
+        "signal",
+        "action",
+        "modifier"
+      ]
+    }
+  ],
+  "projectionAudit": {
+    "result": "PASS",
+    "scope": "deterministic synthetic temporary-directory Registry persistence projection; no production dataset join is claimed",
+    "candidateCount": 50,
+    "scoreReplayHashes": {
+      "score2_0": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+      "score2_0_1": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f"
+    },
+    "registryProjectionEqual": true,
+    "registryProjectionSha256": "4409b2e795ef9e628960a0dca67af817337a623bcc83f77a6627a3de2cb0232b",
+    "projectionFields": [
+      "eventKey",
+      "eventState",
+      "materialChange",
+      "duplicate",
+      "observationId",
+      "occurrences",
+      "Registry write behavior",
+      "transaction behavior",
+      "snapshot behavior",
+      "receipt behavior"
+    ],
+    "perPolicy": {
+      "score2_0": {
+        "eventsBeforeF34Update": 50,
+        "observationsBeforeF34Update": 50,
+        "committedOperations": 102,
+        "transactionIdsAllocatedIncludingRead": 103,
+        "journalState": "COMMITTED",
+        "snapshotValid": true
+      },
+      "score2_0_1": {
+        "eventsBeforeF34Update": 50,
+        "observationsBeforeF34Update": 50,
+        "committedOperations": 102,
+        "transactionIdsAllocatedIncludingRead": 103,
+        "journalState": "COMMITTED",
+        "snapshotValid": true
+      }
+    },
+    "candidateResults": [
+      {
+        "id": 1,
+        "first": {
+          "eventKey": "openai-gpt6:release:score-compat-f01",
+          "observationId": "fe2e58f403c09746",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "openai-gpt6:release:score-compat-f01",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "openai-gpt6:release:score-compat-f01",
+          "observationId": "fe2e58f403c09746",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "openai-gpt6:release:score-compat-f01",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 2,
+        "first": {
+          "eventKey": "anthropic-opus:release:score-compat-f02",
+          "observationId": "7c6d7c8d8ef7adfc",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "anthropic-opus:release:score-compat-f02",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "anthropic-opus:release:score-compat-f02",
+          "observationId": "7c6d7c8d8ef7adfc",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "anthropic-opus:release:score-compat-f02",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 3,
+        "first": {
+          "eventKey": "deepseek-v4.1:release:score-compat-f03",
+          "observationId": "76b70b82ea76eae1",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "deepseek-v4.1:release:score-compat-f03",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "deepseek-v4.1:release:score-compat-f03",
+          "observationId": "76b70b82ea76eae1",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "deepseek-v4.1:release:score-compat-f03",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 4,
+        "first": {
+          "eventKey": "zcode:release:score-compat-f04",
+          "observationId": "de2a7b33eafbe1f8",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f04",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "zcode:release:score-compat-f04",
+          "observationId": "de2a7b33eafbe1f8",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f04",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 5,
+        "first": {
+          "eventKey": "snorkel:release:score-compat-f05",
+          "observationId": "b1b5d1c7ef1c739d",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "snorkel:release:score-compat-f05",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "snorkel:release:score-compat-f05",
+          "observationId": "b1b5d1c7ef1c739d",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "snorkel:release:score-compat-f05",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 6,
+        "first": {
+          "eventKey": "xiaomi-mimo:release:score-compat-f06",
+          "observationId": "bda6dfcab284803d",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "xiaomi-mimo:release:score-compat-f06",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "xiaomi-mimo:release:score-compat-f06",
+          "observationId": "bda6dfcab284803d",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "xiaomi-mimo:release:score-compat-f06",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 7,
+        "first": {
+          "eventKey": "deepseek-v4.1:release:score-compat-f07",
+          "observationId": "fef4752c0e0ebc6f",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "deepseek-v4.1:release:score-compat-f07",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "deepseek-v4.1:release:score-compat-f07",
+          "observationId": "fef4752c0e0ebc6f",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "deepseek-v4.1:release:score-compat-f07",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 8,
+        "first": {
+          "eventKey": "chatgpt-voice-agent:release:score-compat-f08",
+          "observationId": "074915be75a1374e",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "chatgpt-voice-agent:release:score-compat-f08",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "chatgpt-voice-agent:release:score-compat-f08",
+          "observationId": "074915be75a1374e",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "chatgpt-voice-agent:release:score-compat-f08",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 9,
+        "first": {
+          "eventKey": "zcode:release:score-compat-f09",
+          "observationId": "b2460af9e4746461",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f09",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "zcode:release:score-compat-f09",
+          "observationId": "b2460af9e4746461",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f09",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 10,
+        "first": {
+          "eventKey": "glm-5.2-openrouter:release:score-compat-f10",
+          "observationId": "e0e5b9d6b56b256e",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "glm-5.2-openrouter:release:score-compat-f10",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "glm-5.2-openrouter:release:score-compat-f10",
+          "observationId": "e0e5b9d6b56b256e",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "glm-5.2-openrouter:release:score-compat-f10",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 11,
+        "first": {
+          "eventKey": "atuin:release:score-compat-f11",
+          "observationId": "9fba2ea9748bd3d1",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "atuin:release:score-compat-f11",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "atuin:release:score-compat-f11",
+          "observationId": "9fba2ea9748bd3d1",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "atuin:release:score-compat-f11",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 12,
+        "first": {
+          "eventKey": "https-capture:release:score-compat-f12",
+          "observationId": "9c87da8dace60155",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "https-capture:release:score-compat-f12",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "https-capture:release:score-compat-f12",
+          "observationId": "9c87da8dace60155",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "https-capture:release:score-compat-f12",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 13,
+        "first": {
+          "eventKey": "obscura-vpn:release:score-compat-f13",
+          "observationId": "ef967ffa0c759e33",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obscura-vpn:release:score-compat-f13",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "obscura-vpn:release:score-compat-f13",
+          "observationId": "ef967ffa0c759e33",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obscura-vpn:release:score-compat-f13",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 14,
+        "first": {
+          "eventKey": "morloc:release:score-compat-f14",
+          "observationId": "d3d54fe05a93e7f3",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "morloc:release:score-compat-f14",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "morloc:release:score-compat-f14",
+          "observationId": "d3d54fe05a93e7f3",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "morloc:release:score-compat-f14",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 15,
+        "first": {
+          "eventKey": "pgsty-silo:release:score-compat-f15",
+          "observationId": "40cec273be58d572",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "pgsty-silo:release:score-compat-f15",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "pgsty-silo:release:score-compat-f15",
+          "observationId": "40cec273be58d572",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "pgsty-silo:release:score-compat-f15",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 16,
+        "first": {
+          "eventKey": "https-capture:release:score-compat-f16",
+          "observationId": "3e86a8ebc0763e91",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "https-capture:release:score-compat-f16",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "https-capture:release:score-compat-f16",
+          "observationId": "3e86a8ebc0763e91",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "https-capture:release:score-compat-f16",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 17,
+        "first": {
+          "eventKey": "radicle:release:score-compat-f17",
+          "observationId": "f40a1dede4196c3d",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "radicle:release:score-compat-f17",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "radicle:release:score-compat-f17",
+          "observationId": "f40a1dede4196c3d",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "radicle:release:score-compat-f17",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 18,
+        "first": {
+          "eventKey": "agents-md-telemetry:release:score-compat-f18",
+          "observationId": "d601de1839c32f5e",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "agents-md-telemetry:release:score-compat-f18",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "agents-md-telemetry:release:score-compat-f18",
+          "observationId": "d601de1839c32f5e",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "agents-md-telemetry:release:score-compat-f18",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 19,
+        "first": {
+          "eventKey": "atuin:release:score-compat-f19",
+          "observationId": "b9c1719b411e0c84",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "atuin:release:score-compat-f19",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "atuin:release:score-compat-f19",
+          "observationId": "b9c1719b411e0c84",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "atuin:release:score-compat-f19",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 20,
+        "first": {
+          "eventKey": "tailscale:release:score-compat-f20",
+          "observationId": "9bea0845b3060181",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "tailscale:release:score-compat-f20",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "tailscale:release:score-compat-f20",
+          "observationId": "9bea0845b3060181",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "tailscale:release:score-compat-f20",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 21,
+        "first": {
+          "eventKey": "fast-jev-compaction:release:score-compat-f21",
+          "observationId": "4959d18e6cf50bf3",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "fast-jev-compaction:release:score-compat-f21",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "fast-jev-compaction:release:score-compat-f21",
+          "observationId": "4959d18e6cf50bf3",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "fast-jev-compaction:release:score-compat-f21",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 22,
+        "first": {
+          "eventKey": "abide:release:score-compat-f22",
+          "observationId": "0285ea2d6d6db518",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "abide:release:score-compat-f22",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "abide:release:score-compat-f22",
+          "observationId": "0285ea2d6d6db518",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "abide:release:score-compat-f22",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 23,
+        "first": {
+          "eventKey": "zcode:release:score-compat-f23",
+          "observationId": "ec91dfbce110376d",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f23",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "zcode:release:score-compat-f23",
+          "observationId": "ec91dfbce110376d",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f23",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 24,
+        "first": {
+          "eventKey": "cometixcode:release:score-compat-f24",
+          "observationId": "401502d9e411cf34",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cometixcode:release:score-compat-f24",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "cometixcode:release:score-compat-f24",
+          "observationId": "401502d9e411cf34",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cometixcode:release:score-compat-f24",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 25,
+        "first": {
+          "eventKey": "jev-review-mcp:release:score-compat-f25",
+          "observationId": "e770aa759bd221b2",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "jev-review-mcp:release:score-compat-f25",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "jev-review-mcp:release:score-compat-f25",
+          "observationId": "e770aa759bd221b2",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "jev-review-mcp:release:score-compat-f25",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 26,
+        "first": {
+          "eventKey": "zcode:release:score-compat-f26",
+          "observationId": "34bbebf70668db74",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f26",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "zcode:release:score-compat-f26",
+          "observationId": "34bbebf70668db74",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "zcode:release:score-compat-f26",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 27,
+        "first": {
+          "eventKey": "claude-code:release:score-compat-f27",
+          "observationId": "832ecb3dc313e758",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "claude-code:release:score-compat-f27",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "claude-code:release:score-compat-f27",
+          "observationId": "832ecb3dc313e758",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "claude-code:release:score-compat-f27",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 28,
+        "first": {
+          "eventKey": "cometixcode:release:score-compat-f28",
+          "observationId": "48c3d43ef2a3fc85",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cometixcode:release:score-compat-f28",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "cometixcode:release:score-compat-f28",
+          "observationId": "48c3d43ef2a3fc85",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cometixcode:release:score-compat-f28",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 29,
+        "first": {
+          "eventKey": "cordium:release:score-compat-f29",
+          "observationId": "ee3b04a7db20d6d7",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cordium:release:score-compat-f29",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "cordium:release:score-compat-f29",
+          "observationId": "ee3b04a7db20d6d7",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cordium:release:score-compat-f29",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 30,
+        "first": {
+          "eventKey": "agentrun:release:score-compat-f30",
+          "observationId": "688c7d68a037e353",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "agentrun:release:score-compat-f30",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "agentrun:release:score-compat-f30",
+          "observationId": "688c7d68a037e353",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "agentrun:release:score-compat-f30",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 31,
+        "first": {
+          "eventKey": "gigatech-pdv5701:release:score-compat-f31",
+          "observationId": "6788982b4c047044",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "gigatech-pdv5701:release:score-compat-f31",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "gigatech-pdv5701:release:score-compat-f31",
+          "observationId": "6788982b4c047044",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "gigatech-pdv5701:release:score-compat-f31",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 32,
+        "first": {
+          "eventKey": "linux-kernel-cisa:release:score-compat-f32",
+          "observationId": "4a911a90f3237f5c",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "linux-kernel-cisa:release:score-compat-f32",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "linux-kernel-cisa:release:score-compat-f32",
+          "observationId": "4a911a90f3237f5c",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "linux-kernel-cisa:release:score-compat-f32",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 33,
+        "first": {
+          "eventKey": "f5-bigip:release:score-compat-f33",
+          "observationId": "b841387c694b85bf",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "f5-bigip:release:score-compat-f33",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "f5-bigip:release:score-compat-f33",
+          "observationId": "b841387c694b85bf",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "f5-bigip:release:score-compat-f33",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 34,
+        "first": {
+          "eventKey": "wordpress-metabox:release:score-compat-f34",
+          "observationId": "25518c5f2701bdff",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "wordpress-metabox:release:score-compat-f34",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "wordpress-metabox:release:score-compat-f34",
+          "observationId": "25518c5f2701bdff",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "wordpress-metabox:release:score-compat-f34",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 35,
+        "first": {
+          "eventKey": "gecko-security:release:score-compat-f35",
+          "observationId": "3e41ad47b4f961f6",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "gecko-security:release:score-compat-f35",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "gecko-security:release:score-compat-f35",
+          "observationId": "3e41ad47b4f961f6",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "gecko-security:release:score-compat-f35",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 36,
+        "first": {
+          "eventKey": "jackson-databind:release:score-compat-f36",
+          "observationId": "406fe00dd3523f36",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "jackson-databind:release:score-compat-f36",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "jackson-databind:release:score-compat-f36",
+          "observationId": "406fe00dd3523f36",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "jackson-databind:release:score-compat-f36",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 37,
+        "first": {
+          "eventKey": "fast-fac1203r:release:score-compat-f37",
+          "observationId": "c83aa513c7e51027",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "fast-fac1203r:release:score-compat-f37",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "fast-fac1203r:release:score-compat-f37",
+          "observationId": "c83aa513c7e51027",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "fast-fac1203r:release:score-compat-f37",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 38,
+        "first": {
+          "eventKey": "f5-bigip:release:score-compat-f38",
+          "observationId": "56ebcf26c410443d",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "f5-bigip:release:score-compat-f38",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "f5-bigip:release:score-compat-f38",
+          "observationId": "56ebcf26c410443d",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "f5-bigip:release:score-compat-f38",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 39,
+        "first": {
+          "eventKey": "checkpoint:release:score-compat-f39",
+          "observationId": "1ba812d64d6d8b2f",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "checkpoint:release:score-compat-f39",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "checkpoint:release:score-compat-f39",
+          "observationId": "1ba812d64d6d8b2f",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "checkpoint:release:score-compat-f39",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 40,
+        "first": {
+          "eventKey": "linux-kernel-cisa:release:score-compat-f40",
+          "observationId": "85ace082677ea197",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "linux-kernel-cisa:release:score-compat-f40",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "linux-kernel-cisa:release:score-compat-f40",
+          "observationId": "85ace082677ea197",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "linux-kernel-cisa:release:score-compat-f40",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 41,
+        "first": {
+          "eventKey": "azure-skills:release:score-compat-f41",
+          "observationId": "695b8b8c1179e1ff",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "azure-skills:release:score-compat-f41",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "azure-skills:release:score-compat-f41",
+          "observationId": "695b8b8c1179e1ff",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "azure-skills:release:score-compat-f41",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 42,
+        "first": {
+          "eventKey": "obra-superpowers:release:score-compat-f42",
+          "observationId": "5cd0cdb95cdcb3b1",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obra-superpowers:release:score-compat-f42",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "obra-superpowers:release:score-compat-f42",
+          "observationId": "5cd0cdb95cdcb3b1",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obra-superpowers:release:score-compat-f42",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 43,
+        "first": {
+          "eventKey": "cicd-pipeline-skill:release:score-compat-f43",
+          "observationId": "595a62d6a5c226aa",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cicd-pipeline-skill:release:score-compat-f43",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "cicd-pipeline-skill:release:score-compat-f43",
+          "observationId": "595a62d6a5c226aa",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "cicd-pipeline-skill:release:score-compat-f43",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 44,
+        "first": {
+          "eventKey": "skillopt:release:score-compat-f44",
+          "observationId": "7f05929b2a7d6ad6",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "skillopt:release:score-compat-f44",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "skillopt:release:score-compat-f44",
+          "observationId": "7f05929b2a7d6ad6",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "skillopt:release:score-compat-f44",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 45,
+        "first": {
+          "eventKey": "self-improving-agent:release:score-compat-f45",
+          "observationId": "f4c4d9867103fa03",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "self-improving-agent:release:score-compat-f45",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "self-improving-agent:release:score-compat-f45",
+          "observationId": "f4c4d9867103fa03",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "self-improving-agent:release:score-compat-f45",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 46,
+        "first": {
+          "eventKey": "lark-cli-skills:release:score-compat-f46",
+          "observationId": "048e9572e2b47af7",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "lark-cli-skills:release:score-compat-f46",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "lark-cli-skills:release:score-compat-f46",
+          "observationId": "048e9572e2b47af7",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "lark-cli-skills:release:score-compat-f46",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 47,
+        "first": {
+          "eventKey": "obra-superpowers:release:score-compat-f47",
+          "observationId": "eb232cf80bcb3104",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obra-superpowers:release:score-compat-f47",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "obra-superpowers:release:score-compat-f47",
+          "observationId": "eb232cf80bcb3104",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "obra-superpowers:release:score-compat-f47",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 48,
+        "first": {
+          "eventKey": "azure-skills:release:score-compat-f48",
+          "observationId": "1e80c6435f0b40ba",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "azure-skills:release:score-compat-f48",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "azure-skills:release:score-compat-f48",
+          "observationId": "1e80c6435f0b40ba",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "azure-skills:release:score-compat-f48",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 49,
+        "first": {
+          "eventKey": "diagram-skill:release:score-compat-f49",
+          "observationId": "7cc0cd1beaf3af77",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "diagram-skill:release:score-compat-f49",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "diagram-skill:release:score-compat-f49",
+          "observationId": "7cc0cd1beaf3af77",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "diagram-skill:release:score-compat-f49",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      },
+      {
+        "id": 50,
+        "first": {
+          "eventKey": "skillopt:release:score-compat-f50",
+          "observationId": "34f72b61f1035fed",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "skillopt:release:score-compat-f50",
+          "observationCreated": true,
+          "eventCreated": true,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        },
+        "retry": {
+          "eventKey": "skillopt:release:score-compat-f50",
+          "observationId": "34f72b61f1035fed",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false,
+          "occurrences": 1,
+          "recordIdentity": "skillopt:release:score-compat-f50",
+          "observationCreated": false,
+          "eventCreated": false,
+          "eventUpdated": false,
+          "registryWriteStatus": "COMMITTED"
+        }
+      }
+    ],
+    "scoreOutputsPassedIntoRegistry": false
+  },
+  "f34Regression": {
+    "result": "PASS",
+    "scorePolicy2_0": {
+      "radarModifier": 1,
+      "finalScore": 18,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    "scorePolicy2_0_1": {
+      "radarModifier": -2,
+      "finalScore": 15,
+      "signal": "filtered",
+      "action": "ignore",
+      "filtered": true,
+      "filterReason": "Security Gate UNRELATED"
+    },
+    "changedScoreFields": [
+      "radarModifier",
+      "finalScore"
+    ],
+    "registryProjectionEqual": true,
+    "projection": {
+      "eventKey": "wordpress-metabox:release:score-compat-f34-update",
+      "observationId": "8a91d617cbf4a10b",
+      "eventState": "UPDATE",
+      "duplicate": false,
+      "materialChange": true,
+      "occurrences": 2,
+      "recordIdentity": "wordpress-metabox:release:score-compat-f34-update",
+      "observationCreated": true,
+      "eventCreated": false,
+      "eventUpdated": true,
+      "registryWriteStatus": "COMMITTED"
+    }
+  },
+  "verification": {
+    "contractPin": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49",
+    "scorePolicy2_0Verifier": "PASS",
+    "scorePolicy2_0_1Verifier": "PASS",
+    "registrySuite": "96/96 PASS",
+    "projectionEvidenceSource": "prior isolated temporary-root replay artifact re-audited; Registry source boundary and both Score verifiers rerun during canonicalization",
+    "verifiedAt": "2026-09-30T12:10:39Z"
+  },
+  "conclusion": "Score Policy 2.0 and 2.0.1 change F34 scoring projection only; the persisted Registry identity/state/observation projection and transaction/snapshot/receipt behavior are identical."
+}

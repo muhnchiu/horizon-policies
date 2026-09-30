@@ -1,0 +1,1102 @@
+{
+  "policyVersion": "1.0",
+  "status": "FROZEN",
+  "canonicalizationVersion": "1.0",
+  "authority": {
+    "sourceOfTruth": "radar-registry-design-v1.md",
+    "precedence": [
+      "Frozen Registry Design",
+      "Frozen Registry Schema",
+      "implementation conformance evidence"
+    ],
+    "implementationEvidenceRole": "Conformance only; implementation does not define policy semantics."
+  },
+  "applicability": {
+    "contractVersion": "2.1.2",
+    "schemaVersion": 2,
+    "distributionPin": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49",
+    "eventPolicy": "1.0",
+    "observationPolicy": "1.0"
+  },
+  "registryModel": {
+    "rules": [
+      {
+        "ruleId": "registry.storage-model",
+        "sourceSection": "§ Architecture",
+        "canonicalValue": {
+          "storage": "two independent local JSONL snapshots",
+          "eventPath": "~/.local/state/horizon/radar-event-registry.jsonl",
+          "observationPath": "~/.local/state/horizon/radar-observation-registry.jsonl",
+          "databaseOrNetworkDependency": false
+        }
+      },
+      {
+        "ruleId": "registry.row-order-and-format",
+        "sourceSection": "§ Architecture",
+        "canonicalValue": {
+          "row": "one canonical JSON object per line",
+          "ordering": "sorted by identity key",
+          "finalNewline": true
+        }
+      },
+      {
+        "ruleId": "registry.access-consistency",
+        "sourceSection": "§ Architecture",
+        "canonicalValue": {
+          "writer": "locked read/validate/merge/atomic replacement of complete snapshots",
+          "consistentReader": "acquire the same global lock"
+        }
+      },
+      {
+        "ruleId": "registry.auxiliary-state",
+        "sourceSection": "§ Architecture",
+        "canonicalValue": {
+          "lock": "radar-registry.lock/",
+          "journal": "radar-registry-transaction.json",
+          "staging": "radar-registry-staging/<transaction-id>/",
+          "quarantine": "radar-registry-quarantine/"
+        }
+      },
+      {
+        "ruleId": "registry.no-secondary-index",
+        "sourceSection": "§ Architecture",
+        "canonicalValue": {
+          "secondaryIndex": false,
+          "reconsiderOnlyAfter": "measured lookup cost justifies added consistency burden"
+        }
+      }
+    ]
+  },
+  "eventRegistry": {
+    "key": "eventKey",
+    "recordFields": [
+      {
+        "field": "eventKey",
+        "classification": "STORED",
+        "constraint": "unique; Contract 2.1.2 eventKey grammar"
+      },
+      {
+        "field": "entity",
+        "classification": "STORED",
+        "constraint": "exact first segment of eventKey"
+      },
+      {
+        "field": "canonicalEventType",
+        "classification": "STORED",
+        "constraint": "Frozen Event Policy enum; equals eventKey type segment"
+      },
+      {
+        "field": "firstObservedAt",
+        "classification": "DERIVED",
+        "constraint": "minimum explicit observedAt among linked Observations; never report date/publication time"
+      },
+      {
+        "field": "lastObservedAt",
+        "classification": "DERIVED",
+        "constraint": "maximum explicit observedAt among linked Observations"
+      },
+      {
+        "field": "occurrences",
+        "classification": "DERIVED",
+        "constraint": "unique linked Observation IDs; validator recomputes"
+      },
+      {
+        "field": "latestFingerprint",
+        "classification": "STORED",
+        "constraint": "16 lowercase hex SHA-256 prefix over frozen Event fact fields"
+      },
+      {
+        "field": "fingerprintHistory",
+        "classification": "STORED_INTERNAL",
+        "constraint": "ordered digest/eventState/observedAt transitions; append only for accepted UPDATE with changed digest; no raw facts"
+      },
+      {
+        "field": "lastEventState",
+        "classification": "STORED",
+        "constraint": "most recent candidate evaluation"
+      },
+      {
+        "field": "radars",
+        "classification": "DERIVED",
+        "constraint": "sorted unique radars among linked Observations"
+      },
+      {
+        "field": "observationIds",
+        "classification": "DERIVED",
+        "constraint": "sorted unique linked Observation IDs"
+      },
+      {
+        "field": "createdAt",
+        "classification": "STORED_INTERNAL",
+        "constraint": "local registry writer UTC time at first creation"
+      },
+      {
+        "field": "updatedAt",
+        "classification": "STORED_INTERNAL",
+        "constraint": "local registry writer UTC time for committed change"
+      }
+    ],
+    "rules": [
+      {
+        "ruleId": "event.registry.one-row-per-key",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "cardinality": "one row per eventKey"
+        }
+      },
+      {
+        "ruleId": "event.registry.aggregate-source",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "aggregateAuthority": "linked Observation Registry records",
+          "radarMaySetAggregates": false
+        }
+      }
+    ]
+  },
+  "observationRegistry": {
+    "key": "observationId",
+    "identity": {
+      "policy": "Observation Policy 1.0",
+      "input": "eventKey + newline + canonicalSourceUrl + newline + radar",
+      "encoding": "UTF-8",
+      "digest": "SHA-256",
+      "id": "first 16 lowercase hexadecimal characters"
+    },
+    "recordFields": [
+      {
+        "field": "observationId",
+        "classification": "STORED",
+        "constraint": "unique; recomputation must match"
+      },
+      {
+        "field": "eventKey",
+        "classification": "STORED",
+        "constraint": "resolves to one Event in committed generation"
+      },
+      {
+        "field": "radar",
+        "classification": "STORED",
+        "constraint": "frozen radar enum; identity component"
+      },
+      {
+        "field": "canonicalSourceUrl",
+        "classification": "STORED",
+        "constraint": "Observation Policy 1.0 canonical URL; identity component"
+      },
+      {
+        "field": "sourceUrl",
+        "classification": "STORED",
+        "constraint": "most recently accepted raw URL including fragment; not identity"
+      },
+      {
+        "field": "sourceName",
+        "classification": "STORED",
+        "constraint": "most recently accepted metadata; not identity"
+      },
+      {
+        "field": "sourceLevel",
+        "classification": "STORED",
+        "constraint": "Contract enum; not identity"
+      },
+      {
+        "field": "sourceAuthority",
+        "classification": "STORED_OPTIONAL",
+        "constraint": "frozen enum; not identity"
+      },
+      {
+        "field": "sourcePublishedAt",
+        "classification": "STORED_OPTIONAL",
+        "constraint": "source metadata; not identity or observation time"
+      },
+      {
+        "field": "observedAt",
+        "classification": "STORED",
+        "constraint": "explicit observation time"
+      },
+      {
+        "field": "firstObservedAt",
+        "classification": "DERIVED",
+        "constraint": "minimum accepted explicit observedAt"
+      },
+      {
+        "field": "lastObservedAt",
+        "classification": "DERIVED",
+        "constraint": "maximum accepted explicit observedAt"
+      },
+      {
+        "field": "retrievedAt",
+        "classification": "STORED_OPTIONAL_INTERNAL",
+        "constraint": "latest local fetch/read time"
+      },
+      {
+        "field": "createdAt",
+        "classification": "STORED_INTERNAL",
+        "constraint": "local writer UTC time at first insertion"
+      },
+      {
+        "field": "lastRetrievedAt",
+        "classification": "STORED_OPTIONAL_INTERNAL",
+        "constraint": "latest explicit retrieval time"
+      }
+    ],
+    "rules": [
+      {
+        "ruleId": "observation.registry.one-row-per-identity",
+        "sourceSection": "§ Observation Registry record",
+        "canonicalValue": {
+          "cardinality": "one row per observationId",
+          "repeatBehavior": "upsert same row; refresh accepted metadata and explicit time bounds"
+        }
+      }
+    ]
+  },
+  "occurrencesPolicy": {
+    "rules": [
+      {
+        "ruleId": "occurrences.definition",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "value": "count(unique observationId values linked to eventKey)",
+          "classification": "DERIVED",
+          "reconstructibleFrom": "Observation Registry only"
+        }
+      },
+      {
+        "ruleId": "occurrences.recompute-and-compare",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "validator": "recompute every time and compare stored cache",
+          "mismatchCode": "REGISTRY_OCCURRENCE_MISMATCH",
+          "autoRepair": false
+        }
+      },
+      {
+        "ruleId": "occurrences.identity-effects",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "sameObservationRefetch": 0,
+          "sameEventSameSourceSameRadar": 0,
+          "sameEventDifferentSource": 1,
+          "sameEventSameSourceDifferentRadar": 1,
+          "duplicateWithoutNewObservation": 0,
+          "updateFromExistingObservation": 0,
+          "updateWithNewObservation": 1
+        }
+      }
+    ]
+  },
+  "lockingPolicy": {
+    "rules": [
+      {
+        "ruleId": "lock.global-scope",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "path": "~/.local/state/horizon/radar-registry.lock/",
+          "scope": "single global lock across AI, DEV, SKILL, APP, SEC",
+          "covers": [
+            "registry load",
+            "validation",
+            "commit",
+            "snapshot"
+          ],
+          "excludes": [
+            "collection",
+            "scoring",
+            "network work"
+          ]
+        }
+      },
+      {
+        "ruleId": "lock.owner-metadata",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "required": [
+            "pid",
+            "startedAt",
+            "transactionId",
+            "hostname",
+            "unique lock token"
+          ],
+          "transactionIdGenerated": "before acquisition",
+          "tokenPurpose": "prevent removing a replacement lock"
+        }
+      },
+      {
+        "ruleId": "lock.acquisition-timeout",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "seconds": 120,
+          "rationale": "allow short filesystem transactions and normal overlapping cron starts while failing stalled runs"
+        }
+      },
+      {
+        "ruleId": "lock.cron-overlap-assumption",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "nonOverlapGuaranteed": false,
+          "cronTimingIsLock": false
+        }
+      }
+    ]
+  },
+  "processIdentityPolicy": {
+    "rules": [
+      {
+        "ruleId": "lock.process-identity",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "staleOwnerProof": "same-host valid owner; PID plus process-start identity proves owner is gone",
+          "pidReuse": "distinguish process start identity",
+          "lookupUnknownOrAmbiguous": "fail safe; preserve lock"
+        }
+      }
+    ]
+  },
+  "staleLockPolicy": {
+    "rules": [
+      {
+        "ruleId": "lock.stale-threshold",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "minutes": 15
+        }
+      },
+      {
+        "ruleId": "lock.stale-recovery",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "eligibleOnlyWhen": [
+            "same host",
+            "owner metadata valid",
+            "age exceeds 15 minutes",
+            "PID and process-start identity prove owner is gone"
+          ],
+          "beforeRetry": "recheck unique token and atomically rename lock directory into quarantine",
+          "neverBreakLiveOwner": true,
+          "foreignOwnerlessMalformedOrAmbiguous": "preserve; manual review after acquisition timeout"
+        }
+      }
+    ]
+  },
+  "transactionPolicy": {
+    "rules": [
+      {
+        "ruleId": "transaction.candidate-boundary",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "logicalTransaction": "both Event and Observation mutation for one candidate"
+        }
+      },
+      {
+        "ruleId": "transaction.phase-order",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": [
+          "LOCK",
+          "LOAD",
+          "VALIDATE",
+          "PREPARE",
+          "WRITE TEMP EVENT",
+          "WRITE TEMP OBSERVATION",
+          "FSYNC",
+          "WRITE TRANSACTION JOURNAL (PREPARED)",
+          "ATOMIC RENAME REGISTRIES",
+          "VALIDATE PAIR",
+          "JOURNAL COMMITTED",
+          "SNAPSHOT",
+          "UNLOCK"
+        ]
+      },
+      {
+        "ruleId": "transaction.prepared-readers",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "whilePrepared": "all readers and writers acquire same global lock and do not treat pair as committed"
+        }
+      },
+      {
+        "ruleId": "transaction.durable-prepare",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "beforePreparedJournal": [
+            "staged Event file",
+            "staged Observation file",
+            "expected old hashes",
+            "expected new hashes"
+          ],
+          "fsync": true
+        }
+      }
+    ]
+  },
+  "atomicCommitPolicy": {
+    "rules": [
+      {
+        "ruleId": "transaction.atomicity-boundary",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "perFile": "atomic rename on same filesystem",
+          "pairRename": "not one OS-atomic operation",
+          "pairConsistency": "journal plus lock"
+        }
+      },
+      {
+        "ruleId": "transaction.pair-validation",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "afterRenames": [
+            "validate complete pair and cross-references",
+            "verify both new hashes"
+          ],
+          "then": "atomically mark journal COMMITTED"
+        }
+      }
+    ]
+  },
+  "recoveryPolicy": {
+    "rules": [
+      {
+        "ruleId": "recovery.prepared-forward",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "stagedFiles": "verify both against recorded new hashes",
+          "destinationAllowedHashes": [
+            "recorded old hash",
+            "recorded new hash"
+          ],
+          "oldHashAction": "atomically install staged new file",
+          "newHashAction": "leave in place",
+          "finish": "validate pair, verify both new hashes, atomically mark COMMITTED"
+        }
+      },
+      {
+        "ruleId": "recovery.fail-closed",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "on": [
+            "destination hash matches neither old nor new",
+            "staging missing or corrupt",
+            "pair validation failure"
+          ],
+          "action": "preserve all bytes in quarantine; manual intervention; never publish partial pair"
+        }
+      },
+      {
+        "ruleId": "recovery.before-prepared",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "state": "uncommitted staging only",
+          "action": "quarantine or clean only after confirming neither registry was replaced"
+        }
+      },
+      {
+        "ruleId": "recovery.snapshot-failure",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "registryTransaction": "remains COMMITTED",
+          "action": "retry paired snapshot under lock; do not roll back Registry"
+        }
+      },
+      {
+        "ruleId": "recovery.no-silent-rebuild",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "derivedEventFieldsMayBeRebuiltOnlyFrom": "fully validated Observation Registry",
+          "notReconstructible": [
+            "latestFingerprint",
+            "fingerprintHistory",
+            "lastEventState"
+          ],
+          "completeRecovery": false
+        }
+      }
+    ]
+  },
+  "corruptionPolicy": {
+    "rules": [
+      {
+        "ruleId": "corruption.read-only-validation",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "validationMutatesRegistry": false,
+          "anyFailure": "stop before mutation and preserve original bytes with timestamp and reason"
+        }
+      },
+      {
+        "ruleId": "corruption.partial-jsonl",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "action": "reject whole snapshot and preserve bytes; never drop tail",
+          "recovery": "verified paired snapshot or manual intervention"
+        }
+      },
+      {
+        "ruleId": "corruption.parse-failure",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "action": "reject and quarantine",
+          "recovery": "hash-verified snapshot or manual intervention"
+        }
+      },
+      {
+        "ruleId": "corruption.cross-file-mismatch",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "validPreparedJournal": "finish forward",
+          "otherwise": "quarantine both files as one generation"
+        }
+      },
+      {
+        "ruleId": "corruption.fingerprint-history",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "latestFingerprintMustEqual": "final history digest",
+          "action": "reject; never reconstruct lost transitions silently"
+        }
+      },
+      {
+        "ruleId": "corruption.duplicate-identities",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "keys": [
+            "eventKey",
+            "observationId"
+          ],
+          "action": "reject and preserve all rows; no automatic winner selection"
+        }
+      },
+      {
+        "ruleId": "corruption.event-without-observation",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "allowedOnly": "explicit staged Event awaiting its Observation within PREPARED transaction",
+          "committedGeneration": "every Event has at least one Observation"
+        }
+      },
+      {
+        "ruleId": "corruption.observation-without-event",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "committedGeneration": "reject",
+          "validPreparedTransaction": "may install missing Event from staged pair",
+          "otherwise": "manual intervention"
+        }
+      }
+    ]
+  },
+  "quarantinePolicy": {
+    "rules": [
+      {
+        "ruleId": "quarantine.pair-preservation",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "unit": "both Event and Observation files as one generation",
+          "preserve": "exact original bytes",
+          "metadata": [
+            "timestamp",
+            "reason"
+          ],
+          "repairOrDropRows": false
+        }
+      },
+      {
+        "ruleId": "quarantine.lock-preservation",
+        "sourceSection": "§ Locking",
+        "canonicalValue": {
+          "staleLock": "atomically rename directory into quarantine after token recheck",
+          "foreignOrAmbiguous": "preserve for manual review"
+        }
+      },
+      {
+        "ruleId": "quarantine.failure-boundary",
+        "sourceSection": "§ Corruption recovery",
+        "canonicalValue": {
+          "evidencePreservationFailure": "fail closed; do not mutate Registry"
+        }
+      }
+    ]
+  },
+  "validationPolicy": {
+    "rules": [
+      {
+        "ruleId": "validation.event-record",
+        "sourceSection": "§ Independent Registry validation",
+        "canonicalValue": {
+          "checks": [
+            "unique eventKey",
+            "Contract 2.1.2 grammar",
+            "entity and canonical type match key",
+            "canonical type in frozen enum",
+            "valid explicit timestamp order",
+            "occurrences >= 1",
+            "latest fingerprint is 16 lowercase hex",
+            "non-empty valid fingerprint history ends at latest fingerprint",
+            "lastEventState invariants",
+            "unique observationIds and radars",
+            "all linked observations exist",
+            "stored occurrences equals unique linked observation count"
+          ],
+          "checkOnly": true,
+          "repair": false
+        }
+      },
+      {
+        "ruleId": "validation.observation-record",
+        "sourceSection": "§ Independent Registry validation",
+        "canonicalValue": {
+          "checks": [
+            "unique observationId",
+            "Event exists",
+            "radar and sourceLevel enum",
+            "URL parses as HTTP(S)",
+            "canonicalSourceUrl equals frozen canonicalization of sourceUrl",
+            "identity recomputation equals observationId",
+            "explicit timestamps valid",
+            "firstObservedAt <= lastObservedAt",
+            "optional sourceAuthority and sourcePublishedAt satisfy Contract 2.1.2"
+          ]
+        }
+      },
+      {
+        "ruleId": "validation.cross-file",
+        "sourceSection": "§ Independent Registry validation",
+        "canonicalValue": {
+          "checks": [
+            "every committed Event has >=1 Observation",
+            "all observationIds resolve",
+            "radar and time aggregates equal linked Observations",
+            "no Observation points to absent Event"
+          ],
+          "failure": "diagnostics and nonzero status; no repair"
+        }
+      },
+      {
+        "ruleId": "validation.occurrence-diagnostic",
+        "sourceSection": "§ Independent Registry validation",
+        "canonicalValue": {
+          "code": "REGISTRY_OCCURRENCE_MISMATCH",
+          "automaticRepair": false
+        }
+      }
+    ]
+  },
+  "snapshotPolicy": {
+    "rules": [
+      {
+        "ruleId": "snapshot.paired-generation",
+        "sourceSection": "§ Snapshot policy",
+        "canonicalValue": {
+          "root": "~/.local/state/horizon/radar-registry-snapshots/YYYY-MM-DD/<generation>/",
+          "files": [
+            "events.jsonl",
+            "observations.jsonl",
+            "manifest.json"
+          ],
+          "manifestFields": [
+            "snapshotVersion",
+            "createdAt",
+            "eventCount",
+            "observationCount",
+            "eventSha256",
+            "observationSha256",
+            "transactionId"
+          ]
+        }
+      },
+      {
+        "ruleId": "snapshot.creation-gate",
+        "sourceSection": "§ Snapshot policy",
+        "canonicalValue": {
+          "onlyAfter": "matching transaction journal is COMMITTED and Event/Observation pair validates",
+          "preparedSnapshot": false
+        }
+      },
+      {
+        "ruleId": "snapshot.retention",
+        "sourceSection": "§ Snapshot policy",
+        "canonicalValue": {
+          "retainedDailyPairs": 30,
+          "pruneWhen": "new complete snapshot pair is committed and hash-verified",
+          "deletionUnit": "oldest complete pair",
+          "independentFileDeletion": false
+        }
+      },
+      {
+        "ruleId": "snapshot.failure",
+        "sourceSection": "§ Atomic write and transaction recovery",
+        "canonicalValue": {
+          "onFailure": "leave Registry committed; retry paired snapshot under lock"
+        }
+      }
+    ]
+  },
+  "receiptPolicy": {
+    "rules": [
+      {
+        "ruleId": "receipt.location-and-purpose",
+        "sourceSection": "§ Candidate Receipt policy",
+        "canonicalValue": {
+          "path": "~/.local/state/horizon/radar-runs/YYYY-MM-DD/<radar>.jsonl",
+          "purposes": [
+            "debug",
+            "audit",
+            "filtered-candidate trace",
+            "Radar run diagnosis"
+          ],
+          "registryState": false
+        }
+      },
+      {
+        "ruleId": "receipt.identity-independence",
+        "sourceSection": "§ Candidate Receipt policy",
+        "canonicalValue": {
+          "inputsTo": [
+            "Event identity",
+            "Observation identity",
+            "timeline",
+            "occurrences",
+            "replay"
+          ],
+          "isInput": false
+        }
+      },
+      {
+        "ruleId": "receipt.retention",
+        "sourceSection": "§ Candidate Receipt policy",
+        "canonicalValue": {
+          "days": 14,
+          "cleanup": "explicit job may delete only expired run receipts"
+        }
+      },
+      {
+        "ruleId": "receipt.deletion-effect",
+        "sourceSection": "§ Candidate Receipt policy",
+        "canonicalValue": {
+          "registryImpact": "zero"
+        }
+      }
+    ]
+  },
+  "eventResolutionPolicy": {
+    "rules": [
+      {
+        "ruleId": "event.identity-authority",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "key": "frozen eventKey",
+          "identityRedefinedHere": false
+        },
+        "supportingFrozenArtifacts": [
+          "Event Policy 1.0"
+        ]
+      },
+      {
+        "ruleId": "event.new-state",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "condition": "eventKey absent",
+          "eventState": "NEW",
+          "duplicate": false,
+          "materialChange": false
+        }
+      },
+      {
+        "ruleId": "event.duplicate-state",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "condition": "eventKey present and fingerprint unchanged",
+          "eventState": "DUPLICATE",
+          "duplicate": true,
+          "materialChange": false
+        }
+      },
+      {
+        "ruleId": "event.update-state",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "condition": "same eventKey and canonicalEventType with changed frozen material fingerprint",
+          "eventState": "UPDATE",
+          "duplicate": false,
+          "materialChange": true,
+          "appendHistory": true,
+          "updateLatestFingerprint": true
+        }
+      },
+      {
+        "ruleId": "event.cross-type",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "changedCanonicalEventType": "distinct eventKey and NEW; never cross-type UPDATE"
+        }
+      },
+      {
+        "ruleId": "event.fingerprint-fields",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "authority": "Frozen Event Policy 1.0 allowlist only",
+          "registryScoringInputs": false
+        },
+        "supportingFrozenArtifacts": [
+          "Event Policy 1.0"
+        ]
+      }
+    ]
+  },
+  "observationDedupPolicy": {
+    "rules": [
+      {
+        "ruleId": "observation.identity-authority",
+        "sourceSection": "§ Observation Registry record",
+        "canonicalValue": {
+          "identityFields": [
+            "eventKey",
+            "canonicalSourceUrl",
+            "radar"
+          ],
+          "identityRedefinedHere": false
+        },
+        "supportingFrozenArtifacts": [
+          "Observation Policy 1.0"
+        ]
+      },
+      {
+        "ruleId": "observation.same-identity",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "sameEventSameCanonicalSourceSameRadar": "same observationId and same row",
+          "metadata": "refresh accepted metadata; update explicit time bounds"
+        }
+      },
+      {
+        "ruleId": "observation.cross-source",
+        "sourceSection": "§ Cross-Radar behavior",
+        "canonicalValue": {
+          "sameEventDifferentCanonicalSource": "distinct Observation; shared Event"
+        }
+      },
+      {
+        "ruleId": "observation.cross-radar",
+        "sourceSection": "§ Cross-Radar behavior",
+        "canonicalValue": {
+          "sameEventAndSourceDifferentRadar": "distinct observationId per Radar; one shared Event"
+        }
+      },
+      {
+        "ruleId": "observation.refetch-stability",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "changedObservedAtOrRetrievedAt": "identity unchanged",
+          "retrievedAtIdentityInput": false
+        }
+      },
+      {
+        "ruleId": "observation.url-normalization",
+        "sourceSection": "§ Idempotency and state transitions",
+        "canonicalValue": {
+          "fragmentChange": "canonical URL and observationId unchanged; raw sourceUrl may refresh",
+          "explicitDefaultPort": "same canonical URL as implicit default port"
+        }
+      }
+    ]
+  },
+  "productionMutationBoundary": {
+    "rules": [
+      {
+        "ruleId": "production.mutation-authority",
+        "sourceSection": "§ Implementation notes",
+        "canonicalValue": {
+          "authoritativeMethod": "commitObservation()",
+          "classification": "PRODUCTION_AUTHORITATIVE",
+          "scope": "atomic state resolution and paired Event/Observation commit",
+          "semanticSource": "verified interface/conformance boundary; does not add new Event or Observation semantics"
+        }
+      },
+      {
+        "ruleId": "production.legacy-methods",
+        "sourceSection": "§ Implementation notes",
+        "canonicalValue": {
+          "methods": [
+            "upsertEvent()",
+            "upsertObservation()"
+          ],
+          "classification": "LEGACY_NON_PRODUCTION",
+          "productionAuthoritative": false
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "rules": [
+      {
+        "ruleId": "compat.score-2.0",
+        "sourceSection": "§ Registry-to-published-model boundary",
+        "canonicalValue": {
+          "registryPolicy": "1.0",
+          "scorePolicy": "2.0",
+          "result": "COMPATIBLE",
+          "consumed": [
+            "identity",
+            "evidence",
+            "event state",
+            "material fingerprint",
+            "observation facts"
+          ],
+          "notConsumed": [
+            "score",
+            "signal",
+            "action",
+            "modifier"
+          ]
+        },
+        "supportingFrozenArtifacts": [
+          "Score Policy 2.0",
+          "Score compatibility evidence"
+        ]
+      },
+      {
+        "ruleId": "compat.score-2.0.1",
+        "sourceSection": "§ Registry-to-published-model boundary",
+        "canonicalValue": {
+          "registryPolicy": "1.0",
+          "scorePolicy": "2.0.1",
+          "result": "COMPATIBLE",
+          "consumed": [
+            "identity",
+            "evidence",
+            "event state",
+            "material fingerprint",
+            "observation facts"
+          ],
+          "notConsumed": [
+            "score",
+            "signal",
+            "action",
+            "modifier"
+          ]
+        },
+        "supportingFrozenArtifacts": [
+          "Score Policy 2.0.1",
+          "Score compatibility evidence"
+        ]
+      },
+      {
+        "ruleId": "compat.event-policy",
+        "sourceSection": "§ Event Registry record",
+        "canonicalValue": {
+          "result": "PASS",
+          "preserved": [
+            "eventKey",
+            "canonical event type",
+            "fingerprint",
+            "NEW",
+            "DUPLICATE",
+            "UPDATE",
+            "materialChange"
+          ],
+          "eventIdentityRedefined": false
+        },
+        "supportingFrozenArtifacts": [
+          "Event Policy 1.0",
+          "Event Replay 1.0"
+        ]
+      },
+      {
+        "ruleId": "compat.observation-policy",
+        "sourceSection": "§ Observation Registry record",
+        "canonicalValue": {
+          "result": "PASS",
+          "preserved": [
+            "observationId",
+            "canonicalSourceUrl",
+            "radar",
+            "observedAt",
+            "refetch identity stability",
+            "cross-Radar behavior",
+            "Observation dedup"
+          ],
+          "observationIdentityRedefined": false
+        },
+        "supportingFrozenArtifacts": [
+          "Observation Policy 1.0",
+          "Observation Fixture 1.0"
+        ]
+      },
+      {
+        "ruleId": "compat.contract-boundary",
+        "sourceSection": "§ Registry-to-published-model boundary",
+        "canonicalValue": {
+          "contract": "2.1.2 / schemaVersion 2",
+          "classifications": {
+            "PUBLIC_CONTRACT": [
+              "eventKey",
+              "canonicalEventType",
+              "eventState",
+              "materialChange",
+              "observedAt",
+              "eventOccurredAt",
+              "sourcePublishedAt",
+              "sourceAuthority",
+              "supported source name/URL/level"
+            ],
+            "DERIVED": [
+              "firstObservedAt",
+              "lastObservedAt",
+              "occurrences",
+              "radars",
+              "observationIds"
+            ],
+            "REGISTRY_INTERNAL": [
+              "observationId",
+              "canonicalSourceUrl",
+              "retrievedAt",
+              "lastRetrievedAt",
+              "createdAt",
+              "updatedAt",
+              "latestFingerprint",
+              "fingerprintHistory",
+              "lastEventState",
+              "raw fingerprint inputs",
+              "lock owner metadata",
+              "journal fields",
+              "transaction IDs",
+              "snapshot internals"
+            ],
+            "DEBUG_ONLY": [
+              "candidate receipts",
+              "matching/debug reasons",
+              "quarantine diagnostics and evidence metadata"
+            ]
+          },
+          "publiclyExposeRegistryRecoveryMetadata": false
+        },
+        "supportingFrozenArtifacts": [
+          "Contract 2.1.2",
+          "Frozen Registry Design"
+        ]
+      },
+      {
+        "ruleId": "compat.f34-projection",
+        "sourceSection": "§ Registry-to-published-model boundary",
+        "canonicalValue": {
+          "score20": {
+            "modifier": 1,
+            "score": 18
+          },
+          "score201": {
+            "modifier": -2,
+            "score": 15
+          },
+          "registryProjection": "IDENTICAL",
+          "identity": "UNCHANGED",
+          "eventState": "UNCHANGED",
+          "observationIdentity": "UNCHANGED",
+          "occurrences": "UNCHANGED",
+          "registryMutation": "UNCHANGED"
+        },
+        "supportingFrozenArtifacts": [
+          "Score compatibility evidence"
+        ]
+      }
+    ]
+  }
+}

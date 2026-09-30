@@ -1,0 +1,163 @@
+{
+  "distributionFormatVersion": "1.0",
+  "runtimeBaselineVersion": 1,
+  "contractDistributionCommit": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49",
+  "policyDistributionCommit": null,
+  "policyDistributionCommitResolution": "Exact Policy Distribution SHA is supplied and verified by the Horizon consumer immutable vendor/horizon-policies gitlink; this manifest is part of that commit and does not self-hash.",
+  "artifacts": [
+    {
+      "logicalName": "scorePolicy",
+      "version": "2.0",
+      "path": "radar/score/2.0/radar-score-policy-v2.0.json",
+      "sha256": "52f32078c63b07ddeb7f3b0d76c9e2a1e1cab6e5cfc67b08133f11153a7ad0e5",
+      "status": "HISTORICAL_VERIFICATION_BASELINE"
+    },
+    {
+      "logicalName": "scorePolicyDocumentation",
+      "version": "2.0",
+      "path": "radar/score/2.0/radar-score-policy-v2.0.md",
+      "sha256": "f5ac707d5f8cebb513bcd80f712e53391519f558a68fa3b0a2b5f59ed86ee6b6",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreReplay",
+      "version": "2.0",
+      "path": "radar/score/2.0/radar-score-replay-v2.0.json",
+      "sha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreManifest",
+      "version": "2.0",
+      "path": "radar/score/2.0/radar-score-v2.0-manifest.json",
+      "sha256": "0335432467cb2a7690f627fd0d4d4b5136006fe2d63255aa03c4c39b914c544f",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scorePolicy",
+      "version": "2.0.1",
+      "path": "radar/score/2.0.1/radar-score-policy-v2.0.1.json",
+      "sha256": "6ee674ab532d57ad9b49df815e61c453255c1a866e1a8a2ddca7bf86a763549f",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scorePolicyDocumentation",
+      "version": "2.0.1",
+      "path": "radar/score/2.0.1/radar-score-policy-v2.0.1.md",
+      "sha256": "2341c1995890a5e33ca671d5da013de1b13e7f2ae1ad1f51bbd2e6c861da6cd6",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreReplay",
+      "version": "2.0.1",
+      "path": "radar/score/2.0.1/radar-score-replay-v2.0.1.json",
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreManifest",
+      "version": "2.0.1",
+      "path": "radar/score/2.0.1/radar-score-v2.0.1-manifest.json",
+      "sha256": "ee3d2f04624881864a15c663c634336cca7b895783d4242996019e0dd6d62bf5",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "eventPolicy",
+      "version": "1.0",
+      "path": "radar/event/1.0/radar-event-policy-v1.json",
+      "sha256": "8585485099430d13652b2ba8560dc0ea00ce3cd26b8c28e21f3d13e188221a31",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "eventPolicyDocumentation",
+      "version": "1.0",
+      "path": "radar/event/1.0/radar-event-policy-v1.md",
+      "sha256": "a8ae49b46dcad785ea006e03788a9d6ee4244d3d4a18bb97b8bc7eeb663cbfd6",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "eventReplay",
+      "version": "1.0",
+      "path": "radar/event/1.0/radar-event-replay-v1.json",
+      "sha256": "f172f4b9bb26335633ce4c018420ff41ee748df53161c1ea83f19bd182d76dd9",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "eventManifest",
+      "version": "1.0",
+      "path": "radar/event/1.0/radar-event-policy-v1-manifest.json",
+      "sha256": "51b3d41c858d5f9057a3ea2ac025f68af7da319a0f4b07afed26e8413a273ced",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationPolicy",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-policy-v1.json",
+      "sha256": "c7761cdeae712deb6096fce67b1324f5d1acac55ed3b0df6e91a1a49a8c9de51",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationPolicyDocumentation",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-policy-v1.md",
+      "sha256": "a9664ead4ef3288884b5b657851cd7868b5a37b70ccb4f89e0cac760a574fa3e",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationFixture",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-fixtures-v1.json",
+      "sha256": "b01e8f0c4e9c350df4cfce4b55a4f210c7447692caf6e6530cbd611c8b1e7cdc",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationFixtureDocumentation",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-fixtures-v1.md",
+      "sha256": "25ede34bcd64216527168c97f8d1218500eb851c09f94ca6d01910b79a9d2644",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationPolicyManifest",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-policy-v1-manifest.json",
+      "sha256": "1046a3c9951312c0a5d2569991730f87a6ec4873ee40955d94bb0b1492c488b8",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "observationFixtureManifest",
+      "version": "1.0",
+      "path": "radar/observation/1.0/radar-observation-fixtures-v1-manifest.json",
+      "sha256": "ed68a9a75180e7562b6206d85593109a9bfe61b12a9ef2ec8d25b68bb5e33371",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "registryPolicy",
+      "version": "1.0",
+      "path": "radar/registry/1.0/radar-registry-policy-v1.json",
+      "sha256": "cf052c2d75de5f4ba74cece3ae91a21994de535e8cd8852ac3a182f098028362",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "registryCanonicalizationReport",
+      "version": "1.0",
+      "path": "radar/registry/1.0/radar-registry-policy-canonicalization-v1.md",
+      "sha256": "8bd935161464b8c3585837278c87ce66bfd176e9fd56a8958540ef841d031ad3",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "registryScoreCompatibility",
+      "version": "1.0",
+      "path": "radar/registry/1.0/radar-registry-score-compatibility-v1.json",
+      "sha256": "f5ba74124916bf4b63f8af28701cf7c3018283a680c8860276e7e86839226fcc",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "registryCanonicalManifest",
+      "version": "1.0",
+      "path": "radar/registry/1.0/radar-registry-policy-v1-canonical-manifest.json",
+      "sha256": "a2aa015504d7a2eb9f3df121d3aa6ce8b873bd1f1df5389e39fb34a86fdba34b",
+      "status": "FROZEN"
+    }
+  ]
+}

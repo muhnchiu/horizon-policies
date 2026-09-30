@@ -1,0 +1,28 @@
+{
+  "policyVersion": "1.0",
+  "status": "FROZEN",
+  "artifacts": {
+    "json": {
+      "file": "radar-observation-policy-v1.json",
+      "sha256": "c7761cdeae712deb6096fce67b1324f5d1acac55ed3b0df6e91a1a49a8c9de51"
+    },
+    "markdown": {
+      "file": "radar-observation-policy-v1.md",
+      "sha256": "a9664ead4ef3288884b5b657851cd7868b5a37b70ccb4f89e0cac760a574fa3e"
+    }
+  },
+  "identityAlgorithm": "SHA-256(UTF-8(eventKey + newline + canonicalSourceUrl + newline + radar))[:16 lowercase hex]",
+  "identityFields": [
+    "eventKey",
+    "canonicalSourceUrl",
+    "radar"
+  ],
+  "urlCanonicalizationVersion": "1.0",
+  "fixtureVersion": "1.0",
+  "fixtureCounts": {
+    "total": 29,
+    "valid": 19,
+    "invalid": 10
+  },
+  "supersession": "Event Policy 1.0 observationId definition only; all Event semantics remain authoritative and unchanged."
+}

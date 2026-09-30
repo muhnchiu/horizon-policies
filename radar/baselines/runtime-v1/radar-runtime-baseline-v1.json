@@ -1,0 +1,39 @@
+{
+  "runtimeBaselineVersion": 1,
+  "status": "FROZEN",
+  "contract": {
+    "version": "2.1.2",
+    "schemaVersion": 2,
+    "distributionCommit": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49",
+    "owner": "horizon-contracts"
+  },
+  "scorePolicy": {
+    "version": "2.0.1",
+    "path": "radar/score/2.0.1/radar-score-policy-v2.0.1.json"
+  },
+  "eventPolicy": {
+    "version": "1.0",
+    "path": "radar/event/1.0/radar-event-policy-v1.json"
+  },
+  "observationPolicy": {
+    "version": "1.0",
+    "path": "radar/observation/1.0/radar-observation-policy-v1.json"
+  },
+  "registryPolicy": {
+    "version": "1.0",
+    "path": "radar/registry/1.0/radar-registry-policy-v1.json"
+  },
+  "policyDistributionCommit": "PINNED_BY_CONSUMER_IMMUTABLE_GITLINK",
+  "policyDistributionCommitResolution": "The consuming repository records the full immutable commit in its vendor/horizon-policies gitlink; verify against git rev-parse HEAD. This avoids self-referencing commit metadata.",
+  "compatibility": {
+    "combination": "Contract 2.1.2 \u00d7 Score Policy 2.0.1 \u00d7 Event Policy 1.0 \u00d7 Observation Policy 1.0 \u00d7 Registry Policy 1.0",
+    "result": "COMPATIBLE",
+    "evidence": [
+      "radar/registry/1.0/radar-registry-score-compatibility-v1.json",
+      "radar/registry/1.0/radar-registry-policy-v1-canonical-manifest.json"
+    ]
+  },
+  "historicalBaselines": {
+    "scorePolicy2.0": "HISTORICAL_VERIFICATION_BASELINE; not active runtime policy"
+  }
+}

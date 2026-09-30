@@ -1,0 +1,258 @@
+{
+  "policyVersion": "1.0",
+  "status": "frozen",
+  "designPhase": "5A.1",
+  "supersedes": "5A-draft",
+  "model": {
+    "entity": "A continuously tracked object (e.g. GPT-6, Claude Code, ZCode, CVE-2026-94127)",
+    "event": "A specific change that happened to an entity (e.g. release, pricing change, version update, CISA KEV addition)",
+    "observation": "A discovery or report of an Event by a Radar/Source",
+    "rules": [
+      "Multiple observations may map to one event",
+      "Multiple events may belong to one entity",
+      "Different canonicalEventType for same entity = different event (no cross-type UPDATE)"
+    ]
+  },
+  "eventKeyFormat": {
+    "structure": "<entity>:<canonicalEventType>:<eventIdentifier>",
+    "rules": [
+      "lowercase",
+      "deterministic",
+      "no random UUID",
+      "human debuggable",
+      "machine comparable",
+      "canonicalEventType is part of identity — different types never share eventKey"
+    ]
+  },
+  "eventTypeRegistry": {
+    "release": "Generic software/tool release (absorbs project-discovery, product-discovery)",
+    "model-release": "AI model publication or weight release",
+    "skill-release": "Skill, plugin, or extension published",
+    "research-release": "Research paper, study, or project published",
+    "version-update": "Version bump of an existing tool or library",
+    "pricing-change": "Pricing, availability, or licensing terms change",
+    "capability-change": "New feature or capability added to existing product",
+    "security-cve": "CVE vulnerability disclosure",
+    "security-cisa-kev": "CISA KEV addition",
+    "security-advisory": "Non-CVE security advisory or vulnerability disclosure",
+    "funding": "Funding, acquisition, or valuation event",
+    "incident": "Incident, controversy, or outage",
+    "documentation": "Official documentation or guide published"
+  },
+  "removedTypes": {
+    "tool-discovery": "Removed — discovery is observation metadata, not an event type. Merged into release.",
+    "project-discovery": "Removed — same as above",
+    "product-discovery": "Removed — same as above"
+  },
+  "releaseTaxonomyPrecedence": {
+    "order": [
+      "version-update: version string extractable AND entity already tracked",
+      "model-release: AI model entity",
+      "skill-release: skill/plugin/extension entity",
+      "research-release: research paper/study entity",
+      "release: everything else (including first discovery of new tools)"
+    ],
+    "rules": [
+      "Precedence is determined by entity type and available version info, not title wording",
+      "First discovery of a new tool = release (not a discovery event type)",
+      "Claude Code 2.1.281 = version-update (version string present, entity tracked)",
+      "New model first published = model-release",
+      "New skill first published = skill-release"
+    ]
+  },
+  "eventTypeMigration": {
+    "project-discovery": "release",
+    "product-discovery": "release",
+    "version-release": "version-update",
+    "price-change": "pricing-change",
+    "cve": "security-cve",
+    "cisa-kev": "security-cisa-kev",
+    "vulnerability": "security-advisory"
+  },
+  "eventIdentifierPrecedence": [
+    {"priority": 1, "field": "cveId", "description": "CVE ID extracted from title (e.g. CVE-2026-94493)"},
+    {"priority": 2, "field": "version", "description": "Version string extracted from title (e.g. 2.1.281)"},
+    {"priority": 3, "field": "entity", "description": "Canonical entity slug from Phase 4"},
+    {"priority": 4, "field": "canonicalEventType", "description": "Event type from registry"},
+    {"priority": 5, "field": "eventIdentifier", "description": "Type-specific identifier (initial, version, cve-id, etc.)"}
+  ],
+  "canonicalization": {
+    "entity": "Normalize to lowercase kebab-case slug. Common variants of same entity must map to same slug.",
+    "version": "Extract numeric version string (major.minor.patch) from title. Ignore 'v' prefix.",
+    "repository": "Normalize to owner/repo format (e.g. microsoft/azure-skills).",
+    "cve": "Normalize to CVE-YYYY-NNNN format, lowercase.",
+    "url": "Normalize: strip trailing slash, strip query params (except canonical article IDs).",
+    "model": "Normalize to entity:modelVariant format.",
+    "examples": {
+      "entity": "ZCode / ZCode - Z.ai / Z.ai ZCode -> zcode",
+      "cve": "cve-2026-94493 / CVE-2026-94493 -> cve-2026-94493"
+    }
+  },
+  "eventStates": {
+    "NEW": {
+      "definition": "eventKey has never been seen in the registry",
+      "outputs": {"duplicate": false, "materialChange": false}
+    },
+    "DUPLICATE": {
+      "definition": "eventKey exists AND no material change detected",
+      "outputs": {"duplicate": true, "materialChange": false}
+    },
+    "UPDATE": {
+      "definition": "eventKey exists AND material change detected within same canonicalEventType",
+      "outputs": {"duplicate": false, "materialChange": true},
+      "boundaryRule": "If canonicalEventType changed, it is a NEW event, not UPDATE. Cross-type progression (e.g. security-cve -> security-cisa-kev) = two separate events."
+    }
+  },
+  "minimalMaterialChange": {
+    "scope": "Phase 5A minimal. Full Material Change Engine is Phase 5B.",
+    "isUpdate": [
+      "new version (version string differs from registry, within version-update)",
+      "pricing terms materially changed (within pricing-change)",
+      "API availability changed",
+      "exploitation status changed (activeExploitation false -> true or vice versa)",
+      "new official release (distinct from re-reporting)",
+      "license changed",
+      "major capability change (new model size, new platform)"
+    ],
+    "isNotUpdate": [
+      "GitHub Stars increased",
+      "downloads increased",
+      "media coverage increased or additional source reporting same event",
+      "title changed without factual change",
+      "description changed without factual change",
+      "community heat increased",
+      "same claim from another source (accumulate into sources[])"
+    ],
+    "crossTypeRule": "canonicalEventType change = NEW event, never UPDATE"
+  },
+  "fingerprint": {
+    "strategy": "SHA256 over event facts only. User-relative intelligence metadata excluded.",
+    "eventFactFields": [
+      "version",
+      "cveId",
+      "activeExploitation",
+      "supplyChainImpact",
+      "reachableDependency",
+      "officialEmergencyAdvisory"
+    ],
+    "excludedFields": {
+      "securityGate": "User-relative assessment of relevance, not an event fact",
+      "title": "Text content, not structural",
+      "description": "Text content, not structural",
+      "score": "Intelligence metadata",
+      "signal": "Intelligence metadata",
+      "action": "Intelligence metadata",
+      "momentum": "Intelligence metadata",
+      "relevanceLevel": "User-relative assessment",
+      "impact": "User-relative assessment",
+      "actionability": "User-relative assessment",
+      "confidence": "User-relative assessment",
+      "novelty": "User-relative assessment"
+    },
+    "hashAlgorithm": "sha256",
+    "hashInput": "JSON stringification of sorted field names with non-null values",
+    "rules": [
+      "Null or absent fields are excluded",
+      "Fingerprint comparison is exact match only",
+      "Fingerprint change implies potential material change",
+      "Text fields are NEVER in fingerprint",
+      "User-relative assessment fields are NEVER in fingerprint"
+    ]
+  },
+  "observationModel": {
+    "definition": "An Observation is a discovery or report of an Event by a Radar/Source",
+    "schema": {
+      "observationId": "string (deterministic: radar:entity:eventKey:source:date)",
+      "observedAt": "ISO date (YYYY-MM-DD)",
+      "radar": "string (ai|dev|app|sec|skill)",
+      "source": "string (source name)",
+      "sourceUrl": "string (canonical URL)",
+      "sourceLevel": "official|ecosystem|community|media|research",
+      "eventKey": "string (the event this observation maps to)"
+    },
+    "rules": [
+      "One Event may have multiple Observations",
+      "Multiple Observations of same Event = sources[] accumulation, not new events",
+      "Observation metadata (title, description) does not affect Event identity"
+    ]
+  },
+  "sourceDedup": {
+    "principle": "Multiple sources reporting same eventKey = one event with multiple sources[]",
+    "sourceSchema": {
+      "sourceName": "string",
+      "sourceUrl": "string",
+      "sourceLevel": "official|ecosystem|community|media|research",
+      "firstSeen": "YYYY-MM-DD"
+    },
+    "rules": [
+      "First source sets firstSeen",
+      "Subsequent sources append to sources[]",
+      "Duplicate source URL = ignored"
+    ]
+  },
+  "registry": {
+    "format": "JSONL",
+    "location": "~/.local/state/horizon/radar-event-registry.jsonl",
+    "eventFacts": {
+      "eventKey": "string",
+      "entity": "string",
+      "canonicalEventType": "string",
+      "firstSeen": "YYYY-MM-DD",
+      "lastSeen": "YYYY-MM-DD",
+      "occurrences": "integer",
+      "latestFingerprint": "sha256hex16",
+      "fingerprintHistory": "array",
+      "sources": "array"
+    },
+    "intelligenceMetadata": {
+      "securityGate": "string (user-relative, NOT in fingerprint)",
+      "score": "integer (from Phase 4)",
+      "signal": "string (from Phase 4)",
+      "action": "string (from Phase 4)",
+      "radars": "array (which radars observed this event)"
+    },
+    "separationRule": "Event Facts and Intelligence Metadata are stored separately. Intelligence metadata changes do NOT create Event UPDATE."
+  },
+  "scorePolicyIntegration": {
+    "phase4Rule": "duplicate=true -> Hard Filter (frozen, not modifiable)",
+    "outputs": {
+      "NEW": {"duplicate": false, "materialChange": false},
+      "DUPLICATE": {"duplicate": true, "materialChange": false},
+      "UPDATE": {"duplicate": false, "materialChange": true}
+    }
+  },
+  "radarBoundary": {
+    "phase5a": "Event Identity, Same-event Dedup, Minimal UPDATE boundary",
+    "phase5b": "Full Material Change Engine, semantic diff, importance delta, event lifecycle",
+    "phase5c": "Primary Radar Ownership, Cross-Radar Collision Resolution, relatedRadars"
+  },
+  "overMergeGuard": {
+    "rule": "Same entity does NOT imply same event. Different canonicalEventType = different event.",
+    "examples": [
+      "GPT-6 model-release and GPT-6 pricing-change = two events",
+      "Claude Code version-update and Claude Code incident = two events",
+      "F5 BIG-IP security-cve and F5 BIG-IP security-cisa-kev = two events (resolved)",
+      "Atuin release on day 1 and Atuin release re-reported on day 2 = one event (DUPLICATE)"
+    ]
+  },
+  "ambiguousFallback": {
+    "principle": "Prefer false split over false merge. Two events temporarily separate is lower risk than swallowing a real new event.",
+    "behavior": "When identity is ambiguous, default to treating as DUPLICATE only if eventKey matches exactly. If there is any doubt about entity or identifier mapping, treat as NEW.",
+    "loggedCases": [
+      {
+        "entity": "https-capture",
+        "fixtures": [12, 16],
+        "issue": "Cannot determine if 'lifetime free' is same promotion with terms clarification or new pricing event",
+        "resolution": "DUPLICATE (same eventKey, conservative)",
+        "phase5bNeeded": "Full pricing terms comparison to determine if material change"
+      },
+      {
+        "entity": "obra-superpowers",
+        "fixtures": [42, 47],
+        "issue": "Cannot determine if requesting-code-review is same skill artifact or different skill in suite",
+        "resolution": "DUPLICATE (same eventKey, conservative)",
+        "phase5bNeeded": "Artifact-level identity comparison to determine if different skill"
+      }
+    ]
+  }
+}

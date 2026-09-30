@@ -1,0 +1,38 @@
+{
+  "scoreVersion": "2.0.1",
+  "status": "FROZEN",
+  "supersedes": "2.0",
+  "baselineSource": "Score Policy 2.0 frozen artifacts plus Phase 5A.6.2 Option C reconciliation; historical candidate replay remains unchanged.",
+  "artifactHashes": {
+    "policyJsonSha256": "6ee674ab532d57ad9b49df815e61c453255c1a866e1a8a2ddca7bf86a763549f",
+    "policyMarkdownSha256": "2341c1995890a5e33ca671d5da013de1b13e7f2ae1ad1f51bbd2e6c861da6cd6",
+    "replayJsonSha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f"
+  },
+  "replayCounts": {
+    "total": 50,
+    "high": 8,
+    "medium": 8,
+    "low": 13,
+    "filtered": 21,
+    "net": 16
+  },
+  "expectedDelta": {
+    "fixtureId": 34,
+    "fields": [
+      "radarModifier",
+      "finalScore"
+    ],
+    "modifier": {
+      "from": 1,
+      "to": -2
+    },
+    "finalScore": {
+      "from": 18,
+      "to": 15
+    },
+    "signal": "filtered (unchanged)",
+    "action": "ignore (unchanged)",
+    "filtered": true,
+    "filterReason": "Security Gate UNRELATED (unchanged)"
+  }
+}
