@@ -220,6 +220,16 @@
       "sha256": "a2aa015504d7a2eb9f3df121d3aa6ce8b873bd1f1df5389e39fb34a86fdba34b",
       "requiredForRuntime": true,
       "requiredForVerification": true
+    },
+    {
+      "artifactType": "runtimeBaseline",
+      "policyVersion": "1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-runtime-baseline-v1.json",
+      "distributionPath": "radar/baselines/runtime-v1/radar-runtime-baseline-v1.json",
+      "sha256": "86d0eda8f13e4038b03d96be8c23b557b23a0d7981c8fe8ade3dc1d904b603f6",
+      "requiredForRuntime": true,
+      "requiredForVerification": true
     }
   ]
 }
