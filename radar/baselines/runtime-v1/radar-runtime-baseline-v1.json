@@ -1,6 +1,6 @@
 {
   "runtimeBaselineVersion": 1,
-  "status": "FROZEN",
+  "status": "TEMPLATE",
   "contract": {
     "version": "2.1.2",
     "schemaVersion": 2,
@@ -23,7 +23,7 @@
     "version": "1.0",
     "path": "radar/registry/1.0/radar-registry-policy-v1.json"
   },
-  "policyDistributionCommit": "PINNED_BY_CONSUMER_IMMUTABLE_GITLINK",
+  "policyDistributionCommit": "RESOLVE_FROM_CONSUMER_IMMUTABLE_GITLINK",
   "policyDistributionCommitResolution": "The consuming repository records the full immutable commit in its vendor/horizon-policies gitlink; verify against git rev-parse HEAD. This avoids self-referencing commit metadata.",
   "compatibility": {
     "combination": "Contract 2.1.2 \u00d7 Score Policy 2.0.1 \u00d7 Event Policy 1.0 \u00d7 Observation Policy 1.0 \u00d7 Registry Policy 1.0",

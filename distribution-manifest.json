@@ -160,11 +160,11 @@
       "status": "FROZEN"
     },
     {
-      "logicalName": "runtimeBaseline",
+      "logicalName": "runtimeBaselineTemplate",
       "version": "1",
       "path": "radar/baselines/runtime-v1/radar-runtime-baseline-v1.json",
       "sha256": "86d0eda8f13e4038b03d96be8c23b557b23a0d7981c8fe8ade3dc1d904b603f6",
-      "status": "FROZEN"
+      "status": "TEMPLATE"
     }
   ]
 }
