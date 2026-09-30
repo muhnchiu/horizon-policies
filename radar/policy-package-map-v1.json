@@ -14,7 +14,7 @@
     {
       "artifactType": "scorePolicyDocumentation",
       "policyVersion": "2.0",
-      "status": "FROZEN",
+      "status": "HISTORICAL_VERIFICATION_BASELINE",
       "sourceArtifact": "radar-score-policy-v2.0.md",
       "distributionPath": "radar/score/2.0/radar-score-policy-v2.0.md",
       "sha256": "f5ac707d5f8cebb513bcd80f712e53391519f558a68fa3b0a2b5f59ed86ee6b6",
@@ -24,7 +24,7 @@
     {
       "artifactType": "scoreReplay",
       "policyVersion": "2.0",
-      "status": "FROZEN",
+      "status": "HISTORICAL_VERIFICATION_BASELINE",
       "sourceArtifact": "radar-score-replay-v2.0.json",
       "distributionPath": "radar/score/2.0/radar-score-replay-v2.0.json",
       "sha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
@@ -34,7 +34,7 @@
     {
       "artifactType": "scoreManifest",
       "policyVersion": "2.0",
-      "status": "FROZEN",
+      "status": "HISTORICAL_VERIFICATION_BASELINE",
       "sourceArtifact": "radar-score-v2.0-manifest.json",
       "distributionPath": "radar/score/2.0/radar-score-v2.0-manifest.json",
       "sha256": "0335432467cb2a7690f627fd0d4d4b5136006fe2d63255aa03c4c39b914c544f",
