@@ -1,0 +1,38 @@
+{
+  "artifact": "radar-security-gate-reason-code-correction-v1",
+  "phase": "5A.6.8e.4.1",
+  "status": "DRAFT_REVIEW",
+  "rootCause": "DECISION_TABLE_REASON_CODE_GENERATOR",
+  "baseline": {
+    "contractPin": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49",
+    "policyDistributionPin": "68e81559b3f2b82dc15577a3680a33884e01e2a7"
+  },
+  "correction": {
+    "rowsWithTrue": 5904,
+    "incorrectTrueRowsBefore": 5904,
+    "correctedTrueRows": 5904,
+    "noTrueStateReasonRestorations": 4080,
+    "totalReasonCodeCorrections": 9984,
+    "remainingViolations": 0
+  },
+  "semantics": {
+    "securitySemanticsChanged": false,
+    "scoreSemanticsChanged": false,
+    "decisionSemanticOutputDelta": 0,
+    "escalationResultChanges": 0
+  },
+  "fixtures": {
+    "semanticFixtureChanges": 0,
+    "reasonCodeFixtureChanges": 0
+  },
+  "gate": {
+    "freeze": "NOT AUTHORIZED",
+    "distribution": "NOT RUN",
+    "productionRadar": "NOT RUN",
+    "registry": "NOT MODIFIED",
+    "publisher": "NOT RUN",
+    "deployment": "NOT RUN",
+    "commit": "NONE",
+    "push": "NOT RUN"
+  }
+}

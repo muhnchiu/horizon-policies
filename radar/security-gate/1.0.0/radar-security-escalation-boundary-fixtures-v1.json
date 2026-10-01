@@ -1,0 +1,619 @@
+{
+  "artifact": "radar-security-escalation-boundary-fixtures-v1",
+  "status": "DRAFT_REVIEW",
+  "syntheticOnly": true,
+  "caseCount": 28,
+  "allCasesDeterministic": true,
+  "cases": [
+    {
+      "fixtureId": "E01",
+      "name": "all-false",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E02",
+      "name": "all-not-applicable",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "NOT_APPLICABLE",
+          "supplyChainImpact": "NOT_APPLICABLE",
+          "reachableDependency": "NOT_APPLICABLE",
+          "officialEmergencyAdvisory": "NOT_APPLICABLE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_NOT_APPLICABLE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E03",
+      "name": "false-plus-not-applicable",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "NOT_APPLICABLE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "NOT_APPLICABLE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_NOT_APPLICABLE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E04",
+      "name": "one-true-three-false",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "ESCALATE",
+        "capExemption": true,
+        "capProjection": "high",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E05",
+      "name": "one-true-plus-unknown",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE",
+          "supplyChainImpact": "UNKNOWN",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "ESCALATE",
+        "capExemption": true,
+        "capProjection": "high",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E06",
+      "name": "one-true-plus-missing",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE",
+          "supplyChainImpact": "MISSING",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "ESCALATE",
+        "capExemption": true,
+        "capProjection": "high",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_MISSING",
+          "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E07",
+      "name": "multiple-true",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "TRUE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "ESCALATE",
+        "capExemption": true,
+        "capProjection": "high",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E08",
+      "name": "one-unknown-rest-false",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E09",
+      "name": "one-unknown-rest-not-applicable",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "NOT_APPLICABLE",
+          "reachableDependency": "NOT_APPLICABLE",
+          "officialEmergencyAdvisory": "NOT_APPLICABLE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_ESCALATION_NOT_APPLICABLE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E10",
+      "name": "multiple-unknown",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "UNKNOWN",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "NOT_APPLICABLE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_ESCALATION_NOT_APPLICABLE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E11",
+      "name": "one-missing-rest-false",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "MISSING",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_MISSING",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E12",
+      "name": "partial-object",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_MISSING",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E13",
+      "name": "empty-object",
+      "input": {
+        "keyStates": {}
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_MISSING",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E14",
+      "name": "all-unknown",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "UNKNOWN",
+          "reachableDependency": "UNKNOWN",
+          "officialEmergencyAdvisory": "UNKNOWN"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E15",
+      "name": "complete-all-false",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E16",
+      "name": "duplicate-json-key",
+      "input": {
+        "raw": "{\"activeExploitation\":true,\"activeExploitation\":false}",
+        "reason": "Duplicate member rejected before JSON object materialization."
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "DUPLICATE_OBJECT_KEY"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E17",
+      "name": "invalid-state-enum",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "MAYBE"
+        }
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "INVALID_ESCALATION_STATE"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E18",
+      "name": "null-state",
+      "input": {
+        "keyStates": {
+          "activeExploitation": null
+        }
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "NULL_ESCALATION_STATE"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E19",
+      "name": "not-applicable-without-basis",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "NOT_APPLICABLE"
+        }
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "NA_PROVENANCE_REQUIRED"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E20",
+      "name": "true-without-positive-evidence",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE"
+        }
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "TRUE_EVIDENCE_REQUIRED"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E21",
+      "name": "false-with-supporting-evidence",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": {
+        "eachKey": "evidenceRef supports evaluated false"
+      }
+    },
+    {
+      "fixtureId": "E22",
+      "name": "unknown-with-rationale",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": {
+        "activeExploitation": "reason determination cannot be made recorded"
+      }
+    },
+    {
+      "fixtureId": "E23",
+      "name": "na-with-applicability-basis",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "NOT_APPLICABLE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_NOT_APPLICABLE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": {
+        "activeExploitation": "applicability basis recorded; distinct from false"
+      }
+    },
+    {
+      "fixtureId": "E24",
+      "name": "escalate-preserves-high",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "TRUE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "ESCALATE",
+        "capExemption": true,
+        "capProjection": "high",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E25",
+      "name": "no-escalation-caps-high",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "FALSE",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "NO_ESCALATION",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E26",
+      "name": "unresolved-caps-but-does-not-filter",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "UNKNOWN",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_UNKNOWN",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E27",
+      "name": "unrelated-hard-filter-independent-of-unresolved",
+      "input": {
+        "keyStates": {
+          "activeExploitation": "MISSING",
+          "supplyChainImpact": "FALSE",
+          "reachableDependency": "FALSE",
+          "officialEmergencyAdvisory": "FALSE"
+        }
+      },
+      "inputValidity": "VALID",
+      "expected": {
+        "escalationResult": "UNRESOLVED",
+        "capExemption": false,
+        "capProjection": "medium",
+        "reasonCodes": [
+          "SECURITY_ESCALATION_NO_KEY_TRUE",
+          "SECURITY_ESCALATION_INPUT_MISSING",
+          "SECURITY_SIGNAL_CAP_APPLIED"
+        ]
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    },
+    {
+      "fixtureId": "E28",
+      "name": "invalid-object-type",
+      "input": {
+        "securityEscalation": []
+      },
+      "inputValidity": "INVALID_INPUT",
+      "expected": {
+        "validation": "REJECT",
+        "error": "INVALID_ESCALATION_OBJECT"
+      },
+      "provenance": "Synthetic semantic fixture; no production observation."
+    }
+  ]
+}

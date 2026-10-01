@@ -1,0 +1,4915 @@
+{
+  "artifact": "radar-security-gate-classification-matrix-v1",
+  "phase": "5A.6.8e.3b",
+  "status": "DRAFT_REVIEW",
+  "assumptions": "State vectors are structurally valid and required state provenance is valid; INVALID_INPUT cases are listed separately in the policy and boundary fixtures.",
+  "relationshipPredicates": [
+    "directExposure",
+    "dependencyRelationship",
+    "ecosystemRelationship"
+  ],
+  "relationshipStates": [
+    "TRUE",
+    "FALSE",
+    "UNKNOWN",
+    "NOT_APPLICABLE",
+    "MISSING"
+  ],
+  "trackedEnvironmentStates": [
+    "VERSIONED_COMPLETE",
+    "VERSIONED_INCOMPLETE",
+    "MISSING"
+  ],
+  "combinationCount": 375,
+  "deterministicRows": 375,
+  "unknownDecisionRows": 0,
+  "outputCounts": {
+    "RESOLVED": 86,
+    "UNRESOLVED": 289,
+    "INVALID_INPUT": 0
+  },
+  "rows": [
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "UNRELATED",
+      "reasonCodes": [
+        "SECURITY_CLASS_UNRELATED_CONFIRMED",
+        "SECURITY_CLASS_INPUT_NOT_APPLICABLE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_COMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DIRECTLY_EXPOSED",
+      "reasonCodes": [
+        "SECURITY_CLASS_DIRECT_EXPOSURE"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "DEPENDENCY_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_DEPENDENCY_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "RESOLVED",
+      "securityGateClass": "ECOSYSTEM_RELEVANT",
+      "reasonCodes": [
+        "SECURITY_CLASS_ECOSYSTEM_RELEVANT"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_UNKNOWN"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_INPUT_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "TRUE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "FALSE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "UNKNOWN",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "NOT_APPLICABLE",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "TRUE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "FALSE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "UNKNOWN",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "NOT_APPLICABLE",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "TRUE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "FALSE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "UNKNOWN"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "NOT_APPLICABLE"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    },
+    {
+      "trackedEnvironmentState": "MISSING",
+      "relationshipStates": {
+        "directExposure": "MISSING",
+        "dependencyRelationship": "MISSING",
+        "ecosystemRelationship": "MISSING"
+      },
+      "classificationResolution": "UNRESOLVED",
+      "securityGateClass": null,
+      "reasonCodes": [
+        "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      ]
+    }
+  ]
+}

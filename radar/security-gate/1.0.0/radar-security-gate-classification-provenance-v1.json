@@ -1,0 +1,106 @@
+{
+  "artifact": "radar-security-gate-classification-provenance-v1",
+  "phase": "5A.6.8e.3b",
+  "status": "DRAFT_REVIEW",
+  "outputSchema": {
+    "policyVersion": "1.0.0",
+    "classificationResolution": [
+      "RESOLVED",
+      "UNRESOLVED",
+      "INVALID_INPUT"
+    ],
+    "securityGateClass": [
+      "DIRECTLY_EXPOSED",
+      "DEPENDENCY_RELEVANT",
+      "ECOSYSTEM_RELEVANT",
+      "UNRELATED",
+      null
+    ],
+    "gateApplicability": [
+      "APPLICABLE",
+      "NOT_APPLICABLE",
+      "UNRESOLVED"
+    ],
+    "trackedEnvironmentBaseline": {
+      "version": "required for classifying SEC; immutable/versioned identifier",
+      "sha256": "required exact baseline hash",
+      "observedAt": "required timestamp",
+      "coverage": [
+        "trackedTechnologyCatalog",
+        "directDeploymentInventory",
+        "completeDependencyGraph",
+        "trackedEcosystemCatalog"
+      ],
+      "scopeCompleteness": "COMPLETE|INCOMPLETE"
+    },
+    "candidateIdentity": {
+      "candidateAffectedTechnology": "required canonical ID or unresolved",
+      "candidateAffectedComponent": "component ID or explicit TECHNOLOGY_WIDE scope, backed by evidence; unresolved if absent",
+      "aliasMapping": "exact versioned map only; no fuzzy matching"
+    },
+    "relationshipEvaluations": {
+      "directExposure": {
+        "states": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "true": "Exact positive relationship evidence required.",
+        "false": "Predicate evaluated with evidence and complete dataset coverage; a missing search result alone is not false.",
+        "unknown": "Reason, conflicts/staleness or missing authority recorded; blocks lower-specificity classification.",
+        "notApplicable": "Versioned applicability rule plus evidence required; distinct from false.",
+        "missing": "No valid evaluation record; never defaults to false or N/A."
+      },
+      "dependencyRelationship": {
+        "states": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "true": "Exact positive relationship evidence required.",
+        "false": "Predicate evaluated with evidence and complete dataset coverage; a missing search result alone is not false.",
+        "unknown": "Reason, conflicts/staleness or missing authority recorded; blocks lower-specificity classification.",
+        "notApplicable": "Versioned applicability rule plus evidence required; distinct from false.",
+        "missing": "No valid evaluation record; never defaults to false or N/A."
+      },
+      "ecosystemRelationship": {
+        "states": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "true": "Exact positive relationship evidence required.",
+        "false": "Predicate evaluated with evidence and complete dataset coverage; a missing search result alone is not false.",
+        "unknown": "Reason, conflicts/staleness or missing authority recorded; blocks lower-specificity classification.",
+        "notApplicable": "Versioned applicability rule plus evidence required; distinct from false.",
+        "missing": "No valid evaluation record; never defaults to false or N/A."
+      }
+    },
+    "authorityRules": {
+      "sourceAuthority": "must resolve in the exact versioned authority map included by the tracked-environment baseline",
+      "modelJudgment": "may assist discovery only; cannot by itself assert TRUE/FALSE/NOT_APPLICABLE for direct exposure or dependency; absent deterministic evidence => UNKNOWN",
+      "falseEvidence": "must include query/evaluation record and complete coverage attestation",
+      "naEvidence": "must include rule ID/version and applicability basis",
+      "conflict": "conflicting facts that cannot be reconciled as identity inputs => INVALID_INPUT; conflicting factual assessments => UNKNOWN/UNRESOLVED"
+    },
+    "trackedEnvironmentBaselineVersioning": {
+      "required": true,
+      "recordVersion": true,
+      "recordSha256": true,
+      "reason": "Candidate class can change as tracked inventory/scope changes; capture exact baseline version/hash for reproducibility."
+    },
+    "scoreEligibility": {
+      "unresolvedClassification": "RECEIPT_ONLY; no valid securityGate enum or approved partial scoring path exists",
+      "invalidInput": "REJECT; never default or score",
+      "resolvedClass": "may proceed to other existing SCORE_READY checks",
+      "policyChangeRequired": false,
+      "authority": "Frozen Score Input Generation Policy 2.1.0 requires every required field READY; no defaults/partial scoring."
+    }
+  }
+}

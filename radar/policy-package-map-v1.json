@@ -9,7 +9,9 @@
       "distributionPath": "radar/score/2.0/radar-score-policy-v2.0.json",
       "sha256": "52f32078c63b07ddeb7f3b0d76c9e2a1e1cab6e5cfc67b08133f11153a7ad0e5",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePolicyDocumentation",
@@ -19,7 +21,9 @@
       "distributionPath": "radar/score/2.0/radar-score-policy-v2.0.md",
       "sha256": "f5ac707d5f8cebb513bcd80f712e53391519f558a68fa3b0a2b5f59ed86ee6b6",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreReplay",
@@ -29,7 +33,9 @@
       "distributionPath": "radar/score/2.0/radar-score-replay-v2.0.json",
       "sha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreManifest",
@@ -39,7 +45,9 @@
       "distributionPath": "radar/score/2.0/radar-score-v2.0-manifest.json",
       "sha256": "0335432467cb2a7690f627fd0d4d4b5136006fe2d63255aa03c4c39b914c544f",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePolicy",
@@ -49,7 +57,9 @@
       "distributionPath": "radar/score/2.0.1/radar-score-policy-v2.0.1.json",
       "sha256": "6ee674ab532d57ad9b49df815e61c453255c1a866e1a8a2ddca7bf86a763549f",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePolicyDocumentation",
@@ -59,7 +69,9 @@
       "distributionPath": "radar/score/2.0.1/radar-score-policy-v2.0.1.md",
       "sha256": "2341c1995890a5e33ca671d5da013de1b13e7f2ae1ad1f51bbd2e6c861da6cd6",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreReplay",
@@ -69,7 +81,9 @@
       "distributionPath": "radar/score/2.0.1/radar-score-replay-v2.0.1.json",
       "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreManifest",
@@ -79,7 +93,9 @@
       "distributionPath": "radar/score/2.0.1/radar-score-v2.0.1-manifest.json",
       "sha256": "ee3d2f04624881864a15c663c634336cca7b895783d4242996019e0dd6d62bf5",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "eventPolicy",
@@ -89,7 +105,9 @@
       "distributionPath": "radar/event/1.0/radar-event-policy-v1.json",
       "sha256": "8585485099430d13652b2ba8560dc0ea00ce3cd26b8c28e21f3d13e188221a31",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Event Policy",
+      "dependencies": []
     },
     {
       "artifactType": "eventPolicyDocumentation",
@@ -99,7 +117,9 @@
       "distributionPath": "radar/event/1.0/radar-event-policy-v1.md",
       "sha256": "a8ae49b46dcad785ea006e03788a9d6ee4244d3d4a18bb97b8bc7eeb663cbfd6",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Event Policy",
+      "dependencies": []
     },
     {
       "artifactType": "eventReplay",
@@ -109,7 +129,9 @@
       "distributionPath": "radar/event/1.0/radar-event-replay-v1.json",
       "sha256": "f172f4b9bb26335633ce4c018420ff41ee748df53161c1ea83f19bd182d76dd9",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Event Policy",
+      "dependencies": []
     },
     {
       "artifactType": "eventManifest",
@@ -119,7 +141,9 @@
       "distributionPath": "radar/event/1.0/radar-event-policy-v1-manifest.json",
       "sha256": "51b3d41c858d5f9057a3ea2ac025f68af7da319a0f4b07afed26e8413a273ced",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Event Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationPolicy",
@@ -129,7 +153,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-policy-v1.json",
       "sha256": "c7761cdeae712deb6096fce67b1324f5d1acac55ed3b0df6e91a1a49a8c9de51",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationPolicyDocumentation",
@@ -139,7 +165,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-policy-v1.md",
       "sha256": "a9664ead4ef3288884b5b657851cd7868b5a37b70ccb4f89e0cac760a574fa3e",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationFixture",
@@ -149,7 +177,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-fixtures-v1.json",
       "sha256": "b01e8f0c4e9c350df4cfce4b55a4f210c7447692caf6e6530cbd611c8b1e7cdc",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationFixtureDocumentation",
@@ -159,7 +189,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-fixtures-v1.md",
       "sha256": "25ede34bcd64216527168c97f8d1218500eb851c09f94ca6d01910b79a9d2644",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationPolicyManifest",
@@ -169,7 +201,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-policy-v1-manifest.json",
       "sha256": "1046a3c9951312c0a5d2569991730f87a6ec4873ee40955d94bb0b1492c488b8",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "observationFixtureManifest",
@@ -179,7 +213,9 @@
       "distributionPath": "radar/observation/1.0/radar-observation-fixtures-v1-manifest.json",
       "sha256": "ed68a9a75180e7562b6206d85593109a9bfe61b12a9ef2ec8d25b68bb5e33371",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Observation Policy",
+      "dependencies": []
     },
     {
       "artifactType": "registryPolicy",
@@ -189,7 +225,9 @@
       "distributionPath": "radar/registry/1.0/radar-registry-policy-v1.json",
       "sha256": "cf052c2d75de5f4ba74cece3ae91a21994de535e8cd8852ac3a182f098028362",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Registry Policy",
+      "dependencies": []
     },
     {
       "artifactType": "registryCanonicalizationReport",
@@ -199,7 +237,9 @@
       "distributionPath": "radar/registry/1.0/radar-registry-policy-canonicalization-v1.md",
       "sha256": "8bd935161464b8c3585837278c87ce66bfd176e9fd56a8958540ef841d031ad3",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Registry Policy",
+      "dependencies": []
     },
     {
       "artifactType": "registryScoreCompatibility",
@@ -209,7 +249,9 @@
       "distributionPath": "radar/registry/1.0/radar-registry-score-compatibility-v1.json",
       "sha256": "f5ba74124916bf4b63f8af28701cf7c3018283a680c8860276e7e86839226fcc",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Registry Policy",
+      "dependencies": []
     },
     {
       "artifactType": "registryCanonicalManifest",
@@ -219,7 +261,9 @@
       "distributionPath": "radar/registry/1.0/radar-registry-policy-v1-canonical-manifest.json",
       "sha256": "a2aa015504d7a2eb9f3df121d3aa6ce8b873bd1f1df5389e39fb34a86fdba34b",
       "requiredForRuntime": true,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Registry Policy",
+      "dependencies": []
     },
     {
       "artifactType": "runtimeBaselineTemplate",
@@ -229,7 +273,9 @@
       "distributionPath": "radar/baselines/runtime-v1/radar-runtime-baseline-v1.json",
       "sha256": "300321c3f00505ebec5e5efed90299ee7865448b17059366c63e2fb08489747d",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Runtime Baseline",
+      "dependencies": []
     },
     {
       "artifactType": "scorePolicy",
@@ -239,7 +285,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-policy-v2.1.0.json",
       "sha256": "c00562c09e6c9f21eec0149c549993013f825bf351415a0076c05d6601f6deb7",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePolicyDocumentation",
@@ -249,7 +297,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-policy-v2.1.0.md",
       "sha256": "a0023bac3d2b0e49499083459ef13c957239cbbf9b20cafe8373a72258323775",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreReplayCompatibilityFixture",
@@ -259,7 +309,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-replay-v2.0.1-compatibility.json",
       "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "actionDecisionPolicy",
@@ -269,7 +321,9 @@
       "distributionPath": "radar/score/2.1.0/radar-action-decision-policy-v2.1.0.json",
       "sha256": "a3f7916300d24f1466b72d71664a534a3cffd70a72ec513fa9d505f3c4458a72",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "actionBoundaryFixtures",
@@ -279,7 +333,9 @@
       "distributionPath": "radar/score/2.1.0/radar-action-boundary-fixtures-v2.1.0.json",
       "sha256": "005139df01be2be100d80ae9067910631b69390ebeba4b0f3f71c09419b5eb2d",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "riskPolicy",
@@ -289,7 +345,9 @@
       "distributionPath": "radar/score/2.1.0/radar-risk-policy-v1.0.json",
       "sha256": "a8fdccfb9f28f2c196f57230ba96a64b9460fc7a03564bc9b63a2277af593c78",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "priorValidationLifecyclePolicy",
@@ -299,7 +357,9 @@
       "distributionPath": "radar/score/2.1.0/radar-prior-validation-lifecycle-policy-v1.0.json",
       "sha256": "bee1792df9b4f726c0fd629c4f28ffe26e58545a4eebf413ddd31d74668c0321",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "priorValidationLifecycleFixtures",
@@ -309,7 +369,9 @@
       "distributionPath": "radar/score/2.1.0/radar-prior-validation-lifecycle-fixtures-v1.0.json",
       "sha256": "c8fae3342d530ff9fdce79922a5c8994d612152ffa8ffb0e9adce1e1cb404bc3",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreInputGenerationPolicy",
@@ -319,7 +381,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-input-generation-policy-v2.1.0.json",
       "sha256": "fa3340a1afd7f98747785c5847ecae8d88298d6fed26fdc64a79a052d81b6486",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreInputProvenanceSchema",
@@ -329,7 +393,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-input-provenance-schema-v2.1.json",
       "sha256": "9fe8e56f76faedd3536403039ebe00a8656120f213337bbc38a9af1e782f8088",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scoreCalibrationDatasetSchema",
@@ -339,7 +405,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-calibration-dataset-schema-v2.1.json",
       "sha256": "0f20b565fdc36578a5981ebf2cf47eb7e4525fde716b560710a07d7602fae6da",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePackageManifest",
@@ -349,7 +417,9 @@
       "distributionPath": "radar/score/2.1.0/radar-score-policy-v2.1.0-manifest.json",
       "sha256": "1326c47743ad68c4e1d37a6e1572119b518b038b34e0328a8711d4e0da9802ba",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
     },
     {
       "artifactType": "scorePackageIntegrity",
@@ -359,7 +429,499 @@
       "distributionPath": "radar/score/2.1.0/package-integrity.json",
       "sha256": "5403cd02026d140f809886d3641d183f8be0ed2b8a9e6b0a0fdd881c32207536",
       "requiredForRuntime": false,
-      "requiredForVerification": true
+      "requiredForVerification": true,
+      "policyFamily": "Score Policy",
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityGatePackageIntegrity",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "package-integrity.json",
+      "distributionPath": "radar/security-gate/1.0.0/package-integrity.json",
+      "sha256": "db740325e333636fbef597fef15eea209a1d8909b6556cfd5f57857d6a37e64d",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityGatePackageMap",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "package-map-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/package-map-v1.json",
+      "sha256": "ddc0a5a028d26a2061d55627dd593a74b6539d1f06659becaeb493deace402a3",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityEscalationFixtures",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-escalation-boundary-fixtures-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-escalation-boundary-fixtures-v1.json",
+      "sha256": "21ab2c0f671743987f8379fc47b750c5b928b1b3ccde631d205d7f36621075ec",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityEscalationMatrix",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-escalation-decision-matrix-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-escalation-decision-matrix-v1.json",
+      "sha256": "dfb9b76c1697c40275ec141ed5b85597f4d757a985b8da0abad471e55f97c73a",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityEscalationSemanticDecision",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-escalation-semantic-decision-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-escalation-semantic-decision-v1.json",
+      "sha256": "992663a54038fb853ab5d866ee6bba84a0981aa2cec389ef539cd14b3c21ed9c",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityClassificationFixtures",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-classification-boundary-fixtures-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-classification-boundary-fixtures-v1.json",
+      "sha256": "1b01c74cbb842fc1df0b5283a1f72fd7165dbde20adc2e2c6942982a04dac921",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityClassificationMatrix",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-classification-matrix-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-classification-matrix-v1.json",
+      "sha256": "9fcf3006a31713e9aa1b609aeb5942e47735282e405c4e696497ba4267e535cc",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityClassificationProvenance",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-classification-provenance-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-classification-provenance-v1.json",
+      "sha256": "8a568f5d2ea3a392116b61e8eaf5ee31c36ca36e6226aadc807af4d3f857faf2",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityDecisionTableHistorical",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-decision-table-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-decision-table-v1.json",
+      "sha256": "dda1a9158d5996d0758a89d0fb21ce2445455ffc2d747c97d6a41d3c6bc9ee67",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityDecisionTable",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-decision-table-v2.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-decision-table-v2.json",
+      "sha256": "60de27e0e14e55ff9e21d1bc04095a49a44f649bbaf8ba6b5c402fd17ca30ca9",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityHistoricalProjection",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-historical-projection-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-historical-projection-v1.json",
+      "sha256": "7da7ca81a29d10da047ac0baa3449c28dd21b44001770630531f1ef52d412888",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityGatePolicy",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-policy-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+      "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701",
+      "requiredForRuntime": true,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityGatePolicyDocumentation",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-policy-v1.md",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.md",
+      "sha256": "843794e38a3af907f232920d0de6594aea1c90cfcc56e3d4a4077ba61797ba4c",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityReasonCodeCorrection",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-reason-code-correction-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-reason-code-correction-v1.json",
+      "sha256": "a16e7350313bfca705290b70814a4ffa8918bbac5749477b8fc2e829dda57f52",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "securityGatePackageManifest",
+      "policyFamily": "Security Gate Policy",
+      "policyVersion": "1.0.0",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-security-gate-v1.0.0-manifest.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-v1.0.0-manifest.json",
+      "sha256": "f69e8c6fe7700cf0fcb4013d6b79078f749ac4312f09bee2f49f576ed809a6b0",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": []
+    },
+    {
+      "artifactType": "scorePackageIntegrity",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "package-integrity.json",
+      "distributionPath": "radar/score/2.1.1/package-integrity.json",
+      "sha256": "18c47a3e1e9571161a17464332ce3d06ed610998f72e35361ceb2fab4ef3e2c5",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scorePackageMap",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "package-map-v1.json",
+      "distributionPath": "radar/score/2.1.1/package-map-v1.json",
+      "sha256": "c4119aabc18e3e56bebbb44b81f964a47cf5c77ef20909684c40b0d9655a6202",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "actionBoundaryFixtures",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-action-boundary-fixtures-v2.1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-action-boundary-fixtures-v2.1.0.json",
+      "sha256": "005139df01be2be100d80ae9067910631b69390ebeba4b0f3f71c09419b5eb2d",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "actionDecisionPolicy",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-action-decision-policy-v2.1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-action-decision-policy-v2.1.0.json",
+      "sha256": "a3f7916300d24f1466b72d71664a534a3cffd70a72ec513fa9d505f3c4458a72",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "priorValidationLifecycleFixtures",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-prior-validation-lifecycle-fixtures-v1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-prior-validation-lifecycle-fixtures-v1.0.json",
+      "sha256": "c8fae3342d530ff9fdce79922a5c8994d612152ffa8ffb0e9adce1e1cb404bc3",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "priorValidationLifecyclePolicy",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-prior-validation-lifecycle-policy-v1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-prior-validation-lifecycle-policy-v1.0.json",
+      "sha256": "bee1792df9b4f726c0fd629c4f28ffe26e58545a4eebf413ddd31d74668c0321",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "riskPolicy",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-risk-policy-v1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-risk-policy-v1.0.json",
+      "sha256": "a8fdccfb9f28f2c196f57230ba96a64b9460fc7a03564bc9b63a2277af593c78",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scoreCalibrationDatasetSchema",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-calibration-dataset-schema-v2.1.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-calibration-dataset-schema-v2.1.json",
+      "sha256": "0f20b565fdc36578a5981ebf2cf47eb7e4525fde716b560710a07d7602fae6da",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scoreInputGenerationPolicy",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-input-generation-policy-v2.1.0.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-input-generation-policy-v2.1.0.json",
+      "sha256": "fa3340a1afd7f98747785c5847ecae8d88298d6fed26fdc64a79a052d81b6486",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scoreInputProvenanceSchema",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-input-provenance-schema-v2.1.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-input-provenance-schema-v2.1.json",
+      "sha256": "9fe8e56f76faedd3536403039ebe00a8656120f213337bbc38a9af1e782f8088",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scorePackageManifest",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-policy-v2.1.1-manifest.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-policy-v2.1.1-manifest.json",
+      "sha256": "91b2a895908efd4ad696a47b580af9c2828170aafec5f77b6f33e550878f5009",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scorePolicy",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-policy-v2.1.1.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-policy-v2.1.1.json",
+      "sha256": "15e2d390e5fce66f9b406dc4830cd15c65e9af2e04967c0e320cbbd693ae1d7d",
+      "requiredForRuntime": true,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scorePolicyDocumentation",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-policy-v2.1.1.md",
+      "distributionPath": "radar/score/2.1.1/radar-score-policy-v2.1.1.md",
+      "sha256": "9543ae65bfa62c78e9c73a5ed7bc3c5792686e5df5b14ed43654f127850a1d7d",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    },
+    {
+      "artifactType": "scoreReplayCompatibilityFixture",
+      "policyFamily": "Score Policy",
+      "policyVersion": "2.1.1",
+      "status": "FROZEN",
+      "sourceArtifact": "radar-score-replay-v2.0.1-compatibility.json",
+      "distributionPath": "radar/score/2.1.1/radar-score-replay-v2.0.1-compatibility.json",
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "requiredForRuntime": false,
+      "requiredForVerification": true,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "policyFamily": "Security Gate Policy",
+      "version": "1.0.0",
+      "status": "FROZEN",
+      "path": "radar/security-gate/1.0.0",
+      "manifestPath": "radar/security-gate/1.0.0/radar-security-gate-v1.0.0-manifest.json",
+      "manifestSha256": "f69e8c6fe7700cf0fcb4013d6b79078f749ac4312f09bee2f49f576ed809a6b0",
+      "integrityPath": "radar/security-gate/1.0.0/package-integrity.json",
+      "integritySha256": "db740325e333636fbef597fef15eea209a1d8909b6556cfd5f57857d6a37e64d",
+      "payloadCount": 12,
+      "dependencies": []
+    },
+    {
+      "policyFamily": "Score Policy",
+      "version": "2.1.1",
+      "status": "FROZEN",
+      "path": "radar/score/2.1.1",
+      "manifestPath": "radar/score/2.1.1/radar-score-policy-v2.1.1-manifest.json",
+      "manifestSha256": "91b2a895908efd4ad696a47b580af9c2828170aafec5f77b6f33e550878f5009",
+      "integrityPath": "radar/score/2.1.1/package-integrity.json",
+      "integritySha256": "18c47a3e1e9571161a17464332ce3d06ed610998f72e35361ceb2fab4ef3e2c5",
+      "payloadCount": 11,
+      "dependencies": [
+        {
+          "policyFamily": "Security Gate Policy",
+          "version": "1.0.0",
+          "path": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+          "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701",
+          "frozenReference": "vendor/horizon-policies/radar/security-gate/1.0.0/radar-security-gate-policy-v1.json"
+        }
+      ]
+    }
+  ],
+  "formatVersion": "1.0",
+  "policyDistributionBaseline": "68e81559b3f2b82dc15577a3680a33884e01e2a7",
+  "pathAliases": [
+    {
+      "frozenReference": "vendor/horizon-policies/radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+      "distributionPath": "radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+      "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701",
+      "reason": "Score Policy 2.1.1 was frozen in the Horizon workspace; resolve its repository-root path to the equivalent path inside this policy distribution repository."
     }
   ]
 }

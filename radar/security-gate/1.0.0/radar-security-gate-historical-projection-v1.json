@@ -1,0 +1,752 @@
+{
+  "artifact": "radar-security-gate-classification-historical-impact-v1",
+  "phase": "5A.6.8e.3b",
+  "status": "DRAFT_REVIEW",
+  "source": "vendor/horizon-policies/radar/score/2.1.0/radar-score-replay-v2.0.1-compatibility.json",
+  "rows": [
+    {
+      "fixtureId": 1,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 2,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 3,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 4,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 5,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 6,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 7,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 8,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 9,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 10,
+      "radar": "AI",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 11,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 12,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 13,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 14,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 15,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 16,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 17,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 18,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 19,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 20,
+      "radar": "APP",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 21,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 22,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 23,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 24,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 25,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 26,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 27,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 28,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 29,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 30,
+      "radar": "DEV",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 31,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 32,
+      "radar": "SEC",
+      "recordedGateClass": "DIRECTLY_EXPOSED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 33,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 34,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 35,
+      "radar": "SEC",
+      "recordedGateClass": "DIRECTLY_EXPOSED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 36,
+      "radar": "SEC",
+      "recordedGateClass": "DIRECTLY_EXPOSED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 37,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 38,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 39,
+      "radar": "SEC",
+      "recordedGateClass": "UNRELATED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 40,
+      "radar": "SEC",
+      "recordedGateClass": "DIRECTLY_EXPOSED",
+      "classification": "UNDERDETERMINED",
+      "candidateClassification": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "legacyGateInputProjection": {
+        "recordedClassApplied": true,
+        "gateBehaviorDelta": 0,
+        "qualification": "Conditional on the frozen replay input class; this is not proof that the class matches an actual tracked environment."
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 41,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 42,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 43,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 44,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 45,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 46,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 47,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 48,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 49,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    },
+    {
+      "fixtureId": 50,
+      "radar": "SKILL",
+      "recordedGateClass": "N/A",
+      "classification": "PROVABLE",
+      "candidateClassification": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "securityGateClass": null
+      },
+      "legacyGateInputProjection": {
+        "gateBehaviorDelta": 0
+      },
+      "trackedEnvironmentEvidence": "Not present in historical replay row; no facts fabricated."
+    }
+  ],
+  "totalRows": 50,
+  "provableRows": 40,
+  "underdeterminedRows": 10,
+  "securityRows": 10,
+  "provableHistoricalBehavioralDelta": {
+    "hardFilter": 0,
+    "signal": 0,
+    "score": 0,
+    "action": 0,
+    "modifier": 0
+  },
+  "conditionalLegacyInputProjectionDelta": 0,
+  "claimLimit": "40 non-SEC rows are provably outside this gate; 10 SEC gate classifications are UNDERDETERMINED without tracked-environment evidence. Existing gate behavior is unchanged conditional on each frozen replay row’s recorded class; do not claim classifier 50/50 semantic equivalence.",
+  "fabricatedTrackedEnvironmentFacts": 0
+}

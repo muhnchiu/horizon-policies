@@ -1,0 +1,126 @@
+{
+  "artifact": "radar-score-policy-v2.1.1-package-manifest",
+  "policy": "Score Policy",
+  "scorePolicyVersion": "2.1.1",
+  "schemaVersion": "2.1",
+  "packageVersion": "2.1.1",
+  "status": "FROZEN",
+  "frozen": true,
+  "distributed": false,
+  "normativeBase": {
+    "version": "2.1.0",
+    "path": "vendor/horizon-policies/radar/score/2.1.0/radar-score-policy-v2.1.0.json",
+    "sha256": "c00562c09e6c9f21eec0149c549993013f825bf351415a0076c05d6601f6deb7"
+  },
+  "compatibilityDeclarations": {
+    "contract": {
+      "version": "2.1.2",
+      "schemaVersion": 2,
+      "distributionCommit": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49"
+    },
+    "eventPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    },
+    "observationPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    },
+    "registryPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    }
+  },
+  "dependencies": [
+    {
+      "policy": "Security Gate Policy",
+      "version": "1.0.0",
+      "status": "FROZEN",
+      "path": "vendor/horizon-policies/radar/security-gate/1.0.0/radar-security-gate-policy-v1.json",
+      "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701",
+      "exactPin": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "radar-action-boundary-fixtures-v2.1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "005139df01be2be100d80ae9067910631b69390ebeba4b0f3f71c09419b5eb2d",
+      "bytes": 45249
+    },
+    {
+      "path": "radar-action-decision-policy-v2.1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "a3f7916300d24f1466b72d71664a534a3cffd70a72ec513fa9d505f3c4458a72",
+      "bytes": 8641
+    },
+    {
+      "path": "radar-prior-validation-lifecycle-fixtures-v1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "c8fae3342d530ff9fdce79922a5c8994d612152ffa8ffb0e9adce1e1cb404bc3",
+      "bytes": 7726
+    },
+    {
+      "path": "radar-prior-validation-lifecycle-policy-v1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "bee1792df9b4f726c0fd629c4f28ffe26e58545a4eebf413ddd31d74668c0321",
+      "bytes": 7719
+    },
+    {
+      "path": "radar-risk-policy-v1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "a8fdccfb9f28f2c196f57230ba96a64b9460fc7a03564bc9b63a2277af593c78",
+      "bytes": 6265
+    },
+    {
+      "path": "radar-score-calibration-dataset-schema-v2.1.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "0f20b565fdc36578a5981ebf2cf47eb7e4525fde716b560710a07d7602fae6da",
+      "bytes": 12821
+    },
+    {
+      "path": "radar-score-input-generation-policy-v2.1.0.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "fa3340a1afd7f98747785c5847ecae8d88298d6fed26fdc64a79a052d81b6486",
+      "bytes": 20059
+    },
+    {
+      "path": "radar-score-input-provenance-schema-v2.1.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "9fe8e56f76faedd3536403039ebe00a8656120f213337bbc38a9af1e782f8088",
+      "bytes": 23452
+    },
+    {
+      "path": "radar-score-policy-v2.1.1.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "15e2d390e5fce66f9b406dc4830cd15c65e9af2e04967c0e320cbbd693ae1d7d",
+      "bytes": 4563
+    },
+    {
+      "path": "radar-score-policy-v2.1.1.md",
+      "role": "NORMATIVE",
+      "version": "2.1.1",
+      "sha256": "9543ae65bfa62c78e9c73a5ed7bc3c5792686e5df5b14ed43654f127850a1d7d",
+      "bytes": 5463
+    },
+    {
+      "path": "radar-score-replay-v2.0.1-compatibility.json",
+      "role": "NORMATIVE_OR_SUPPORT",
+      "version": "2.1.1",
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "bytes": 57287
+    }
+  ],
+  "integrity": "package-integrity.json",
+  "packageMap": "package-map-v1.json",
+  "outerIntegrityExcludesItself": true
+}

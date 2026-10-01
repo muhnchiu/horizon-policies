@@ -1,0 +1,583 @@
+{
+  "artifact": "radar-security-gate-classification-boundary-fixtures-v1",
+  "phase": "5A.6.8e.3b",
+  "status": "DRAFT_REVIEW",
+  "syntheticOnly": true,
+  "caseCount": 28,
+  "cases": [
+    {
+      "fixtureId": "C01",
+      "name": "direct-true-wins-all-positive",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "TRUE",
+          "dependencyRelationship": "TRUE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "DIRECTLY_EXPOSED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C02",
+      "name": "direct-true-wins-over-lower-unknown",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "TRUE",
+          "dependencyRelationship": "UNKNOWN",
+          "ecosystemRelationship": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "DIRECTLY_EXPOSED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C03",
+      "name": "unresolved-higher-specificity-blocks-dependency",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "UNKNOWN",
+          "dependencyRelationship": "TRUE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C04",
+      "name": "dependency-wins-ecosystem",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "TRUE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "DEPENDENCY_RELEVANT"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C05",
+      "name": "ecosystem-only",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "ECOSYSTEM_RELEVANT"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C06",
+      "name": "all-false-complete-scope",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        },
+        "scopeCoverage": "COMPLETE",
+        "negativeQueryEvidence": true
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "UNRELATED",
+        "reasonCode": "SECURITY_CLASS_UNRELATED_CONFIRMED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C07",
+      "name": "all-unknown",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "UNKNOWN",
+          "dependencyRelationship": "UNKNOWN",
+          "ecosystemRelationship": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C08",
+      "name": "false-unknown-false",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "UNKNOWN",
+          "ecosystemRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C09",
+      "name": "false-false-unknown",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C10",
+      "name": "all-na-with-provenance-complete-scope",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "NOT_APPLICABLE",
+          "dependencyRelationship": "NOT_APPLICABLE",
+          "ecosystemRelationship": "NOT_APPLICABLE"
+        },
+        "applicabilityProvenance": "Versioned applicability rule and basis for each predicate."
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "UNRELATED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C11",
+      "name": "missing-direct-with-dependency-true",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "dependencyRelationship": "TRUE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_INPUT_MISSING"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C12",
+      "name": "missing-dependency-with-ecosystem-true",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "ecosystemRelationship": "TRUE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_INPUT_MISSING"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C13",
+      "name": "missing-ecosystem",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_INPUT_MISSING"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C14",
+      "name": "empty-evidence-object",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {}
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C15",
+      "name": "candidate-technology-unresolved",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "candidateAffectedTechnology": null,
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C16",
+      "name": "tracked-baseline-absent",
+      "input": {
+        "trackedEnvironmentState": "MISSING",
+        "relations": {
+          "directExposure": "TRUE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C17",
+      "name": "tracked-baseline-version-absent",
+      "input": {
+        "trackedEnvironmentState": "MISSING",
+        "trackedEnvironment": {
+          "baselineVersion": null
+        },
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_TRACKED_BASELINE_MISSING"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C18",
+      "name": "conflicting-unreconcilable-identities",
+      "input": {
+        "structuralInput": "conflictingCanonicalTechnologyIds"
+      },
+      "expected": {
+        "classificationResolution": "INVALID_INPUT",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C19",
+      "name": "ecosystem-string-similarity-is-not-match",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "UNKNOWN",
+          "ecosystemRelationship": "FALSE"
+        },
+        "matching": "Exact canonical ID only; fuzzy/string similarity not accepted."
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C20",
+      "name": "dependency-claim-without-edge-evidence",
+      "input": {
+        "structuralInput": {
+          "dependencyRelationship": "TRUE",
+          "evidenceRefs": []
+        }
+      },
+      "expected": {
+        "classificationResolution": "INVALID_INPUT",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C21",
+      "name": "absence-of-matches-with-incomplete-coverage",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_INCOMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        },
+        "negativeQueryEvidence": false
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C22",
+      "name": "complete-negative-scope-evaluation",
+      "input": {
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        },
+        "negativeQueryEvidence": true,
+        "coverage": {
+          "directDeployment": "COMPLETE",
+          "dependencyGraph": "COMPLETE",
+          "trackedEcosystemCatalog": "COMPLETE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "UNRELATED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C23",
+      "name": "n-a-without-applicability-evidence",
+      "input": {
+        "structuralInput": {
+          "directExposure": "NOT_APPLICABLE",
+          "applicabilityRuleRef": null
+        }
+      },
+      "expected": {
+        "classificationResolution": "INVALID_INPUT",
+        "securityGateClass": null,
+        "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C24",
+      "name": "explicit-non-security-scope",
+      "input": {
+        "radar": "APP",
+        "trackedEnvironmentState": "NOT_REQUIRED"
+      },
+      "expected": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "gateDisposition": "NOT_APPLICABLE",
+        "signalPreserved": true
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C25",
+      "name": "sec-gate-explicit-not-applicable",
+      "input": {
+        "radar": "SEC",
+        "gateApplicability": "NOT_APPLICABLE",
+        "applicabilityRuleRef": "versioned-rule-with-evidence"
+      },
+      "expected": {
+        "gateApplicability": "NOT_APPLICABLE",
+        "gateDisposition": "NOT_APPLICABLE",
+        "signalPreserved": true
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C26",
+      "name": "sec-gate-applicability-missing",
+      "input": {
+        "radar": "SEC",
+        "gateApplicability": "MISSING"
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "gateDisposition": "RECEIPT_ONLY"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C27",
+      "name": "score-facts-do-not-classify-exposure",
+      "input": {
+        "score": "high",
+        "signal": "high",
+        "action": "adopt",
+        "modifier": 10,
+        "publication": "published",
+        "priorValidation": true,
+        "registryPresent": true,
+        "trackedEnvironmentState": "VERSIONED_COMPLETE",
+        "relations": {
+          "directExposure": "FALSE",
+          "dependencyRelationship": "FALSE",
+          "ecosystemRelationship": "FALSE"
+        }
+      },
+      "expected": {
+        "classificationResolution": "RESOLVED",
+        "securityGateClass": "UNRELATED",
+        "reasonCode": "SECURITY_CLASS_UNRELATED_CONFIRMED"
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    },
+    {
+      "fixtureId": "C28",
+      "name": "model-only-positive-claim-not-deterministic",
+      "input": {
+        "method": "MODEL_JUDGMENT",
+        "relations": {
+          "directExposure": "UNKNOWN",
+          "dependencyRelationship": "UNKNOWN",
+          "ecosystemRelationship": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "classificationResolution": "UNRESOLVED",
+        "securityGateClass": null
+      },
+      "provenance": "Synthetic semantic case; no production observation."
+    }
+  ],
+  "structuralInvalidCases": [
+    {
+      "id": "I01",
+      "case": "wrong relationship value type",
+      "input": {
+        "directExposure": true
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "id": "I02",
+      "case": "invalid relationship enum",
+      "input": {
+        "directExposure": "MAYBE"
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "id": "I03",
+      "case": "null prohibited value",
+      "input": {
+        "directExposure": null
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "id": "I04",
+      "case": "malformed tracked environment object",
+      "input": {
+        "trackedEnvironment": []
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "id": "I05",
+      "case": "identity fields conflict and cannot be reconciled",
+      "input": {
+        "technologyId": "canon:a",
+        "componentTechnologyId": "canon:b"
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "id": "I06",
+      "case": "TRUE without positive evidence provenance",
+      "input": {
+        "directExposure": {
+          "state": "TRUE",
+          "evidenceRefs": []
+        }
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "id": "I07",
+      "case": "FALSE without evaluation/query provenance",
+      "input": {
+        "directExposure": {
+          "state": "FALSE",
+          "evidenceRefs": []
+        }
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "id": "I08",
+      "case": "NOT_APPLICABLE without versioned applicability basis",
+      "input": {
+        "directExposure": {
+          "state": "NOT_APPLICABLE",
+          "applicabilityRuleRef": null
+        }
+      },
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "id": "I09",
+      "case": "duplicate logical JSON key",
+      "rawJson": "{\"directExposure\":\"TRUE\",\"directExposure\":\"FALSE\"}",
+      "result": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    }
+  ]
+}

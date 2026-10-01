@@ -1,0 +1,127 @@
+{
+  "artifact": "radar-security-escalation-semantic-decision-v1",
+  "phase": "5A.6.8e.3a",
+  "status": "DRAFT_REVIEW",
+  "decisionAuthority": "Explicit Phase 5A.6.8e.3a user-provided policy decision",
+  "aggregation": "ANY_TRUE",
+  "keys": [
+    "activeExploitation",
+    "supplyChainImpact",
+    "reachableDependency",
+    "officialEmergencyAdvisory"
+  ],
+  "valueStates": [
+    "TRUE",
+    "FALSE",
+    "UNKNOWN",
+    "NOT_APPLICABLE"
+  ],
+  "missingKeyState": "MISSING",
+  "precedence": [
+    {
+      "order": 1,
+      "when": "ANY key state is TRUE",
+      "result": "ESCALATE",
+      "capExemption": true
+    },
+    {
+      "order": 2,
+      "when": "No TRUE and ANY key is MISSING or UNKNOWN",
+      "result": "UNRESOLVED",
+      "capExemption": false
+    },
+    {
+      "order": 3,
+      "when": "All keys are FALSE or NOT_APPLICABLE, with no MISSING or UNKNOWN",
+      "result": "NO_ESCALATION",
+      "capExemption": false
+    }
+  ],
+  "naSemantics": {
+    "distinctFromFalse": true,
+    "triggersEscalation": false,
+    "satisfiesCompleteness": true,
+    "provenanceRequired": "Applicability basis must be recorded."
+  },
+  "missingSemantics": {
+    "distinctFromNotApplicable": true,
+    "complete": false,
+    "ifAnyTruePrecedence": "ESCALATE",
+    "otherwiseResult": "UNRESOLVED"
+  },
+  "unknownSemantics": {
+    "distinctFromFalse": true,
+    "complete": false,
+    "ifAnyTruePrecedence": "ESCALATE",
+    "otherwiseResult": "UNRESOLVED",
+    "rationaleRequired": true
+  },
+  "provenance": {
+    "TRUE": "Positive supporting evidence required.",
+    "FALSE": "Evidence supporting evaluated false required.",
+    "UNKNOWN": "Reason determination cannot be made required.",
+    "NOT_APPLICABLE": "Applicability basis required.",
+    "MISSING": "No valid evaluation record exists; do not synthesize a value."
+  },
+  "malformedInput": {
+    "duplicateKey": "INVALID_INPUT; reject during duplicate-aware parsing before object materialization.",
+    "invalidState": "INVALID_INPUT",
+    "null": "INVALID_INPUT",
+    "wrongType": "INVALID_INPUT",
+    "extraKey": "INVALID_INPUT",
+    "missingNamedKey": "Valid incomplete semantic input; represents MISSING and resolves per precedence.",
+    "provenanceFailure": "INVALID_INPUT"
+  },
+  "cap": {
+    "trigger": "radar == sec AND securityGate == ECOSYSTEM_RELEVANT AND preGateSignal == high",
+    "ESCALATE": "No high-to-medium cap; retain high.",
+    "NO_ESCALATION": "Apply high-to-medium cap.",
+    "UNRESOLVED": "Apply high-to-medium cap.",
+    "unresolvedHardFilter": false
+  },
+  "hardFilter": {
+    "predicate": "radar == sec AND securityGate == UNRELATED",
+    "independentOfEscalation": true,
+    "reasonCode": "SEC_UNRELATED"
+  },
+  "outputsSeparate": [
+    "hardFilter",
+    "signalCap",
+    "escalationResult",
+    "securityModifier",
+    "score",
+    "action",
+    "publication"
+  ],
+  "reasonCodes": [
+    "SECURITY_ESCALATION_KEY_TRUE",
+    "SECURITY_ESCALATION_NO_KEY_TRUE",
+    "SECURITY_ESCALATION_INPUT_UNKNOWN",
+    "SECURITY_ESCALATION_INPUT_MISSING",
+    "SECURITY_ESCALATION_NOT_APPLICABLE",
+    "SECURITY_SIGNAL_CAP_APPLIED",
+    "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION"
+  ],
+  "scoreInputCompatibility": {
+    "frozenScoreSchemaUnchanged": true,
+    "policyEvaluationStatesAreNotEncodedAsBooleans": "Retain per-key TRUE/FALSE/UNKNOWN/NOT_APPLICABLE state and provenance in the Security Gate Policy evaluation record. Do not collapse NOT_APPLICABLE into FALSE in that record. Reconcile any downstream boolean projection separately; this semantic decision does not modify Score Policy 2.1.0 or its schema."
+  },
+  "matrix": {
+    "rows": 625,
+    "unknownDecisionRows": 0,
+    "outcomeCounts": {
+      "ESCALATE": 369,
+      "NO_ESCALATION": 16,
+      "UNRESOLVED": 240
+    },
+    "contextForCapProjection": "Each row includes projected cap result for ECOSYSTEM_RELEVANT + high."
+  },
+  "frozenPolicyImpact": {
+    "scorePolicy20": "UNCHANGED",
+    "scorePolicy201": "UNCHANGED",
+    "scorePolicy210": "UNCHANGED",
+    "contract": "UNCHANGED",
+    "securityModifier": "UNCHANGED"
+  },
+  "publication": "DEFERRED"
+}

@@ -1,0 +1,100 @@
+{
+  "artifact": "radar-security-gate-policy-v1.0.0-package-map",
+  "status": "FROZEN",
+  "packageRoot": "vendor/horizon-policies/radar/security-gate/1.0.0",
+  "canonical": {
+    "policy": "radar-security-gate-policy-v1.json",
+    "markdown": "radar-security-gate-policy-v1.md",
+    "manifest": "radar-security-gate-v1.0.0-manifest.json",
+    "integrity": "package-integrity.json"
+  },
+  "pathResolutions": {
+    "radar-security-escalation-boundary-fixtures-v1.json": "radar-security-escalation-boundary-fixtures-v1.json",
+    "radar-security-escalation-decision-matrix-v1.json": "radar-security-escalation-decision-matrix-v1.json",
+    "radar-security-escalation-semantic-decision-v1.json": "radar-security-escalation-semantic-decision-v1.json",
+    "radar-security-gate-classification-boundary-fixtures-v1.json": "radar-security-gate-classification-boundary-fixtures-v1.json",
+    "radar-security-gate-classification-matrix-v1.json": "radar-security-gate-classification-matrix-v1.json",
+    "radar-security-gate-classification-provenance-v1.json": "radar-security-gate-classification-provenance-v1.json",
+    "radar-security-gate-decision-table-v1.json": "radar-security-gate-decision-table-v1.json",
+    "radar-security-gate-decision-table-v2.json": "radar-security-gate-decision-table-v2.json",
+    "radar-security-gate-historical-projection-v1.json": "radar-security-gate-historical-projection-v1.json",
+    "radar-security-gate-policy-v1.json": "radar-security-gate-policy-v1.json",
+    "radar-security-gate-policy-v1.md": "radar-security-gate-policy-v1.md",
+    "radar-security-gate-reason-code-correction-v1.json": "radar-security-gate-reason-code-correction-v1.json"
+  },
+  "dependencies": [],
+  "payloads": [
+    {
+      "path": "radar-security-escalation-boundary-fixtures-v1.json",
+      "sha256": "21ab2c0f671743987f8379fc47b750c5b928b1b3ccde631d205d7f36621075ec",
+      "bytes": 18250,
+      "role": "FIXTURE"
+    },
+    {
+      "path": "radar-security-escalation-decision-matrix-v1.json",
+      "sha256": "dfb9b76c1697c40275ec141ed5b85597f4d757a985b8da0abad471e55f97c73a",
+      "bytes": 388792,
+      "role": "MATRIX"
+    },
+    {
+      "path": "radar-security-escalation-semantic-decision-v1.json",
+      "sha256": "992663a54038fb853ab5d866ee6bba84a0981aa2cec389ef539cd14b3c21ed9c",
+      "bytes": 4090,
+      "role": "REVIEWED_AUTHORITY"
+    },
+    {
+      "path": "radar-security-gate-classification-boundary-fixtures-v1.json",
+      "sha256": "1b01c74cbb842fc1df0b5283a1f72fd7165dbde20adc2e2c6942982a04dac921",
+      "bytes": 17591,
+      "role": "FIXTURE"
+    },
+    {
+      "path": "radar-security-gate-classification-matrix-v1.json",
+      "sha256": "9fcf3006a31713e9aa1b609aeb5942e47735282e405c4e696497ba4267e535cc",
+      "bytes": 146825,
+      "role": "MATRIX"
+    },
+    {
+      "path": "radar-security-gate-classification-provenance-v1.json",
+      "sha256": "8a568f5d2ea3a392116b61e8eaf5ee31c36ca36e6226aadc807af4d3f857faf2",
+      "bytes": 4713,
+      "role": "REVIEWED_AUTHORITY"
+    },
+    {
+      "path": "radar-security-gate-decision-table-v1.json",
+      "sha256": "dda1a9158d5996d0758a89d0fb21ce2445455ffc2d747c97d6a41d3c6bc9ee67",
+      "bytes": 7287926,
+      "role": "DECISION_TABLE"
+    },
+    {
+      "path": "radar-security-gate-decision-table-v2.json",
+      "sha256": "60de27e0e14e55ff9e21d1bc04095a49a44f649bbaf8ba6b5c402fd17ca30ca9",
+      "bytes": 8073605,
+      "role": "DECISION_TABLE"
+    },
+    {
+      "path": "radar-security-gate-historical-projection-v1.json",
+      "sha256": "7da7ca81a29d10da047ac0baa3449c28dd21b44001770630531f1ef52d412888",
+      "bytes": 24890,
+      "role": "NORMATIVE"
+    },
+    {
+      "path": "radar-security-gate-policy-v1.json",
+      "sha256": "1050157be9eb2d5a7a9af2af3bb5777073ff255584a125889049f1da04487701",
+      "bytes": 10858,
+      "role": "NORMATIVE"
+    },
+    {
+      "path": "radar-security-gate-policy-v1.md",
+      "sha256": "843794e38a3af907f232920d0de6594aea1c90cfcc56e3d4a4077ba61797ba4c",
+      "bytes": 3179,
+      "role": "NORMATIVE"
+    },
+    {
+      "path": "radar-security-gate-reason-code-correction-v1.json",
+      "sha256": "a16e7350313bfca705290b70814a4ffa8918bbac5749477b8fc2e829dda57f52",
+      "bytes": 1063,
+      "role": "NORMATIVE"
+    }
+  ]
+}

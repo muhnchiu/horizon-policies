@@ -1,0 +1,278 @@
+{
+  "artifact": "radar-security-gate-policy-v1",
+  "policyVersion": "1.0.0",
+  "status": "FROZEN",
+  "normative": true,
+  "scope": {
+    "appliesWhen": "radar == SEC AND gateApplicability == APPLICABLE",
+    "outOfScope": "radar != SEC => explicit NOT_APPLICABLE disposition; SEC with versioned affirmative non-applicability record => NOT_APPLICABLE",
+    "owned": [
+      "SEC applicability",
+      "four-class tracked-environment classification",
+      "UNRELATED hard filter",
+      "escalation evaluation",
+      "ECOSYSTEM_RELEVANT high cap",
+      "provenance validation",
+      "reason codes",
+      "deterministic outputs"
+    ],
+    "notOwned": [
+      "security modifier",
+      "numeric score",
+      "generic action",
+      "Event identity",
+      "Observation identity",
+      "Registry",
+      "publication",
+      "priorValidation"
+    ]
+  },
+  "classification": {
+    "classes": [
+      "DIRECTLY_EXPOSED",
+      "DEPENDENCY_RELEVANT",
+      "ECOSYSTEM_RELEVANT",
+      "UNRELATED"
+    ],
+    "resolution": [
+      "RESOLVED",
+      "UNRESOLVED",
+      "INVALID_INPUT"
+    ],
+    "precedence": [
+      "DIRECTLY_EXPOSED",
+      "DEPENDENCY_RELEVANT",
+      "ECOSYSTEM_RELEVANT",
+      "UNRELATED"
+    ],
+    "relationshipPredicates": [
+      "directExposure",
+      "dependencyRelationship",
+      "ecosystemRelationship"
+    ],
+    "states": [
+      "TRUE",
+      "FALSE",
+      "UNKNOWN",
+      "NOT_APPLICABLE",
+      "MISSING"
+    ],
+    "algorithm": [
+      "Validate structural types, identity consistency, source authority references and provenance shape; on malformed input return INVALID_INPUT.",
+      "If SEC applicability is unresolved, candidate identity is unresolved, or the tracked-environment baseline/version/hash is missing, return UNRESOLVED.",
+      "If directExposure is TRUE, return RESOLVED/DIRECTLY_EXPOSED.",
+      "If directExposure is UNKNOWN or MISSING and no higher-specificity TRUE exists, return UNRESOLVED; do not let lower-class evidence mask unresolved direct exposure.",
+      "If directExposure is FALSE or NOT_APPLICABLE and dependencyRelationship is TRUE, return RESOLVED/DEPENDENCY_RELEVANT.",
+      "If dependencyRelationship is UNKNOWN or MISSING before a lower-specificity positive, return UNRESOLVED.",
+      "If directExposure and dependencyRelationship are each FALSE or provenance-backed NOT_APPLICABLE and ecosystemRelationship is TRUE, return RESOLVED/ECOSYSTEM_RELEVANT.",
+      "If ecosystemRelationship is UNKNOWN or MISSING, return UNRESOLVED.",
+      "If all three predicates are FALSE or provenance-backed NOT_APPLICABLE and the exact versioned baseline proves complete coverage of all tracked scopes, return RESOLVED/UNRELATED.",
+      "Otherwise return UNRESOLVED. Missing or absent matches alone never imply UNRELATED."
+    ]
+  },
+  "trackedEnvironmentInput": {
+    "baseline": {
+      "requiredFields": [
+        "baselineVersion",
+        "baselineSha256",
+        "observedAt",
+        "trackedTechnologyCatalog",
+        "directDeploymentInventory",
+        "dependencyGraph",
+        "trackedEcosystemCatalog",
+        "coverageAttestation",
+        "sourceAuthorityMapVersion",
+        "sourceAuthorityMapSha256"
+      ],
+      "realValues": "External runtime configuration; none invented in this candidate."
+    },
+    "candidate": {
+      "requiredFields": [
+        "candidateAffectedTechnology.canonicalId",
+        "candidateAffectedTechnology.evidenceRef",
+        "candidateAffectedComponent.componentId OR candidateAffectedComponent.scope=TECHNOLOGY_WIDE with evidenceRef"
+      ],
+      "identityMapping": "Exact canonical IDs; aliases only through an explicit versioned alias map. String similarity is never a match."
+    },
+    "relationships": {
+      "directExposure": "TRUE only for exact candidate target match to an active direct deployment/use record and evidence that candidate applies to that tracked instance/capability.",
+      "dependencyRelationship": "TRUE only for an explicit dependency graph path from a tracked root to the candidate target; direct/transitive/runtime/platform/infrastructure edges carry evidence and path.",
+      "ecosystemRelationship": "TRUE only for exact membership in an explicitly tracked ecosystem with evidence.",
+      "false": "requires evaluated query + complete relevant inventory/graph/catalog coverage + provenance; no-match from incomplete source is UNKNOWN.",
+      "notApplicable": "requires a versioned applicability rule and basis; not equivalent to FALSE.",
+      "unknown": "stale, conflicting, missing authority, unresolved identity, or incomplete relevant source facts."
+    }
+  },
+  "gateApplicability": {
+    "nonSEC": "NOT_APPLICABLE deterministically; preserve incoming signal, no filter/cap.",
+    "SEC": "requires APPLICABLE or an explicit versioned NOT_APPLICABLE applicability record. Missing/UNKNOWN => classification UNRESOLVED and RECEIPT_ONLY. Do not use N/A as fallback.",
+    "secNaCompatibility": "An explicit, provenance-backed NOT_APPLICABLE disposition preserves the frozen Score 2.1 boundary behavior for securityGate=N/A."
+  },
+  "escalation": {
+    "decisionRef": "radar-security-escalation-semantic-decision-v1.json",
+    "decisionMatrixRef": "radar-security-escalation-decision-matrix-v1.json",
+    "aggregation": "ANY_TRUE",
+    "states": [
+      "TRUE",
+      "FALSE",
+      "UNKNOWN",
+      "NOT_APPLICABLE",
+      "MISSING"
+    ],
+    "outputs": [
+      "ESCALATE",
+      "NO_ESCALATION",
+      "UNRESOLVED"
+    ],
+    "precedence": "Use approved 5A.6.8e.3a exactly; no reinterpretation."
+  },
+  "gateDisposition": {
+    "unrelated": {
+      "when": "radar == SEC AND classificationResolution == RESOLVED AND securityGateClass == UNRELATED",
+      "hardFilter": true,
+      "outgoingSignal": "filtered",
+      "reasonCode": "SECURITY_UNRELATED_HARD_FILTER"
+    },
+    "ecosystemHigh": {
+      "when": "radar == SEC AND securityGateClass == ECOSYSTEM_RELEVANT AND incomingSignal == high",
+      "ESCALATE": {
+        "outgoingSignal": "high",
+        "capApplied": false,
+        "capExemption": true
+      },
+      "NO_ESCALATION": {
+        "outgoingSignal": "medium",
+        "capApplied": true,
+        "capExemption": false
+      },
+      "UNRESOLVED": {
+        "outgoingSignal": "medium",
+        "capApplied": true,
+        "capExemption": false
+      }
+    },
+    "directAndDependency": "No Security Gate signal cap or hard filter; preserve signal.",
+    "notApplicable": "No Security Gate filter/cap; preserve signal.",
+    "unresolvedClassification": "RECEIPT_ONLY; no score invocation; no hard filter.",
+    "unresolvedEscalation": "Never creates hard filter by itself."
+  },
+  "provenanceRef": "radar-security-gate-classification-provenance-v1.json",
+  "inputModel": {
+    "trackedEnvironmentBaseline": "version/hash/asOf/complete coverage/source authority map",
+    "candidateAffectedTechnology": "canonicalId + evidenceRef; unresolved if no mapping",
+    "candidateAffectedComponent": "canonical component ID or evidence-backed TECHNOLOGY_WIDE",
+    "relationships": {
+      "directExposure": {
+        "state": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "provenanceRequired": true
+      },
+      "dependencyRelationship": {
+        "state": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "provenanceRequired": true
+      },
+      "ecosystemRelationship": {
+        "state": [
+          "TRUE",
+          "FALSE",
+          "UNKNOWN",
+          "NOT_APPLICABLE",
+          "MISSING"
+        ],
+        "provenanceRequired": true
+      }
+    },
+    "gateApplicabilityAssessment": {
+      "states": [
+        "APPLICABLE",
+        "NOT_APPLICABLE",
+        "UNKNOWN",
+        "MISSING"
+      ],
+      "requiredForSEC": true,
+      "notApplicableRequiresVersionedRuleAndEvidence": true,
+      "missingOrUnknown": "UNRESOLVED"
+    },
+    "securityGateClass": "derived output; not accepted as unaudited input"
+  },
+  "reasonCodes": {
+    "SECURITY_CLASS_DIRECT_EXPOSURE": "resolved direct class",
+    "SECURITY_CLASS_DEPENDENCY_RELEVANT": "resolved dependency class",
+    "SECURITY_CLASS_ECOSYSTEM_RELEVANT": "resolved ecosystem class",
+    "SECURITY_CLASS_UNRELATED_CONFIRMED": "all scopes affirmatively excluded under complete baseline",
+    "SECURITY_CLASS_INPUT_UNKNOWN": "a required relationship cannot be determined",
+    "SECURITY_CLASS_INPUT_MISSING": "a required evaluation record is absent",
+    "SECURITY_CLASS_INPUT_NOT_APPLICABLE": "predicate is N/A with valid basis",
+    "SECURITY_CLASS_INVALID_INPUT": "structural/value input rejected",
+    "SECURITY_CLASS_TRACKED_BASELINE_MISSING": "baseline/version/hash absent",
+    "SECURITY_CLASS_PROVENANCE_INVALID": "required evidence/provenance invalid",
+    "SECURITY_UNRELATED_HARD_FILTER": "SEC and resolved UNRELATED",
+    "SECURITY_SIGNAL_CAP_APPLIED": "ecosystem high with NO_ESCALATION or UNRESOLVED",
+    "SECURITY_SIGNAL_CAP_EXEMPT_ESCALATION": "ecosystem high with ESCALATE",
+    "SECURITY_GATE_NOT_APPLICABLE": "non-SEC or explicit valid N/A applicability",
+    "SECURITY_GATE_INVALID_INPUT": "malformed gate input"
+  },
+  "invalidInput": [
+    {
+      "condition": "wrong relationship value type",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "condition": "invalid relationship enum",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "condition": "null prohibited value",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "condition": "malformed tracked environment object",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "condition": "identity fields conflict and cannot be reconciled",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    },
+    {
+      "condition": "TRUE without positive evidence provenance",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "condition": "FALSE without evaluation/query provenance",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "condition": "NOT_APPLICABLE without versioned applicability basis",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_PROVENANCE_INVALID"
+    },
+    {
+      "condition": "duplicate logical JSON key",
+      "output": "INVALID_INPUT",
+      "reasonCode": "SECURITY_CLASS_INVALID_INPUT"
+    }
+  ],
+  "reasonCodeRef": "radar-security-gate-policy-v1.md",
+  "deterministic": true,
+  "contractChanges": false,
+  "eventIdentityChanges": false,
+  "observationIdentityChanges": false
+}
