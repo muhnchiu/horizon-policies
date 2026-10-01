@@ -165,6 +165,97 @@
       "path": "radar/baselines/runtime-v1/radar-runtime-baseline-v1.json",
       "sha256": "300321c3f00505ebec5e5efed90299ee7865448b17059366c63e2fb08489747d",
       "status": "TEMPLATE"
+    },
+    {
+      "logicalName": "scorePolicy",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-score-policy-v2.1.0.json",
+      "sha256": "c00562c09e6c9f21eec0149c549993013f825bf351415a0076c05d6601f6deb7",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scorePolicyDocumentation",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-score-policy-v2.1.0.md",
+      "sha256": "a0023bac3d2b0e49499083459ef13c957239cbbf9b20cafe8373a72258323775",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreReplayCompatibilityFixture",
+      "version": "2.0.1-fixture",
+      "path": "radar/score/2.1.0/radar-score-replay-v2.0.1-compatibility.json",
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "actionDecisionPolicy",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-action-decision-policy-v2.1.0.json",
+      "sha256": "a3f7916300d24f1466b72d71664a534a3cffd70a72ec513fa9d505f3c4458a72",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "actionBoundaryFixtures",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-action-boundary-fixtures-v2.1.0.json",
+      "sha256": "005139df01be2be100d80ae9067910631b69390ebeba4b0f3f71c09419b5eb2d",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "riskPolicy",
+      "version": "1.0",
+      "path": "radar/score/2.1.0/radar-risk-policy-v1.0.json",
+      "sha256": "a8fdccfb9f28f2c196f57230ba96a64b9460fc7a03564bc9b63a2277af593c78",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "priorValidationLifecyclePolicy",
+      "version": "1.0",
+      "path": "radar/score/2.1.0/radar-prior-validation-lifecycle-policy-v1.0.json",
+      "sha256": "bee1792df9b4f726c0fd629c4f28ffe26e58545a4eebf413ddd31d74668c0321",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "priorValidationLifecycleFixtures",
+      "version": "1.0",
+      "path": "radar/score/2.1.0/radar-prior-validation-lifecycle-fixtures-v1.0.json",
+      "sha256": "c8fae3342d530ff9fdce79922a5c8994d612152ffa8ffb0e9adce1e1cb404bc3",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreInputGenerationPolicy",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-score-input-generation-policy-v2.1.0.json",
+      "sha256": "fa3340a1afd7f98747785c5847ecae8d88298d6fed26fdc64a79a052d81b6486",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreInputProvenanceSchema",
+      "version": "2.1",
+      "path": "radar/score/2.1.0/radar-score-input-provenance-schema-v2.1.json",
+      "sha256": "9fe8e56f76faedd3536403039ebe00a8656120f213337bbc38a9af1e782f8088",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scoreCalibrationDatasetSchema",
+      "version": "2.1",
+      "path": "radar/score/2.1.0/radar-score-calibration-dataset-schema-v2.1.json",
+      "sha256": "0f20b565fdc36578a5981ebf2cf47eb7e4525fde716b560710a07d7602fae6da",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scorePackageManifest",
+      "version": "2.1.0",
+      "path": "radar/score/2.1.0/radar-score-policy-v2.1.0-manifest.json",
+      "sha256": "1326c47743ad68c4e1d37a6e1572119b518b038b34e0328a8711d4e0da9802ba",
+      "status": "FROZEN"
+    },
+    {
+      "logicalName": "scorePackageIntegrity",
+      "version": "1.0",
+      "path": "radar/score/2.1.0/package-integrity.json",
+      "sha256": "5403cd02026d140f809886d3641d183f8be0ed2b8a9e6b0a0fdd881c32207536",
+      "status": "FROZEN"
     }
   ]
 }

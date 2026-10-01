@@ -1,0 +1,113 @@
+{
+  "artifact": "radar-risk-policy-v1.0",
+  "policyVersion": "1.0",
+  "status": "FROZEN",
+  "normative": true,
+  "semanticDefinition": "Negative adoption/usage impact risk of acting on this candidate in the tracked environment. It estimates plausible adverse consequences of action, not whether the candidate is important or credible.",
+  "exclusions": [
+    "event importance",
+    "source credibility",
+    "evidence uncertainty",
+    "urgency",
+    "Security Gate",
+    "generic relevance",
+    "novelty or momentum",
+    "implementation effort unless it creates a negative use consequence"
+  ],
+  "enum": {
+    "low": {
+      "definition": "Available evidence supports that acting in the tracked environment has no material negative impact, or only trivial and readily reversible impact. Low requires positive evidence of safe scope/permissions and reversibility; absence of known harm is not enough.",
+      "positiveEvidence": [
+        "scoped permissions and data flows are documented",
+        "operation is opt-in, bounded and reversible",
+        "relevant deployment/integration path has been inspected",
+        "no material adverse side effect is indicated by the evidence"
+      ],
+      "negativeEvidence": [
+        "unknown external data flows",
+        "broad privileges without reviewed necessity",
+        "irreversible/destructive behavior",
+        "credible high-severity adverse effect"
+      ],
+      "examplesNonNormative": [
+        "A local opt-in utility using non-sensitive data with narrow permissions and a tested uninstall path."
+      ],
+      "requiredEvidence": [
+        "candidate version and intended action/use path",
+        "tracked-environment context relevant to the action",
+        "evidence refs for permissions, data handling and reversibility"
+      ],
+      "minimumGenerationConfidence": 0.8
+    },
+    "normal": {
+      "definition": "Evidence supports ordinary, bounded or manageable negative consequences if acted upon, with identifiable mitigations; evidence does not meet the LOW or HIGH anchors. Normal is not the missing/unknown value.",
+      "positiveEvidence": [
+        "bounded operational/data/compatibility downside exists",
+        "mitigation or rollback is available",
+        "no credible severe or irreversible downside is identified"
+      ],
+      "negativeEvidence": [
+        "credible severe harm or unbounded exposure => HIGH",
+        "fully evidenced trivial/reversible impact => LOW",
+        "insufficient evidence/conflicting facts => unresolved"
+      ],
+      "examplesNonNormative": [
+        "A tool requiring routine permissions and a reversible local configuration change, with documented rollback."
+      ],
+      "requiredEvidence": [
+        "candidate version and intended action/use path",
+        "evidence of plausible downside and mitigation or rollback",
+        "tracked-environment context"
+      ],
+      "minimumGenerationConfidence": 0.65
+    },
+    "high": {
+      "definition": "Credible evidence shows a material adverse consequence of acting in the tracked environment, including severe data/security/privacy exposure, destructive or difficult-to-reverse change, or significant operational/legal harm.",
+      "positiveEvidence": [
+        "verified broad access to sensitive data without adequate controls",
+        "destructive/irreversible migration or command path",
+        "credible serious security/privacy/operational harm in the actual use path"
+      ],
+      "negativeEvidence": [
+        "only popularity, severity of reported event, weak source credibility, uncertainty, or urgency without an adverse use consequence",
+        "well-contained and reversible low-impact behavior"
+      ],
+      "examplesNonNormative": [
+        "A candidate integration transmits tracked-environment secrets to an untrusted endpoint or performs destructive changes with broad privileges."
+      ],
+      "requiredEvidence": [
+        "candidate version and intended action/use path",
+        "specific adverse consequence and affected asset/data",
+        "credible evidence of exposure/exploitability or irreversibility in tracked environment"
+      ],
+      "minimumGenerationConfidence": 0.8
+    }
+  },
+  "rubricDimensions": [
+    "severityOfNegativeConsequence",
+    "exposureInTrackedEnvironment",
+    "reversibilityAndContainment"
+  ],
+  "ambiguityHandling": "Missing, conflicting, stale or weakly sourced facts => RISK_UNRESOLVED, no Score Policy invocation. Do not default to normal. Resolve deterministic-source conflicts by source authority/version; if unresolved, do not let model override. Model rubric may classify only after deterministic facts are insufficient and must cite evidence.",
+  "generationArchitecture": "HYBRID",
+  "provenanceMethods": {
+    "RULE_FACT": "Deterministic explicit source/runtime fact satisfying a named policy rule; takes precedence over model judgment when valid and relevant.",
+    "MODEL_RUBRIC": "Fixed rubric applied to cited evidence only when deterministic facts do not decide the level.",
+    "HYBRID": "Per-candidate resolution chooses RULE_FACT when explicit authoritative facts are decisive; otherwise MODEL_RUBRIC. The resulting value records the actual method, never just HYBRID."
+  },
+  "confidenceScale": {
+    "field": "generationConfidence",
+    "range": [
+      0,
+      1
+    ],
+    "separateFromScoreInput": "Score Policy confidence remains integer 0..10; this provenance confidence is a generation-quality measure and is not passed into scoring.",
+    "thresholdsAreCandidateForHumanCalibration": true
+  },
+  "missingDataBehavior": "RISK_UNRESOLVED; candidate remains receipt-only/no score. Never synthesize normal, low, or high from missing evidence.",
+  "scorePolicyIntegration": {
+    "numericScoreMapping": "NONE",
+    "reason": "Frozen Score Policy 2.0.1 does not include risk in weighted dimensions, direct bonus, signal, Security Gate or modifier. This candidate preserves that formula; risk affects only the proposed Action Decision Policy.",
+    "baselineCompatibility": "All historical replay rows carry risk=normal; the candidate passes frozen score and signal outputs through unchanged. A future numeric risk penalty/bonus would require a separate policy change and replay review."
+  }
+}

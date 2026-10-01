@@ -1,0 +1,12 @@
+{
+  "artifact": "radar-score-policy-v2.1.0-package-integrity",
+  "integrityVersion": "1.0",
+  "packageIdentity": "radar-score-policy-v2.1.0-package-manifest",
+  "packageVersion": "2.1.0",
+  "manifestFilename": "radar-score-policy-v2.1.0-manifest.json",
+  "manifestSha256": "1326c47743ad68c4e1d37a6e1572119b518b038b34e0328a8711d4e0da9802ba",
+  "payloadCount": 11,
+  "serialization": "UTF-8 JSON, 2-space indentation, object insertion order, one LF newline; SHA-256 over exact bytes.",
+  "status": "FROZEN",
+  "frozen": true
+}

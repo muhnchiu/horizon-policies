@@ -1,0 +1,268 @@
+{
+  "artifact": "radar-action-decision-policy-v2.1.0",
+  "policyVersion": "2.1.0",
+  "status": "FROZEN",
+  "normative": true,
+  "purpose": "A deterministic, ordered terminal action policy for frozen Score Policy 2.1.0. Does not replace or edit historical 2.0/2.0.1 artifacts.",
+  "input": {
+    "required": {
+      "signal": {
+        "enum": [
+          "filtered",
+          "high",
+          "medium",
+          "low"
+        ],
+        "meaning": "Already-classified signal from Signal Policy after hard filters and Security Gate signal cap."
+      },
+      "eventClass": {
+        "enum": [
+          "FIRST_DISCOVERY",
+          "VERSION_RELEASE",
+          "OTHER"
+        ],
+        "meaning": "Explicitly normalized event class; see context mapping, never inferred from missing fields."
+      },
+      "risk": {
+        "enum": [
+          "low",
+          "normal",
+          "high"
+        ],
+        "source": "Risk Policy 1.0; unresolved generation rejects the candidate."
+      },
+      "priorValidation": {
+        "type": "boolean",
+        "source": "priorValidation Policy 1.0; explicit human authority only."
+      },
+      "relevanceLevel": {
+        "enum": [
+          "DIRECT",
+          "ADJACENT",
+          "EXPLORATORY",
+          "UNRELATED"
+        ]
+      },
+      "relevanceScore": {
+        "enum": [
+          9,
+          5,
+          3,
+          1
+        ],
+        "mustMatch": "DIRECT=9, ADJACENT=5, EXPLORATORY=3, UNRELATED=1"
+      },
+      "impact": {
+        "integerRange": [
+          0,
+          10
+        ]
+      },
+      "actionability": {
+        "integerRange": [
+          0,
+          10
+        ]
+      },
+      "confidence": {
+        "integerRange": [
+          0,
+          10
+        ]
+      }
+    },
+    "notInputs": [
+      "radarModifier",
+      "directBonus",
+      "duplicate",
+      "securityGate",
+      "securityEscalation",
+      "finalScore",
+      "sourceAuthority"
+    ]
+  },
+  "eventClassMapping": {
+    "historicalScore2Adapter": {
+      "FIRST_DISCOVERY": [
+        "model-release",
+        "project-discovery",
+        "skill-release",
+        "research-release",
+        "price-change",
+        "capability-change"
+      ],
+      "VERSION_RELEASE": [
+        "version-release"
+      ],
+      "OTHER": "all other historical eventType values"
+    },
+    "futureContract21Adapter": {
+      "FIRST_DISCOVERY": [
+        "release",
+        "model-release",
+        "skill-release",
+        "research-release",
+        "pricing-change",
+        "capability-change"
+      ],
+      "VERSION_RELEASE": [
+        "version-update"
+      ],
+      "OTHER": [
+        "security-cve",
+        "security-cisa-kev",
+        "security-advisory",
+        "funding",
+        "incident",
+        "documentation"
+      ]
+    },
+    "determinism": "The adapter is selected explicitly by Contract/package version. Event Policy 1.0 canonicalization is required before Contract 2.1.2 mapping."
+  },
+  "actions": {
+    "ignore": "Candidate was hard-filtered upstream and is not admitted to actionable Radar output.",
+    "watch": "Retain for monitoring; no immediate review/test/adoption instruction.",
+    "read": "Read and assess the evidence; no trial/adoption instruction.",
+    "test": "Run a bounded, reversible evaluation in a safe environment before use.",
+    "adopt": "Incorporate into the tracked environment only after explicit independent human validation."
+  },
+  "precedence": [
+    {
+      "id": "P01",
+      "when": "signal == filtered",
+      "then": "ignore",
+      "terminal": true
+    },
+    {
+      "id": "P02",
+      "when": "risk == high AND signal == high",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P03",
+      "when": "risk == high AND signal IN [medium, low]",
+      "then": "watch",
+      "terminal": true
+    },
+    {
+      "id": "P04",
+      "when": "signal == high AND eventClass == VERSION_RELEASE",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P05",
+      "when": "signal == high AND eventClass == FIRST_DISCOVERY AND actionability >= 7 AND relevanceScore >= 8",
+      "then": "test",
+      "terminal": true
+    },
+    {
+      "id": "P06",
+      "when": "signal == high AND eventClass == FIRST_DISCOVERY AND NOT P05 AND impact >= 6",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P07",
+      "when": "signal == high AND eventClass == FIRST_DISCOVERY AND NOT P05 AND impact < 6",
+      "then": "read",
+      "terminal": true,
+      "decisionReason": "P07_FIRST_DISCOVERY_DEFAULT_READ",
+      "rationale": "A first discovery that fails the explicit P05 minimum relevance/actionability condition and P06 material-impact read condition is READ; newness alone never produces TEST."
+    },
+    {
+      "id": "P08",
+      "when": "signal == high AND eventClass == OTHER AND priorValidation == true AND risk == low AND relevanceLevel == DIRECT AND relevanceScore >= 8 AND actionability >= 7 AND confidence >= 6 AND impact >= 7",
+      "then": "adopt",
+      "terminal": true
+    },
+    {
+      "id": "P09",
+      "when": "signal == high AND no prior high rule matched AND actionability >= 5",
+      "then": "test",
+      "terminal": true
+    },
+    {
+      "id": "P10",
+      "when": "signal == high AND no prior high rule matched AND actionability < 5",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P11",
+      "when": "signal == medium AND actionability >= 6 AND relevanceScore >= 7",
+      "then": "test",
+      "terminal": true
+    },
+    {
+      "id": "P12",
+      "when": "signal == medium AND no prior medium rule matched AND impact >= 5",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P13",
+      "when": "signal == medium AND no prior medium rule matched AND impact < 5",
+      "then": "watch",
+      "terminal": true
+    },
+    {
+      "id": "P14",
+      "when": "signal == low AND actionability >= 4",
+      "then": "read",
+      "terminal": true
+    },
+    {
+      "id": "P15",
+      "when": "signal == low AND actionability < 4",
+      "then": "watch",
+      "terminal": true
+    }
+  ],
+  "invariants": [
+    "Only signal=filtered returns ignore.",
+    "ADOPT is impossible without priorValidation=true, risk=low, direct relevance and all frozen guard thresholds.",
+    "FIRST_DISCOVERY and VERSION_RELEASE classes never ADOPT.",
+    "Action policy does not recalculate scores, direct bonus, modifiers, filters, gates, or signals.",
+    "A missing/invalid required input returns unresolved validation error; it is never silently defaulted."
+  ],
+  "upstreamBoundary": {
+    "duplicate": "Score Engine hard filter. Adapter supplies signal=filtered; Action Policy does not inspect duplicate.",
+    "securityGate": "Security Gate independently filters SEC/UNRELATED and caps ECOSYSTEM_RELEVANT high signal. Action Policy consumes resulting signal only.",
+    "signal": "Signal Policy classifies final score and applies Security Gate cap; Action Policy does not recalculate it.",
+    "directBonus": "Score formula only; not an action input.",
+    "modifier": "Score Policy 2.0.1 resolver only; not an action input."
+  },
+  "historicalReplayAdapter": "Historical Score 2.0.1 rows are adapted from their serialized signal/eventType and unchanged dimensions. risk=normal and priorValidation=false are preserved as fixture values only, not treated as provenance.",
+  "revisionSummary": {
+    "P07": "TEST -> READ default",
+    "semanticChange": "No score or numeric threshold change. TEST remains permitted on first discovery only when explicit P05 relevance and actionability gates pass (unless earlier terminal risk rule applies).",
+    "actionVocabulary": [
+      "ignore",
+      "watch",
+      "read",
+      "test",
+      "adopt"
+    ],
+    "historicalReplayCompatibility": {
+      "fixtureCount": 50,
+      "scorePassThroughMatches": 50,
+      "signalPassThroughMatches": 50,
+      "proposedActionMatches": 50,
+      "filterPassThroughMatches": 50,
+      "historicalBehavioralDelta": "NO"
+    }
+  },
+  "p07Adjudication": {
+    "result": "ACCEPT_2_1_DELTA",
+    "288Rows": "INTENTIONAL_SEMANTIC_CHANGE",
+    "rationale": "P05 requires relevanceScore>=8 and actionability>=7. Actionability 7/10 alone establishes feasibility but not relevance/value; no evidence justifies preserving a first-discovery TEST where relevance is 1/3/5. Legacy engine branch is not policy authority. P07 remains default READ."
+  },
+  "boundaryVerification": {
+    "fixtureCount": 50,
+    "passed": 50,
+    "failed": 0,
+    "reportedFiveFailures": "false positives from erroneous P11/P12 threshold implementation; see reconciliation artifact."
+  }
+}

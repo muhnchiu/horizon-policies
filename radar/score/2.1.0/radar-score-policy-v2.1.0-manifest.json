@@ -1,0 +1,115 @@
+{
+  "artifact": "radar-score-policy-v2.1.0-package-manifest",
+  "scorePolicyVersion": "2.1.0",
+  "schemaVersion": "2.1",
+  "packageVersion": "2.1.0",
+  "status": "FROZEN",
+  "distributionStatus": "NOT_DISTRIBUTED",
+  "frozen": true,
+  "artifacts": [
+    {
+      "path": "radar-score-policy-v2.1.0.json",
+      "role": "NORMATIVE",
+      "version": "2.1.0",
+      "sha256": "c00562c09e6c9f21eec0149c549993013f825bf351415a0076c05d6601f6deb7"
+    },
+    {
+      "path": "radar-score-policy-v2.1.0.md",
+      "role": "NORMATIVE",
+      "version": "2.1.0",
+      "sha256": "a0023bac3d2b0e49499083459ef13c957239cbbf9b20cafe8373a72258323775"
+    },
+    {
+      "path": "radar-score-replay-v2.0.1-compatibility.json",
+      "role": "FIXTURE",
+      "version": "2.0.1-fixture",
+      "sha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f"
+    },
+    {
+      "path": "radar-action-decision-policy-v2.1.0.json",
+      "role": "NORMATIVE",
+      "version": "2.1.0",
+      "sha256": "a3f7916300d24f1466b72d71664a534a3cffd70a72ec513fa9d505f3c4458a72"
+    },
+    {
+      "path": "radar-action-boundary-fixtures-v2.1.0.json",
+      "role": "FIXTURE",
+      "version": "2.1.0",
+      "sha256": "005139df01be2be100d80ae9067910631b69390ebeba4b0f3f71c09419b5eb2d"
+    },
+    {
+      "path": "radar-risk-policy-v1.0.json",
+      "role": "NORMATIVE",
+      "version": "1.0",
+      "sha256": "a8fdccfb9f28f2c196f57230ba96a64b9460fc7a03564bc9b63a2277af593c78"
+    },
+    {
+      "path": "radar-prior-validation-lifecycle-policy-v1.0.json",
+      "role": "NORMATIVE",
+      "version": "1.0",
+      "sha256": "bee1792df9b4f726c0fd629c4f28ffe26e58545a4eebf413ddd31d74668c0321"
+    },
+    {
+      "path": "radar-prior-validation-lifecycle-fixtures-v1.0.json",
+      "role": "FIXTURE",
+      "version": "1.0",
+      "sha256": "c8fae3342d530ff9fdce79922a5c8994d612152ffa8ffb0e9adce1e1cb404bc3"
+    },
+    {
+      "path": "radar-score-input-generation-policy-v2.1.0.json",
+      "role": "NORMATIVE",
+      "version": "2.1.0",
+      "sha256": "fa3340a1afd7f98747785c5847ecae8d88298d6fed26fdc64a79a052d81b6486"
+    },
+    {
+      "path": "radar-score-input-provenance-schema-v2.1.json",
+      "role": "SCHEMA",
+      "version": "2.1",
+      "sha256": "9fe8e56f76faedd3536403039ebe00a8656120f213337bbc38a9af1e782f8088"
+    },
+    {
+      "path": "radar-score-calibration-dataset-schema-v2.1.json",
+      "role": "SCHEMA",
+      "version": "2.1",
+      "sha256": "0f20b565fdc36578a5981ebf2cf47eb7e4525fde716b560710a07d7602fae6da"
+    }
+  ],
+  "manifestSelfHash": "Excluded by design to avoid recursive self-hash; distribution publisher must record manifest blob hash externally.",
+  "compatibilityDeclarations": {
+    "contract": {
+      "version": "2.1.2",
+      "schemaVersion": 2,
+      "distributionCommit": "5ac615eda0de0b0fa1d2cc398309fc2657bacc49"
+    },
+    "eventPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    },
+    "observationPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    },
+    "registryPolicy": {
+      "version": "1.0",
+      "distributionCommit": "09c811f7a67ab5a6a1f9f45295d5d815ffb321be"
+    }
+  },
+  "historicalBaselineReferences": {
+    "scorePolicy2.0": {
+      "policySha256": "52f32078c63b07ddeb7f3b0d76c9e2a1e1cab6e5cfc67b08133f11153a7ad0e5",
+      "markdownSha256": "f5ac707d5f8cebb513bcd80f712e53391519f558a68fa3b0a2b5f59ed86ee6b6",
+      "replaySha256": "cd383741a8532b83c1ea761aba0e98f97edf20c5c31d7c7f077e22bad25f8c9b",
+      "manifestSha256": "0335432467cb2a7690f627fd0d4d4b5136006fe2d63255aa03c4c39b914c544f"
+    },
+    "scorePolicy2.0.1": {
+      "policySha256": "6ee674ab532d57ad9b49df815e61c453255c1a866e1a8a2ddca7bf86a763549f",
+      "markdownSha256": "2341c1995890a5e33ca671d5da013de1b13e7f2ae1ad1f51bbd2e6c861da6cd6",
+      "replaySha256": "9bd845181c823a15030b80f74135fe3f6d9f6f464c86b093f7c2baaf2e76fb4f",
+      "manifestSha256": "ee3d2f04624881864a15c663c634336cca7b895783d4242996019e0dd6d62bf5"
+    }
+  },
+  "compatibilityResult": "PASS_BY_PINNED_REGRESSION_EVIDENCE",
+  "entriesIncludeAllPackageFilesExceptManifestSelf": true,
+  "packageRoot": ".",
+  "serialization": "UTF-8 JSON, 2-space indentation, object insertion order, one LF newline; SHA-256 over exact bytes."
+}

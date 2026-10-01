@@ -1,0 +1,108 @@
+{
+  "artifact": "radar-score-policy-v2.1.0",
+  "scoreVersion": "2.1.0",
+  "policyVersion": "2.1.0",
+  "status": "FROZEN",
+  "normative": true,
+  "supersedes": "2.0.1",
+  "baselineReferences": {
+    "scorePolicy20": "2.0",
+    "scorePolicy201": "2.0.1"
+  },
+  "scoreCalculation": {
+    "weights": {
+      "relevance": 0.3,
+      "impact": 0.25,
+      "actionability": 0.15,
+      "confidence": 0.15,
+      "novelty": 0.1,
+      "momentum": 0.05
+    },
+    "relevanceMap": {
+      "DIRECT": 9,
+      "ADJACENT": 5,
+      "EXPLORATORY": 3,
+      "UNRELATED": 1
+    },
+    "formula": "baseScore=floor(weighted dimensions * 10); finalScore=clamp(baseScore + directBonus + radarModifier, 0, 100).",
+    "numericRiskInput": false
+  },
+  "directBonus": {
+    "condition": "relevance==DIRECT AND (impact>=7 OR actionability>=7)",
+    "value": 5,
+    "cap": 5
+  },
+  "signalThresholds": {
+    "high": 75,
+    "medium": 50,
+    "low": 25
+  },
+  "radarModifier": {
+    "version": "2.0.1",
+    "policy": "Frozen deterministic Score Policy 2.0.1 resolver; bounds [-10,10].",
+    "packageRef": "radar-modifier-resolver-v2.0.1 dependency"
+  },
+  "securityGate": {
+    "ownership": "Security Gate Policy",
+    "scoreBehavior": "Hard filter / signal cap and explicit escalations; excluded from weighted base score and modifier; deterministic safety facts cannot be weakened by model judgment."
+  },
+  "filterPolicy": {
+    "funding": "hard filter",
+    "securityUnrelated": "hard filter under Security Gate",
+    "unrelatedLowImpact": "hard filter per frozen score engine",
+    "duplicate": "hard filter only from committed Registry result"
+  },
+  "actionPolicy": {
+    "path": "radar-action-decision-policy-v2.1.0.json",
+    "actionVocabulary": [
+      "ignore",
+      "watch",
+      "read",
+      "test",
+      "adopt"
+    ]
+  },
+  "riskPolicy": {
+    "path": "radar-risk-policy-v1.0.json",
+    "generation": "HYBRID",
+    "numericScoreMapping": "NONE"
+  },
+  "priorValidationPolicy": {
+    "path": "radar-prior-validation-lifecycle-policy-v1.0.json",
+    "scope": "ENTITY_LEVEL",
+    "states": [
+      "ACTIVE",
+      "STALE",
+      "REVOKED"
+    ],
+    "authority": "EXPLICIT_HUMAN_VALIDATION"
+  },
+  "inputGenerationPolicy": {
+    "path": "radar-score-input-generation-policy-v2.1.0.json",
+    "eligibility": "SCORE_READY or RECEIPT_ONLY; no partial scoring"
+  },
+  "compatibility": {
+    "contract": "2.1.2",
+    "eventPolicy": "1.0",
+    "observationPolicy": "1.0",
+    "registryPolicy": "1.0",
+    "historicalReplay": "50/50 all fields; historical behavior delta NO"
+  },
+  "evaluationOrder": [
+    "validate all score inputs and per-field provenance",
+    "derive relevance score from relevance level",
+    "compute weighted base score using frozen weights",
+    "derive direct bonus",
+    "resolve frozen radar modifier",
+    "clamp final score",
+    "apply hard filters from frozen rules and committed Registry result",
+    "classify signal and apply Security Gate cap",
+    "resolve action by ordered Action Decision Policy"
+  ],
+  "semanticChangeSummary": [
+    "P07 first-discovery fallback resolves to READ; TEST requires explicit relevance and actionability gate.",
+    "Risk is an action/safety input only, not a numeric score term.",
+    "priorValidation is a human-authoritative entity lifecycle projection."
+  ],
+  "distributionStatus": "NOT_DISTRIBUTED"
+}
